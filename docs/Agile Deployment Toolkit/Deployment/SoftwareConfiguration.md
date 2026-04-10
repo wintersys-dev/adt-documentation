@@ -1,6 +1,6 @@
 The file  
 
->     ${BUILD_HOME}/descriptors/software.dat
+>     ${BUILD_HOME}/configuration/software.dat
 
 is where the different pieces of software that you have requested to install through your template.
 If your template is configured to install NGINX then you can configure NGINX to install in a variety of ways as described below:

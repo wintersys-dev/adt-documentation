@@ -6,7 +6,7 @@ Here you will find an expose on the directory structures of the various differen
 ```${BUILD_HOME}/descriptors/database_descriptor.dat``` - the database relevant environment variables  
 ```${BUILD_HOME}/descriptors/webserver_descriptor.dat``` - the webserver relevant environment variables   
 
-```${BUILD_HOME}/descriptors/software.dat``` - configuration of different build methods for the tools we want to work with  
+```${BUILD_HOME}/configuration/software.dat``` - configuration of different build methods for the tools we want to work with  
 
 ```${BUILD_HOME}/runtimedata/ACTIVE_BUILD_IDENTIFIER``` - the currently active build identifier - user provider string    
 

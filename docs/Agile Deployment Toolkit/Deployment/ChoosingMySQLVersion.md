@@ -1,6 +1,6 @@
 In the 
 
->     ${HOME}/descriptors/software.dat
+>     ${HOME}/configuration/software.dat
 
 file you can set the version of MYSQL if you are performing a self hosted solution rather than a managed solution.  
 The line of the file will be something like

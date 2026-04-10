@@ -1,0 +1,33 @@
+site_name: Wintersys Projects
+
+theme:
+  name: readthedocs
+  logo: assets/wintersys.png
+  highlightjs: true
+  hljs_style: purebasic
+  hljs_languages:
+    - bash
+
+extra_css:
+ - stylesheets/extra.css
+
+not_in_nav: |
+  TutorialsMenu.md 
+  index.md
+  DrupalDemos.md
+  JoomlaDemos.md
+  MoodleDemos.md
+  QuickStartDemosPrepBeginnerLevel.md
+  QuickStartDemosPrepExpertLevel.md
+  SetupSSHKeysOnLaptop.md
+  VirginCMSDemos.md
+  WordpressDemos.md
+  CustomisedDemos.md
+  ExampleDemos.md
+  ExampleStackScriptOverride.md
+  IntialOverviewOfADT.md
+
+copyright: >
+  Copyright &copy; 2026 Peter Charles Winter
+
+

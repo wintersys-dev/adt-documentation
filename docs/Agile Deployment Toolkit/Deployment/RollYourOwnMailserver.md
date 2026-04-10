@@ -1,0 +1,12 @@
+There are a few solutions to providing email services for your users:
+
+1. Allow any domain email addresses in your application, like gmail, yahoo and so on.
+2. If you want your users to have their own custom domain, you might have to pay for a custom domain email service, free ones seemed a bit thin on the ground to me. Not having used any of them I won't recommend, but, I am sure you know you can search the Internet for an email service providers for unlimited mailboxes for your custom domain. 
+3. If you want to run your own email server, you can run one using "iRedmail" or "Mail in a box", "Modoba", "Postie" or "Stalwart" or another offering of your choice. If you do so you will have your own email server running and your users will have email addresses for your custom domain but bear in mind that running your own email server is a responsible thing to do because your users might be relying on the email service you provide so if you hit some snag in providing them with service that might not be convenient for them.  
+
+**NOTE** Cloudflare are providing an email routing service which you can setup to route people's emails through your domain to their own email address on gmail, hotmail or whatever. This requires that your domain is setup with Cloudflare, however and it remains to be seen if email addresses routing through Cloudflare can be setup programmatically through their API (in which case it would be great to have people register with their gmail address, detect it, and swap it out for a domain specific address which reroutes to their gmail address using Cloudflare email routing) or whether you would have to have an admin manually add people to the service directly as the register. I'm sure there's a workable workflow somehow. Of course, if you want to use this toolkit for your pre-existing organisation and your peeps already have custom email addresses that you provide, you can use the mail solution you already use or have.
+
+The advantage that there sometimes is of self hosted domain specific email addresses is that you can require people to have one of your email addresses before you let them join your community. This is good from a couple of points of view. It means that you have control over who is joining and also, it enables the user to keep their business pertinent to your community separated from their other business. 
+
+If you would rather pay for an email service with unlimited domains and unlimited mailboxes you could try "mxroute.com" or "migadu".
+

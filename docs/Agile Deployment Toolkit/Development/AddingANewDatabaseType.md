@@ -2,7 +2,7 @@ To support a new database engine type you will need to modify or add to the foll
 
 >     adt-autoscaler-scripts/autoscaler/InitialiseCloudInit.sh
 
->     adt-build-machine-scripts/descriptors/software.dat
+>     adt-build-machine-scripts/configuration/software.dat
 >     adt-build-machine-scripts/initialisation/InitialiseCloudInit.sh
 >     adt-build-machine-scripts/initialisation/InitialiseDatabaseService.sh
 >     adt-build-machine-scripts/application/moodle/SetApplicationConfig.sh

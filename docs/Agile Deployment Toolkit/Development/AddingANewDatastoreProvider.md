@@ -3,7 +3,7 @@ To add a new datastore manipulation tool such as rclone or s5cmd in addition to 
 >     adt-autoscaler-scripts/installation/InstallDatastoreTools.sh
 >     adt-autoscaler-scripts/services/datastore/InitialiseDatastoreConfig.sh
 
->     adt-build-machine-scripts/descriptors/software.dat
+>     adt-build-machine-scripts/configuration/software.dat
 >     adt-build-machine-scripts/initialisation/InitialiseDatastoreConfig.sh
 >     adt-build-machine-scripts/installation/InstallDatastoreTools.sh
 >     adt-build-machine-scripts/services/datastore/*

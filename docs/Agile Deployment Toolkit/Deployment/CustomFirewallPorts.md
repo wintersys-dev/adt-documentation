@@ -10,7 +10,7 @@ phpmyadmin you  might want port 8080 to be accessible from your laptop IP addres
 And so to that end I try to make it easy by facilitating custom ports. The file where you need to set your
 custom ports is located at 
 
->     ${BUILD_HOME}/descriptors/customfirewall.dat
+>     ${BUILD_HOME}/configuration/firewall.dat
 
 and if you wanted port 8080 to be open to your laptop IP address (in other words only your laptop IP address can 
 connect to port 8080 on your webserver then you would configure this file as follows if your laptop IP address is

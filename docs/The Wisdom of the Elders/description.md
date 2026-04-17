@@ -12,12 +12,12 @@ In short form then here is what I am saying..."people spend their whole lives ga
 
 And so if you are an elder what I am imploring you to do is impart your wisdom in whatever way you choose, maybe by writing your life story (which could become a published book), or, a video you record about your life lessons and so on. By getting back to wiser ways, maybe the young ones can be saved from a lot of the troubles that have plagued us. If you do that I will link to your product from here and who knows, maybe, if you are short of the price of a pint you might get a few more quid in your twilight years as well if the young want to read about your experiences. When you achieve 'clear seeing' you can see what is truth and what is fiction. One of the fictions is that slavery has been abolished. It hasn't. This planet is still a slave camp and money is the whip that the slaves are whipped with. The terror of being brassic is the exact same terror that a beast of the field feels in regards to the cattle prod and so the terror of the metaphoric cattle prod of "being skint" is what keeps people productive. Always remember in a money matrix what you do is not what you are, musician, artist, potter, author and so on that's all irrelevant. What you are to the money matrix is a "unit of commerce". The money matrix couldn't care less what you do it only cares that you are financially viable and in that way priceless art commercial process which falls short of the bar. Ask yourself a simple set of question:
 
-"Am I a slave being whipped using money?"
-"Am I a willing slave happy to serve the world in any way?"
-"Is there any way to ever be free of slavery in this world other than by death itself?"
-"If I am slave is it perhaps only possible to see that I am slave once I am freed?"
-"If I am freed will I simply be enslaved to a commensurate exptent by an alternative circumstance that I perhaps will be even less keen on than my current subjugation?"
-"In other words, slavery is tough going, but, do I need to be aware that the grass isnt' always greener and life is very often 'out of the frying pan and into the fire'?"
+"Am I a slave being whipped using money?"  
+"Am I a willing slave happy to serve the world in any way?"  
+"Is there any way to ever be free of slavery in this world other than by death itself?"  
+"If I am slave is it perhaps only possible to see that I am slave once I am freed?"  
+"If I am freed will I simply be enslaved to a commensurate exptent by an alternative circumstance that I perhaps will be even less keen on than my current subjugation?"  
+"In other words, slavery is tough going, but, do I need to be aware that the grass isnt' always greener and life is very often 'out of the frying pan and into the fire'?"  
 
-Using stuff like that maybe together we can create an Elder's protocol and in so doing bring about a wisdom restoration to a world that has become very clever but very naive also. People think they live in 3D but what I say is that they don't they live in 1D. 1D works like this, "does it make me money for nowt", "OK, I am interested". "Does it cost me money for nowt?" "OK I am not interested".  This is a one dimensional society now and if you are prepared to live in 1D, go for it, but some of us want a vision which is beyond the bottom line. 
+Using stuff like that maybe together we can create an Elder's protocol and in so doing bring about a wisdom restoration to a world that has become very clever but very naive also. People think they live in 3D but what I say is that they don't they live in 1D. 1D works like this, "does it make me money for doing nowt", "OK, I am interested". "Does it cost me money for getting nowt?" "OK I am not interested". This is a one dimensional society now and if you are prepared to live in 1D, go for it, but some of us want a vision which is beyond the bottom line. 
 

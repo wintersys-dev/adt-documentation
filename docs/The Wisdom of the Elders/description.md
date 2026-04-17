@@ -16,7 +16,7 @@ And so if you are an elder what I am imploring you to do is impart your wisdom i
 "Am I a willing slave happy to serve the world in any way?"  
 "Is there any way to ever be free of slavery in this world other than by death itself?"  
 "If I am slave is it perhaps only possible to see that I am slave once I am freed?"  
-"If I am freed will I simply be enslaved to a commensurate exptent by an alternative circumstance that I perhaps will be even less keen on than my current subjugation?"  
+"If I am freed will I simply be enslaved to a commensurate extent by an alternative circumstance that I perhaps will be even less keen on than my current mode of subjugation?"  
 "In other words, slavery is tough going, but, do I need to be aware that the grass isnt' always greener and life is very often 'out of the frying pan and into the fire'?"  
 
 Using stuff like that maybe together we can create an Elder's protocol and in so doing bring about a wisdom restoration to a world that has become very clever but very naive also. People think they live in 3D but what I say is that they don't they live in 1D. 1D works like this, "does it make me money for doing nowt", "OK, I am interested". "Does it cost me money for getting nowt?" "OK I am not interested". This is a one dimensional society now and if you are prepared to live in 1D, go for it, but some of us want a vision which is beyond the bottom line. 

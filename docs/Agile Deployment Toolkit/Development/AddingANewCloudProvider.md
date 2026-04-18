@@ -53,9 +53,3 @@ and the script below will swap out the placeholders you have set for live values
 
 >     ${HOME}/services/cloudhost/InitialiseCloudhostConfig.sh
 
-NOTE: originally the core supported AWS but I found I had to make various AWS specific customisations so I stripped AWS out of the core to keep the core as simple and consistent as possible. If you want to put the work in to add support for AWS, then, you might get some clues from my archived repositories which you can find below:  
-
-[build-machine-with-aws](https://github.com/wintersys-dev/adt-build-machine-scripts-withaws)  
-[autoscaler-with-aws](https://github.com/wintersys-dev/adt-autoscaler-scripts-withaws)  
-[webserver-with-aws](https://github.com/wintersys-dev/adt-webserver-scripts-withaws)  
-[database-with-aws](https://github.com/wintersys-dev/adt-database-scripts-withaws)  

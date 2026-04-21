@@ -53,11 +53,13 @@ The Default username is "adt-webmaster" and the default password is the "first 1
 
 Advanced: 
 
-NOTE: If you are interested in deploying Drupal CMS you need to fork the toolit repsitories and change and alter point the infrastructure repositories to your fork and change the application descriptor for drupal in your fork to deploy drupal CMS
+NOTE: If you are interested in deploying Drupal CMS you need to fork the toolkit repositories and set the infrastructure repositories to your fork in the Stackscript rather than wintersys-dev and change the application descriptor for drupal in your fork to deploy drupal CMS
 
-The application descriptor is at ${BUILD_HOME}/application/cms/drupal/descriptor.dat
+The application descriptor is at 
 
-To deploy drupal CMS you need to follow the exact same steps you just just followed but you need to comment drupal and uncoment drupal cms
+>     ${BUILD_HOME}/application/cms/drupal/descriptor.dat
+
+Then to deploy "drupal CMS" you need to follow the exact same steps you just just followed for drupal but because you commented drupal and uncomented drupal cms in the descriptor, drupal CMS will be installed.
 
 ------------------
 ![](images/comment-drupal.png "Comment Drupal in descriptor")   

@@ -16,7 +16,6 @@ Set these fields of your StackScript as shown to deploy a copy of Joomla
 
 ![](images/joomla-virgin.png "Joomla Install Screen") 
 
-
 ----------------------
 
 To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
@@ -35,13 +34,6 @@ Go to the URL of your virgin Joomla installation in my case:
 
 >     https://www.nuocial.uk
 
-and complete the installation of Joomla. When you are putting the credentials you got from application_credentials.dat from your build machine the installation process should look similar to:
-
-![](images/joomla.png "Joomla Install Screen") 
-
-**IMPORTANT:**
-
-You will be prompted to remove the file beginning /var/www/html/installation/_J.... The Agile Deployment Toolkit will do that for your automatically all you need to do when prompted to remove the /var/www/html/installation/_J.... file is to click through a second time (at the bottom of the page prompting you to action) and you will be able to progress without doing anything. 
 
 ---------------------------
 

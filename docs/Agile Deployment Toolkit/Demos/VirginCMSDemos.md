@@ -5,7 +5,8 @@ Perform step 1 or 2 below according to your experience and apply the overrides t
 1. If you are a beginner, follow [here](./QuickStartDemosPrepBeginnerLevel.md)  
 2. If you are an expert, follow [here](./QuickStartDemosPrepExpertLevel.md)
 
--------------------------
+-------------------------  
+
 ### QUICK DEMO OVERRIDE EXAMPLES
 
 Once you have performed the mandatory steps above you can action specific demos by overriding the mentioned settings in the StackScript before you deploy it. By overriding different settings as described below, you will deploy different application types using the same StackScript. 
@@ -16,23 +17,11 @@ Set these fields of your StackScript as shown to deploy a copy of Joomla. The re
 
 ![](images/joomla-virgin.png "Joomla Install Screen") 
 
-----------------------
-
-To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
-
->     ssh -p <build-machine-port> <username>@<build-machine-ip>
->     sudo su
->          <password>
->     /bin/cat /home/<username>/adt-build-machine-scripts/runtimedata/linode/<build-identifier>/credentials/application_credentials.dat
-
-which in my case looks like:
-
->     ssh -p 1035 agile-deployer@156.23.43.21
->     /bin/cat /home/agile-deployer/adt-build-machine-scripts/runtimedata/linode/test-build/credentials/application_credentials.dat
-
 Go to the URL of your virgin Joomla installation in my case:
 
 >     https://www.nuocial.uk
+
+The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
 
 ---------------------------
 
@@ -42,81 +31,26 @@ Set these fields of your StackScript as shown to deploy a copy of Wordpress. The
 
 ![](images/wordpress-virgin.png "Wordpress Install Screen") 
 
-----------------------
-
-To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
-
->     ssh -p <build-machine-port> <username>@<build-machine-ip>
->     sudo su
->          <password>
->     /bin/cat /home/<username>/adt-build-machine-scripts/runtimedata/linode/<build-identifier>/credentials/application_credentials.dat
-
-which in my case looks like:
-
->     ssh -p 1035 agile-deployer@121.34.32.65
->     /bin/cat /home/agile-deployer/adt-build-machine-scripts/runtimedata/linode/test-build/credentials/application_credentials.dat
 
 Go to the URL of your virgin Wordpress installation in my case:
 
 >     https://www.nuocial.uk
+
+The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
 
 ---------------------------
 
 ### Demo 3 (StackScript overrides for a virgin installation of Drupal, Drupal CMS) 
 
-**NOTE:**  
+Set these fields of your StackScript as shown to deploy a copy of Drupal. The rest of the "Advanced Settings" can be set with their default values. You will need to set password, vpc, firewall and so on at the bottom of the script before you click "Create Linode". 
 
-If you see an error message:  
+![](images/drupal-virgin.png "Drupal Install Screen") 
 
-![](images/drupal-error.png "Drupal Error Screen") 
-
-At any point during the installation of a drupal application its very likely becsause the cache is inconsistent. Apart from being unsightly its not a problem or even really an error all you have to do is run  
-
->     ${BUILD_HOME}/helpers/TruncateDrupalCache.sh.   
-
-This will then refresh/rebuild the drupal caching system and the website should then display properly. If anyone knows a cleaner way of achieving this without the error message appearing I would be interested to know because I am not a drupal or any other CMS expert.
-
-**DRUPAL (10.0.10)**  
-
->     set "The number (1, 2 or 3) of the template you are using" to "1"  
->     set "WEBSITE DISPLAY NAME" to "My Drupal Demo" 
->     set "APPLICATION" to "drupal"   
->     set "DRUPAL VERSION" set it to the latest version of drupal for example, "10.0.10" 
->     set "BUILD ARCHIVE CHOICE" to "virgin"   
-
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export SELECTED_TEMPLATE="1"
->     export WEBSITE_DISPLAY_NAME="My Drupal Demo"
->     export APPLICATION="drupal"
->     export DRUPAL_VERSION="10.0.10""
->     export BUILD ARCHIVE CHOICE="virgin"
-
-To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
-
->     ssh -p <build-machine-port> <username>@<build-machine-ip>
->     sudo su
->          <password>
->     /bin/cat /home/<username>/adt-build-machine-scripts/runtimedata/linode/<build-identifier>/credentials/application_credentials.dat
-
-which in my case looks like:
-
->     ssh -p 1035 agile-deployer@121.34.32.65
->     /bin/cat /home/agile-deployer/adt-build-machine-scripts/runtimedata/linode/test-build/credentials/application_credentials.dat
-
-Go to the URL of your virgin Wordpress installation in my case:
+Go to the URL of your virgin Wordpress installation in my case:  
 
 >     https://www.nuocial.uk
 
-and complete the installation of Wordpress. When you are putting the credentials you got from application_credentials.dat from your build machine the installation process should look similar to:
-
-![](images/drupal.png "Drupal Install Screen")  
-
-NOTE: If you get an error message "The website encountered an unexpected error. Try again later" from Drupal CMS once it is installed you need to "clear all caches" which you can do by running
-
->     ${BUILD_HOME}/helpers/TruncateDrupalCache.sh
-
-on your new build machine.
+The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
 
 ----------------------
 

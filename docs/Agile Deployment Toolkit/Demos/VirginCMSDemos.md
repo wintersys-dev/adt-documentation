@@ -57,7 +57,7 @@ NOTE: If you are interested in deploying Drupal CMS you need to fork the toolit 
 
 The application descriptor is at ${BUILD_HOME}/application/cms/drupal/descriptor.dat
 
-To deploy drupal CMS you need to follow the exact same steps you just followed for joomla but you need to comment drupal and uncoment drupal cms
+To deploy drupal CMS you need to follow the exact same steps you just just followed but you need to comment drupal and uncoment drupal cms
 
 ------------------
 ![](images/comment-drupal.png "Comment Drupal in descriptor")   

@@ -1,5 +1,24 @@
 ### QUICK-START DEMOS (EXPERT STYLE) 
 
+#### TLDR;
+
+You need
+
+1. The public key of your linux laptop
+2. The IP address of your laptop
+3. The username and password of your Linode account
+4. A full access PAT (Personal Access Token) for your Linode Account
+5. Full access Access Key and Secret Key for your Object Storage
+6. A Domain name with a DNS provider with its name servers set to: NS1.LINODE.COM  NS2.LINODE.COM  NS3.LINODE.COM  NS4.LINODE.COM  NS5.LINODE.COM
+7. A VPC (adt-vpc) with subnet range 10.0.1.0/24 for the region you are deploying to
+8. A firewall (adt-build-machine) for your build machine (blocking all access except to port 1035 from the IP address gathered in step 2 above)
+9. The StackScript () configured with the values obtained in steps 1 to 8
+10. Click "Create Linode" to deploy the system
+
+---------------------------------------------------------------
+
+##### A bit more detailed
+
 **NOTE:** These quick start demos are only intended for use on the Linode platform using the supplied [StackScript](https://cloud.linode.com/stackscripts/635271) to demonstrate example usage cases for the Agile Deployment Toolkit as quickly and easily as possible.  The demos themselves are very quickly put together simply there for illustrative purposes they are not there to provide any truly useful function. If anyone would like to spend time crafting demos useful for real function that could be listed here that would be valued. 
 
 The purpose of these quick start demos is to show you that with just some parameters you can achieve a lot using the Agile Deployment Toolkit with the possibility of going much deeper into it if you choose to.

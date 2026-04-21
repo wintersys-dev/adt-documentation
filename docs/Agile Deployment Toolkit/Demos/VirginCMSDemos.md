@@ -61,7 +61,7 @@ To deploy drupal CMS you need to follow the exact same steps you just followed f
 
 
 ![](images/comment-drupal.png "Comment Drupal in descriptor") 
-![](images/drupal-virgin.png "Uncomment Drupal CMS in descriptor") 
+![](images/uncomment-drupal-cms.png "Uncomment Drupal CMS in descriptor") 
 
 ---------------------------
 

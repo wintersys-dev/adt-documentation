@@ -62,7 +62,7 @@ Once you have collated all this information your **~/adt-credentials.txt** the c
 
 ````LINODE USERNAME (Cloudhost account ID) : "mylinodeusername" (the username for my linode account)````  
 
-````DNS USERNAME (Cloudhost account email address) : "mylinodeemailaddress@gmail.com" (the email address of my linode account)````  
+````DNS USERNAME (Cloudhost account email address) : "linodeuseremail@gmail.com" (the email address of my linode account)````  
 
 ````DNS SECURITY KEY (same as the full access PAT above) : "difhinrgfgi84f9j4f9j302rrijfubnervggihjjregi34nfin4fine4fi2"````  
 

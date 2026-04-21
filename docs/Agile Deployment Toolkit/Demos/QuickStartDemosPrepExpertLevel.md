@@ -46,13 +46,13 @@ Once you have collated all this information your **~/adt-credentials.txt** the c
 
 ````LAPTOP PUBLIC KEY: "ssh-ed25519 AAAAC3NzaC1lZD.......zGBarK5v+b6NNg4Yxqk16iJ1qsYb8N adt-laptop"````  
 
-````LINUX USERE: "agile-deployer"  (your free choice)````  
+````LINUX USERNAME: "agile-deployer"  (my free choice this will be the username that you ssh onto your build machine with)````  
 
-````LINUX USER PASSWORD: "XXXXXXXXXXXX" (your free choice make sure its strong)```` 
+````LINUX USER PASSWORD: "XXXXXXXXXXXX" (my free choice make sure its strong)```` 
 
-````SSH PORT: "1035" (your free choice)````  
+````SSH PORT: "1035" (my free choice but for the sake of the demos its recommended to set it to 1035)````  
 
-````PUBLIC IP ADDRESS OF LAPTOP: "143:34:41.21"````
+````PUBLIC IP ADDRESS OF LAPTOP: "143:34:41.21" (the ip address of my laptop)````
 
 ````S3 ACCESS KEY:  "XHGBD8edjDBJjBDU2" (generated from linode gui for the gb-lon region with full access)````  
 
@@ -60,15 +60,15 @@ Once you have collated all this information your **~/adt-credentials.txt** the c
 
 ````LINODE PAT : "difhinrgfgi84f9j4f9j302rrijfubnervggihjjregi34nfin4fine4fi2" (full access rights)````  
 
-````LINODE USERNAME (Cloudhost account ID) : "mylinodeusername" (your free choice)````  
+````LINODE USERNAME (Cloudhost account ID) : "mylinodeusername" (the username for my linode account)````  
 
-````DNS USERNAME (Cloudhost account email address) : "myemailaddress@gmail.com" (your free choice)````  
+````DNS USERNAME (Cloudhost account email address) : "mylinodeemailaddress@gmail.com" (the email address of my linode account)````  
 
-````DNS SECURITY KEY (same as the PAT above) : "difhinrgfgi84f9j4f9j302rrijfubnervggihjjregi34nfin4fine4fi2"````  
+````DNS SECURITY KEY (same as the full access PAT above) : "difhinrgfgi84f9j4f9j302rrijfubnervggihjjregi34nfin4fine4fi2"````  
 
 ````WEBSITE NAME : "nuocial" (if website url = www.nuocial.uk this is "nuocial" if its www.tester.co.uk this is "tester")````  
 
-````WEBSITE URL (the domain name you have registered with your registrar) : "adtdemo.nuocial.uk"````  
+````WEBSITE URL (the full domain name you have registered with your DNS registrar, no https needed here) : "adtdemo.nuocial.uk"````  
 
 ----------------------------
 

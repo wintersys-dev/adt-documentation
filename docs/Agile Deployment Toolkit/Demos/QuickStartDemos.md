@@ -23,7 +23,7 @@ on your build machine.
 THIS WILL INSTALL THE DEFAULT DEMO  
 
 1. If you are a beginner, follow [here](./QuickStartDemosPrepBeginnerLevel.md)  
-2. If you are an expert, follow [here](./QuickStartDemosPrepExpertLevel.md)
+2. If you are an expert (most techies), follow [here](./QuickStartDemosPrepExpertLevel.md)
 
 -------------------------------
 

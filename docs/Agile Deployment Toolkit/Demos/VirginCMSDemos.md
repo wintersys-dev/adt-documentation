@@ -14,7 +14,7 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 Set these fields of your StackScript as shown to deploy a copy of Joomla
 
-![](images/joomla.png "Joomla Install Screen") 
+![](images/joomla-virgin.png "Joomla Install Screen") 
 
 
 ----------------------

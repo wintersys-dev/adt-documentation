@@ -12,17 +12,10 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 ### Demo 1 (StackScript overrides for a virgin installation of the Joomla CMS)  
 
->     set "The number (1, 2 or 3) of the template you are using" to "1"  
->     set "WEBSITE DISPLAY NAME" to "My Joomla Demo"  
->     set "APPLICATION" to "joomla"  
->     set "BUILD ARCHIVE CHOICE" to "virgin"  
+Set these fields of your StackScript as shown to deploy a copy of Joomla
 
-If you are using the cloud-init method raher than StackScript these you should set
+![](images/joomla.png "Joomla Install Screen") 
 
->     export SELECTED_TEMPLATE="1"
->     export WEBSITE_DISPLAY_NAME="My Joomla Demo"
->     export APPLICATION="joomla"
->     export BUILD ARCHIVE CHOICE="virgin"
 
 ----------------------
 

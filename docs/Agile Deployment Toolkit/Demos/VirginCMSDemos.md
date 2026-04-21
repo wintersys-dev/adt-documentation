@@ -67,39 +67,16 @@ To deploy drupal CMS you need to follow the exact same steps you just followed f
 
 ### Demo 4 (StackScript overrides for a virgin installation of the Moodle CMS)  
 
->     set "The number (1, 2 or 3) of the template you are using" to "1"  
->     set "WEBSITE DISPLAY NAME" to "My Moodle Demo"  
->     set "APPLICATION" to "moodle"  
->     set "BUILD ARCHIVE CHOICE" to "virgin"  
+Set these fields of your StackScript as shown to deploy a copy of Moodle. The rest of the "Advanced Settings" can be set with their default values. You will need to set password, vpc, firewall and so on at the bottom of the script before you click "Create Linode". 
 
-If you are using the cloud-init method raher than StackScript these you should set
 
->     export SELECTED_TEMPLATE="1"
->     export WEBSITE_DISPLAY_NAME="My Moodle Demo"
->     export APPLICATION="moodle"
->     export BUILD ARCHIVE CHOICE="virgin"
-
-----------------------
-
-To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
-
->     ssh -p <build-machine-port> <username>@<build-machine-ip>
->     sudo su
->          <password>
->     /bin/cat /home/<username>/adt-build-machine-scripts/runtimedata/linode/<build-identifier>/credentials/application_credentials.dat
-
-which in my case looks like:
-
->     ssh -p 1035 agile-deployer@78.98.32.19
->     /bin/cat /home/agile-deployer/adt-build-machine-scripts/runtimedata/linode/test-build/credentials/application_credentials.dat
+![](images/moodle-virgin.png "Moodle Install Screen") 
 
 Go to the URL of your virgin Moodle installation in my case:
 
 >     https://www.nuocial.uk
 
-and complete the installation of Wordpress. When you are putting the credentials you got from application_credentials.dat from your build machine the installation process should look similar to:
-
-![](images/moodle.png "Moodle CMS Install Screen")  
+The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
 
 ---------------------------
 

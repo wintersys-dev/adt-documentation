@@ -34,22 +34,13 @@ Go to the URL of your virgin Joomla installation in my case:
 
 >     https://www.nuocial.uk
 
-
 ---------------------------
 
 ### Demo 2 (StackScript overrides for a virgin installation of the Wordpress CMS)   
 
->     set "The number (1, 2 or 3) of the template you are using" to "1"  
->     set "WEBSITE DISPLAY NAME" to "My Wordpress Demo"  
->     set "APPLICATION" to "wordpress"  
->     set "BUILD ARCHIVE CHOICE" to "virgin"  
+Set these fields of your StackScript as shown to deploy a copy of Wordpress. The rest of the "Advanced Settings" can be set with their default values. You will need to set password, vpc, firewall and so on at the bottom of the script before you click "Create Linode". 
 
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export SELECTED_TEMPLATE="1"
->     export WEBSITE_DISPLAY_NAME="My Wordpress Demo"
->     export APPLICATION="wordpress"
->     export BUILD ARCHIVE CHOICE="virgin"
+![](images/wordpress-virgin.png "Wordpress Install Screen") 
 
 ----------------------
 
@@ -68,10 +59,6 @@ which in my case looks like:
 Go to the URL of your virgin Wordpress installation in my case:
 
 >     https://www.nuocial.uk
-
-and complete the installation of Wordpress. When you are putting the credentials you got from application_credentials.dat from your build machine the installation process should look similar to:
-
-![](images/wordpress.png "Wordpress Install Screen") 
 
 ---------------------------
 

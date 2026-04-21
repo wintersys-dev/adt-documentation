@@ -40,7 +40,7 @@ The Default username is "adt-webmaster" and the default password is the "first 1
 
 ---------------------------
 
-### Demo 3 (StackScript overrides for a virgin installation of Drupal, Drupal CMS) 
+### Demo 3 (StackScript overrides for a virgin installation of Drupal) 
 
 Set these fields of your StackScript as shown to deploy a copy of Drupal. The rest of the "Advanced Settings" can be set with their default values. You will need to set password, vpc, firewall and so on at the bottom of the script before you click "Create Linode". 
 
@@ -52,7 +52,15 @@ Go to the URL of your virgin Wordpress installation in my case:
 
 The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
 
-----------------------
+Advanced: 
+
+NOTE: If you are interested in deploying Drupal CMS you need to fork the toolit repsitories and change and alter point the infrastructure repositories to your fork and change the application descriptor for drupal in your fork to deploy drupal CMS
+
+The application descriptor is at ${BUILD_HOME}/application/cms/drupal/descriptor.dat
+
+To deploy drupal CMS you need to follow the exact same steps you just followed for joomla but you need to comment drupal and uncoment drupal cms
+
+
 
 **DRUPAL CMS**  
 

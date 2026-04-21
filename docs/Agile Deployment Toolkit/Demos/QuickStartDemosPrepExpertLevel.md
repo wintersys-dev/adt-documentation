@@ -6,7 +6,7 @@ You need
 
 1. The public key of your linux laptop
 2. The IP address of your laptop
-3. The username and password of your Linode account
+3. The username and email address of your Linode account
 4. A full access PAT (Personal Access Token) for your Linode Account
 5. Full access Access Key and Secret Key for your Object Storage
 6. A Domain name with a DNS provider with its name servers set to: NS1.LINODE.COM  NS2.LINODE.COM  NS3.LINODE.COM  NS4.LINODE.COM  NS5.LINODE.COM

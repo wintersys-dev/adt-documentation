@@ -31,7 +31,6 @@ Set these fields of your StackScript as shown to deploy a copy of Wordpress. The
 
 ![](images/wordpress-virgin.png "Wordpress Install Screen") 
 
-
 Go to the URL of your virgin Wordpress installation in my case:
 
 >     https://www.nuocial.uk
@@ -61,42 +60,8 @@ The application descriptor is at ${BUILD_HOME}/application/cms/drupal/descriptor
 To deploy drupal CMS you need to follow the exact same steps you just followed for joomla but you need to comment drupal and uncoment drupal cms
 
 
-
-**DRUPAL CMS**  
-
-You can install [DRUPAL CMS](https://new.drupal.org/drupal-cms) by making the following alterations to the above DRUPAL (10.0.10) install method  
-
-You can install  by making the modification to the steps above:
-
->     set "The Display name for your website e.g. My Demo Website" to "My Druapl CMS Demo"  
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "DRUPAL:cms"
-
-
-To find what to set your application credentials to ssh onto your new build machine sudo to root and cat the application_credentials.dat file that the build generated as shown below
-
->     ssh -p <build-machine-port> <username>@<build-machine-ip>
->     sudo su
->          <password>
->     /bin/cat /home/<username>/adt-build-machine-scripts/runtimedata/linode/<build-identifier>/credentials/application_credentials.dat
-
-which in my case looks like:
-
->     ssh -p 1035 agile-deployer@102.12.32.12
->     /bin/cat /home/agile-deployer/adt-build-machine-scripts/runtimedata/linode/test-build/credentials/application_credentials.dat
-
-Go to the URL of your virgin Wordpress installation in my case:
-
->     https://www.nuocial.uk
-
-and complete the installation of Drupal. When you are putting the credentials you got from application_credentials.dat from your build machine the installation process should look similar to:
-
-![](images/drupal-cms.png "Drupal CMS Install Screen")  
-
-NOTE: If you get an error message "The website encountered an unexpected error. Try again later" from Drupal CMS once it is installed you need to "clear all caches" which you can do by running
-
->     ${BUILD_HOME}/helpers/TruncateDrupalCache.sh
-
-on your new build machine.
+![](images/comment-drupal.png "Comment Drupal in descriptor") 
+![](images/drupal-virgin.png "Uncomment Drupal CMS in descriptor") 
 
 ---------------------------
 

@@ -12,7 +12,7 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 ### Demo 1 (StackScript overrides for a virgin installation of the Joomla CMS)  
 
-Set these fields of your StackScript as shown to deploy a copy of Joomla
+Set these fields of your StackScript as shown to deploy a copy of Joomla. The rest of the "Advanced Settings" can be set with their default values. You will need to set password, vpc, firewall and so on at the bottom of the script before you click "Create Linode". 
 
 ![](images/joomla-virgin.png "Joomla Install Screen") 
 

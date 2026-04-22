@@ -97,31 +97,19 @@ Fill in the form with your username and password that you desire as well as the 
 --------------------------------------------
 --------------------------------------------
 
-###Deploying virgin versions of the applications from baselined repositories. I put this here to show you how you can set up a baseline for your application type where you have installed a set of base plugins or extensions and repeatedly deploy that baseline an infinite number of time. As an example under the Wordpress installation I installed "wp-smtp-mail" and if you look you will see that that is available for you by default when you install the Wordpress baseline from the below and you can do the same thing with as many plugins as you like. I will provide more detailed examples later on where you can have whole bespoke social networks baselined and installable an infinite number of times. 
+###Deploying virgin versions of the applications from baselined repositories.   
 
-### Demo 5 (StackScript overrides for a virgin installation of the Joomla CMS from a baselined repository)  
+I put this here to show you how you can set up a baseline for your application type where you have installed a set of base plugins or extensions and repeatedly deploy that baseline an infinite number of time. As an example under the Wordpress installation I installed "wp-smtp-mail" and if you look you will see that that is available for you by default when you install the Wordpress baseline from the below and you can do the same thing with as many plugins as you like. I will provide more detailed examples later on where you can have whole bespoke social networks baselined and installable an infinite number of times. 
 
-This is just a sample virgin joomla install there's no sample data or anything it just shows you how you could baseline a virgin joomla installation for maximum ease when making repeated virgin CMS deployments. The advantage to creating a baseline of a virgin installation of a CMS is that you don't have to enter any parameters into the application GUI because the system deals with it all for you and so you can make faster deployments once you have a baseline to build from. The disadvantage is that you have to update the installed CMS from the administrator backend to the latest version because the baseline you made some weeks/months ago will be several releases back from current.
+### Demo 6 (StackScript overrides for a virgin installation of the Joomla CMS from a baselined repository)  
 
-1. Once the application is installed, the username is "webmaster" and the password is "mnbcxz098321QQZZ"
-
->     set "The number (1, 2 or 3) of the template you are using" to "2"  
->     set "The Display name for your website e.g. My Demo Website" to "My Vanilla Joomla Installation"  
->     set "APPLICATION" to "joomla"  
->     set "BASELINE DB REPOSITORY" to "joomla5.2.5-db-baseline" 
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "joomla5.2.5-webroot-sourcecode-baseline"
-
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export SELECTED_TEMPLATE="2"
->     export WEBSITE_DISPLAY_NAME="My Vanilla Joomla Installation"
->     export APPLICATION="joomla"
->     export BASELINE DB REPOSITORY="joomla5.2.5-db-baseline"
->     export APPLICATION BASELINE SOURCECODE REPOSITORY="joomla5.2.5-webroot-sourcecode-baseline" 
+![](images/virgin-joomla-baseline.png "Virgin Joomla Baseline Installation") 
 
 Wait for the application install to have been completed and available at:
 
 >      https://<dns-url>
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 -----------------
 

@@ -142,7 +142,7 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 ### Demo 9 (StackScript overrides for a virgin installation of the Drupal CMS from a baselined repository)  
 
 
-![](images/virgin-drupal-baseline.png "Virgin Drupal CMS Baseline Installation") 
+![](images/virgin-drupal-cms-baseline.png "Virgin Drupal CMS Baseline Installation") 
 
 Wait for the application install to have been completed and available at:
 

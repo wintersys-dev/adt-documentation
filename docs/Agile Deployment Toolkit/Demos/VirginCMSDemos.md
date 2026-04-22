@@ -21,7 +21,7 @@ Go to the URL of your virgin Joomla installation in my case:
 
 >     https://www.nuocial.uk
 
-The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 ---------------------------
 
@@ -35,7 +35,7 @@ Go to the URL of your virgin Wordpress installation in my case:
 
 >     https://www.nuocial.uk
 
-The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 ---------------------------
 
@@ -49,7 +49,7 @@ Go to the URL of your virgin Wordpress installation in my case:
 
 >     https://www.nuocial.uk
 
-The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 Advanced: 
 
@@ -78,7 +78,7 @@ Go to the URL of your virgin Moodle installation in my case:
 
 >     https://www.nuocial.uk
 
-The Default username is "adt-webmaster" and the default password is the "first 12 characters of the value of your Object Storage Access Key"
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 ---------------------------
 

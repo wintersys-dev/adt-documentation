@@ -123,6 +123,8 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+NOTE: notice the presence of "WP Mail SMTP" as built in to the baseline
+
 -----------------
 
 ### Demo 7 (StackScript overrides for a virgin installation of the Drupal CMS from a baselined repository)  

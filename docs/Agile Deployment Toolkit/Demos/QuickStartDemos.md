@@ -1,6 +1,13 @@
-## QUICK-START DEMOS  
+## FURTHER QUICK DEMOS
 
-**NOTE:** These quick start demos are only intended for use on the Linode platform using the supplied [StackScript](https://cloud.linode.com/stackscripts/635271) to demonstrate example usage cases for the Agile Deployment Toolkit as quickly and easily as possible.  The demos themselves are very quickly put together simply there for illustrative purposes they are not there to provide any truly useful function. If anyone would like to spend time crafting demos useful for real function that could be listed here that would be valued. 
+If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md). 
+You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
+
+--------------------
+
+## QUICK-START DEMO  
+
+**NOTE:** This quick start demo is only intended for use on the Linode platform using the supplied [StackScript](https://cloud.linode.com/stackscripts/635271) to demonstrate example usage cases for the Agile Deployment Toolkit as quickly and easily as possible.  The demos themselves are very quickly put together simply there for illustrative purposes they are not there to provide any truly useful function. If anyone would like to spend time crafting demos useful for real function that could be listed here that would be valued. 
 
 The purpose of these quick start demos is to show you that with just some parameters you can achieve a lot using the Agile Deployment Toolkit with the possibility of going much deeper into it if you choose to.
 
@@ -48,12 +55,6 @@ then do a
 >      ./Logs.sh
 
 -----------------
-
-## FURTHER QUICK DEMOS
-
-If you want to try further demos other than just our default one click [here](./CustomisedDemos.md). You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
-
---------------------
 
 ## DEPLOYING THESE DEMOS USING CLOUD-INIT 
 

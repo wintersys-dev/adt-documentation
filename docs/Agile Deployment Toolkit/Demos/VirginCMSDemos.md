@@ -115,19 +115,13 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 6 (StackScript overrides for a virgin installation of the Wordpress CMS from a baselined repository)  
 
-This is a sample virgin wordpress installation from baselined repositories.  
-
-1. Once the application is installed, the username is "webmaster" and the password is "mnbcxz098321QQZZ"
-
->     set "The number (1, 2 or 3) of the template you are using" to "2"  
->     set "The Display name for your website e.g. My Demo Website" to "My Vanilla Wordpress Installation"  
->     set "APPLICATION" to "wordpress"  
->     set "BASELINE DB REPOSITORY" to "wordpress6.8.2-db-baseline" 
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "wordpress6.8.2-webroot-sourcecode-baseline"
+![](images/virgin-wordpress-baseline.png "Virgin Wordpress Baseline Installation") 
 
 Wait for the application install to have been completed and available at:
 
 >      https://<dns-url>
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 -----------------
 

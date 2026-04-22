@@ -113,7 +113,7 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 -----------------
 
-### Demo 6 (StackScript overrides for a virgin installation of the Wordpress CMS from a baselined repository)  
+### Demo 7 (StackScript overrides for a virgin installation of the Wordpress CMS from a baselined repository)  
 
 ![](images/virgin-wordpress-baseline.png "Virgin Wordpress Baseline Installation") 
 
@@ -127,40 +127,32 @@ NOTE: notice the presence of "WP Mail SMTP" as built in to the baseline
 
 -----------------
 
-### Demo 7 (StackScript overrides for a virgin installation of the Drupal CMS from a baselined repository)  
+### Demo 8 (StackScript overrides for a virgin installation of the Drupal from a baselined repository)  
 
-This is a sample virgin drupal installation from baselined repositories.  
-
-1. Once the application is installed, the username is "webmaster" and the password is "mnbcxz098321QQQZZZ"
-
-
->     set "The number (1, 2 or 3) of the template you are using" to "2"  
->     set "The Display name for your website e.g. My Demo Website" to "My Vanilla Drupal Installation"  
->     set "APPLICATION" to "drupal"  
->     set "BASELINE DB REPOSITORY" to "drupal11.1.7-db-baseline" 
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "drupal11.1.7-webroot-sourcecode-baseline"
-
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export SELECTED_TEMPLATE="2"
->     export WEBSITE_DISPLAY_NAME="My Vanilla Drupal Installation"
->     export APPLICATION="drupal"
->     export BASELINE DB REPOSITORY="drupal11.1.7-db-baseline"
->     export APPLICATION BASELINE SOURCECODE REPOSITORY="drupal11.1.7-webroot-sourcecode-baseline" 
+![](images/virgin-drupal-baseline.png "Virgin Drupal Baseline Installation") 
 
 Wait for the application install to have been completed and available at:
 
 >      https://<dns-url>
 
-NOTE: If you get an error message "The website encountered an unexpected error. Try again later" from Drupal CMS once it is installed you need to "clear all caches" which you can do by running
-
->     ${BUILD_HOME}/helpers/TruncateDrupalCache.sh
-
-on your new build machine.
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 -----------------
 
-### Demo 8 (StackScript overrides for a virgin installation of the Moodle CMS from a baselined repository) 
+### Demo 9 (StackScript overrides for a virgin installation of the Drupal CMS from a baselined repository)  
+
+
+![](images/virgin-drupal-baseline.png "Virgin Drupal CMS Baseline Installation") 
+
+Wait for the application install to have been completed and available at:
+
+>      https://<dns-url>
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
+--------------------------------------
+
+### Demo 9 (StackScript overrides for a virgin installation of the Moodle CMS from a baselined repository) 
 
 This is a sample virgin moodle installation from baselined repositories.  
 

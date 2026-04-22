@@ -154,25 +154,10 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 9 (StackScript overrides for a virgin installation of the Moodle CMS from a baselined repository) 
 
-This is a sample virgin moodle installation from baselined repositories.  
-
-1. Once the application is installed, the username is "webmaster" and the password is "mnbcxz098321QQQZZZ$$"
-
-
->     set "The number (1, 2 or 3) of the template you are using" to "2"  
->     set "The Display name for your website e.g. My Demo Website" to "My Vanilla Moodle Installation"  
->     set "APPLICATION" to "moodle"  
->     set "BASELINE DB REPOSITORY" to "moodle5.0-db-baseline" 
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "moodle5.0-webroot-sourcecode-baseline"
-
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export SELECTED_TEMPLATE="2"
->     export WEBSITE_DISPLAY_NAME="My Vanilla Moodle Installation"
->     export APPLICATION="moodle"
->     export BASELINE DB REPOSITORY="moodle5.0-db-baseline"
->     export APPLICATION BASELINE SOURCECODE REPOSITORY="moodle5.0-webroot-sourcecode-baseline" 
+![](images/virgin-moodle-baseline.png "Virgin Moodle CMS Baseline Installation") 
 
 Wait for the application install to have been completed and available at:
 
 >      https://<dns-url>
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"

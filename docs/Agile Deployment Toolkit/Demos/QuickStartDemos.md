@@ -1,7 +1,8 @@
 ## FURTHER QUICK DEMOS
 
-<span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md). 
-You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)</span>
+<span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  
+
+You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
 
 --------------------
 

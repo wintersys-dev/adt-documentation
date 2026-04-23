@@ -114,7 +114,7 @@ Then we can open up the
 I then update all fields marked "MANDATORY" (marked in red) referring to the values that I have stored in the text file in my laptop in the correct template and when I am finished it looks like:
 
 \###############################################################################################  
-\# Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
+\# Refer to: ${BUILD_HOME}/specifications/specification.md  
 \###############################################################################################  
 \#This template is configured for virgin style builds  
   

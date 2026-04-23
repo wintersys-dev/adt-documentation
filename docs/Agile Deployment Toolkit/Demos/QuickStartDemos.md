@@ -12,7 +12,7 @@ You might want to reference [Understanding StackScript overrides](./ExampleStack
 
 The purpose of these quick start demos is to show you that with just some parameters you can achieve a lot using the Agile Deployment Toolkit with the possibility of going much deeper into it if you choose to.
 
-For more information about parameter configuration please see the [spec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/templatedconfigurations/specification.md) and [quickspec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/templatedconfigurations/quick_specification.dat)
+For more information about parameter configuration please see the [spec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/specifications/specification.md) and [quickspec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/specifications/quick_specification.dat)
 
 **NOTE1:** The onus of these demos is on the word "Quick" and what I mean by that is that throughout these demos I suggest using security keys and tokens which have "full access rights" for all function of your account and therefore can be generated once and reused across all function rather than "limited access keys" which can only be used for particular function according to their scoping. Obviously this is not the most secure approach and if you were doing processes similar to this for real you would want to follow the "principle of least privileges" meaning that you would generate key sets for specific function within your account and with limited access rights.   
 

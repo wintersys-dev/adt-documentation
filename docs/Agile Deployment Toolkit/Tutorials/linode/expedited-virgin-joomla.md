@@ -36,10 +36,10 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 In production use you should use the principle of least privileges and have one key for DNS and one key for compute but here we will generate a single personal access token with ability to manipulate DNS records as well as compute and use the same key for both but in production you should have one PAT that just has DNS scope and one key which has scope for all your other needs. 
 
-![](images/expedited/lin27.png "Exoscale Tutorial Image 27")
-![](images/expedited/lin28.png "Exoscale Tutorial Image 28")
-![](images/expedited/lin29.png "Exoscale Tutorial Image 29")
-![](images/expedited/lin30.png "Exoscale Tutorial Image 30")
+![](images/expedited/lin27.png "Linode Tutorial Image 27")
+![](images/expedited/lin28.png "Linode Tutorial Image 28")
+![](images/expedited/lin29.png "Linode Tutorial Image 29")
+![](images/expedited/lin30.png "Linode Tutorial Image 30")
 
 
 Now record your access key and secret key in your separate text file on your laptop
@@ -50,16 +50,16 @@ Now record your access key and secret key in your separate text file on your lap
 
 We now need to set up a key pair for Object Storage
 
-![](images/expedited/lin31.png "Exoscale Tutorial Image 31")  
+![](images/expedited/lin31.png "Linode Tutorial Image 31")  
 
 Create a scratch bucket in order to active Object Storage if Object Storage  is not already active on your account  
 
-![](images/expedited/lin33.png "Exoscale Tutorial Image 33")
-![](images/expedited/lin34.png "Exoscale Tutorial Image 34")
-![](images/expedited/lin35.png "Exoscale Tutorial Image 35")
+![](images/expedited/lin33.png "Linode Tutorial Image 33")
+![](images/expedited/lin34.png "Linode Tutorial Image 34")
+![](images/expedited/lin35.png "Linode Tutorial Image 35")
 Create access keys with **UNLIMITED** access to your current region (gb-lon)  
-![](images/expedited/lin36.png "Exoscale Tutorial Image 36")
-![](images/expedited/lin37.png "Exoscale Tutorial Image 37")
+![](images/expedited/lin36.png "Linode Tutorial Image 36")
+![](images/expedited/lin37.png "Linode Tutorial Image 37")
 
 
 Now record your Object Storage access keys in the text file on your laptop:
@@ -89,8 +89,8 @@ You then need to get an access key for your personal github account (you are adv
 
 (your personal access token must have enough privileges to create repositories which means the "administrator" and "contents" options need to be set to read/write. Only setting these two values follows the principle of least privileges) 
 
-![](images/expedited/lin74.png "Exoscale Tutorial Image 74")
-![](images/expedited/lin75.png "Exoscale Tutorial Image 75")
+![](images/expedited/lin74.png "Linode Tutorial Image 74")
+![](images/expedited/lin75.png "Linode Tutorial Image 75")
 
 
 >     linode_github_username="adt-apps" #MANDATORY
@@ -243,22 +243,21 @@ You will then need to answer the questions that you are asked and in a few minut
 
 When I ran the build process when writing this tutorial it looked as follows:
 
-![](images/expedited/lin42.png "Exoscale Tutorial Image 42")
-![](images/expedited/lin43.png "Exoscale Tutorial Image 43")
-![](images/expedited/lin44.png "Exoscale Tutorial Image 44")
-![](images/expedited/lin45.png "Exoscale Tutorial Image 45")
-![](images/expedited/lin46.png "Exoscale Tutorial Image 46")
+![](images/expedited/lin42.png "Linode Tutorial Image 42")
+![](images/expedited/lin43.png "Linode Tutorial Image 43")
+![](images/expedited/lin44.png "Linode Tutorial Image 44")
+![](images/expedited/lin45.png "Linode Tutorial Image 45")
+![](images/expedited/lin46.png "Linode Tutorial Image 46")
 
 <span style="color:red">NOTE: In this image or this part of the output you will find the credentials you must set for your joomla application</span>   
 
 
-![](images/expedited/lin47.png "Exoscale Tutorial Image 47")
-![](images/expedited/lin48.png "Exoscale Tutorial Image 48")
+![](images/expedited/lin47.png "Linode Tutorial Image 47")
+![](images/expedited/lin48.png "Linode Tutorial Image 48")
 
+The deployed application will look like:
 
-<span style="color:red">NOTE: To display the joomla application you must go to your website URL in your browser such as https://www.topdog-insiders.uk/installation/index.php</span>   
-
-![](images/expedited/lin49.png "Exoscale Tutorial Image 49")
+![](images/expedited/lin76.png "Linode Tutorial Image 49")
 
 Assuming that you have your Joomla application online that's this tutorial through.   
 

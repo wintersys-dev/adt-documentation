@@ -84,7 +84,7 @@ Notice that there are two webservers and an autoscaler running because this is a
 Notice that an images or assets bucket has been created in the datastore and is mounted within the webroot of the application as /var/www/html/images
 ![](images/expedited/exo49.png "Exoscale Tutorial Image 49")
 And this is what my community builder example looks like deployed from a temporal backup
-![](images/expedited/exo50.png "Exoscale Tutorial Image 50")
+![](images/expedited/exo-54.png "Exoscale Tutorial Image 54")
 
 
 

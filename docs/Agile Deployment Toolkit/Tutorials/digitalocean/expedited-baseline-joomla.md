@@ -110,9 +110,8 @@ When I ran my baseline build the output I got from the ADT was as follows:
 ![](images/expedited/do-49.png "Digital Ocean Tutorial Image 49")
 
 If you follow these steps, then, you will have a copy of your community builder customised Joomla application running on digitalocean.
-When I went to my url www.drpatient.uk, this is what I saw, the baselined version of community builder running:
 
-![](images/expedited/do-50.png "Digital Ocean Tutorial Image 50")
+![](images/expedited/do-67.png "Digital Ocean Tutorial Image 67")
 
 **Leave the servers you have deployed running for use in the next tutorial in the series.**
 

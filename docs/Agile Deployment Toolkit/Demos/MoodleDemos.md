@@ -13,19 +13,8 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 ### Demo 1 (StackScript overrides for a moodle demo install)
 
-1. Once the application is installed, the username is "webmaster" and the password is "mnbcxz098321QQQZZZ"  
- 
->     set "The Display name for your website e.g. My Demo Website" to "My Moodle Demo"  
->     set "APPLICATION" to "moodle"  
->     set "BASELINE DB REPOSITORY" to "moodle5.1.3-db-baseline"  
->     set "APPLICATION BASELINE SOURCECODE REPOSITORY" to "moodle5.1.3-webroot-sourcecode-baseline" 
-
-If you are using the cloud-init method raher than StackScript these you should set
-
->     export WEBSITE_DISPLAY_NAME="My Moodle Demo"
->     export APPLICATION="moodle"  
->     export BASELINE DB REPOSITORY="moodle5.1.3-db-baseline" 
->     export APPLICATION BASELINE SOURCECODE REPOSITORY="moodle5.1.3-webroot-sourcecode-baseline"
+moodle-academi-screenshot.png
+moodle-academi.png
 
 
 

@@ -246,9 +246,9 @@ When I ran the build process when writing this tutorial it looked as follows:
 ![](images/expedited/exo23.png "Exoscale Tutorial Image 23")
 ![](images/expedited/exo24.png "Exoscale Tutorial Image 24")
 
-<span style="color:red">NOTE: To display the joomla application you must go to your website URL in your browser such as https://www.drpatient.uk/installation/index.php</span>   
+The deployed website will look like:
 
-![](images/expedited/exo25.png "Exoscale Tutorial Image 25")
+![](images/expedited/exo53.png "Exoscale Tutorial Image 25")
 
 Assuming that you have your Joomla application online that's this tutorial through.   
 

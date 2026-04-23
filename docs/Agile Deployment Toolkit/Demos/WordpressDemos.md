@@ -13,4 +13,8 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 ### Demo 1 (StackScript overrides for a sample Wordpress Kadence template baseline) 
 
+![](images/joomla-kadence.png "Wordpress Kadence")   
 
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
+![](images/joomla-kadence-screenshot.png "Wordpress Kadence Screenshot") 

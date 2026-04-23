@@ -13,8 +13,9 @@ Perform step 1 or 2 below according to your experience and apply the overrides t
 
 Once you have performed the mandatory steps above you can action specific demos by overriding the mentioned settings in the StackScript before you deploy it. By overriding different settings as described below, you will deploy different application types using the same StackScript.
 
-
 ### Demo 1 (Cassiopeia template with sample data installed installed from a baseline)
 
-![](images/joomla-cassio.png "Joomla Cassio") 
+![](images/joomla-cassio.png "Joomla Cassio")   
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 

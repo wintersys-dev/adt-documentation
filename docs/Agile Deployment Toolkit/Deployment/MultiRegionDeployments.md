@@ -39,7 +39,7 @@ Highlighted in red are the settings in the templates that you need to take parti
 
 
 \###############################################################################################  
-\# Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md
+\# Refer to: ${BUILD_HOME}/specifications/specification.md
 \###############################################################################################  
 \#This template is configured for temporal style builds
 
@@ -170,7 +170,7 @@ Here is my template for the nl-ams region when I am deploying to a primary regio
 
 
 \###############################################################################################  
-\# Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
+\# Refer to: ${BUILD_HOME}/specifications/specification.md  
 \###############################################################################################  
 \#This template is configured for temporal style builds  
      
@@ -300,7 +300,7 @@ You will need to first deploy the primary region infrastrucuture (gb-lon) and on
 I then made a deployment to a third region (with a different vendor, exoscale) and this is what my template looked like when I made a deployment to a different vendor and had all the different regions tied together through the cloudflare DNS system and all having them access the shared Linode DBaaS system. Remember I chose to intitiate all these builds from the same build machine running on Linode. 
 
 \###############################################################################################  
-\# Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
+\# Refer to: ${BUILD_HOME}/specifications/specification.md  
 \###############################################################################################  
 \#This template is configured for temporal style builds  
 

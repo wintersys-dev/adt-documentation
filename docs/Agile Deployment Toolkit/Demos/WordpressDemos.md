@@ -2,8 +2,8 @@
 
 Perform step 1 or 2 below according to your experience and apply the overrides to your StackScript as described below for your desired demo type before you click "Create Linode"
 
-1. If you are a beginner, follow [here](./QuickStartDemosPrepBeginnerLevel.md)  
-2. If you are an expert, follow [here](./QuickStartDemosPrepExpertLevel.md)
+<span style="color:red">1. IF YOU ARE A BEGINNER, follow [here](./QuickStartDemosPrepBeginnerLevel.md)</span>  
+<span style="color:red">2. IF YOU ARE AN EXPERT (any experienced techie), follow [here](./QuickStartDemosPrepExpertLevel.md)</span>
 
 -------------------------
 
@@ -11,7 +11,7 @@ Perform step 1 or 2 below according to your experience and apply the overrides t
 
 Once you have performed the mandatory steps above you can action specific demos by overriding the mentioned settings in the StackScript before you deploy it. By overriding different settings as described below, you will deploy different application types using the same StackScript.
 
-### Demo 1 (StackScript overrides for a sample Wordpress application installation) 
+### Demo 1 (StackScript overrides for a sample Wordpress Kadence template baseline) 
 
 This is just a sample wordpress template with some sample data installed which will show you how you can get a pre-built site up and running with this toolkit
 

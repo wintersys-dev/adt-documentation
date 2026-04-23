@@ -112,9 +112,8 @@ When I ran my baseline build the output I got from the ADT was as follows:
 
 
 If you follow these steps, then, you will have a copy of your community builder customised Joomla application running on linode.
-When I went to my url www.topdog-insiders.uk, this is what I saw, the baselined version of community builder running:
 
-![](images/expedited/lin61.png "Linode Tutorial Image 61")
+![](images/expedited/lin77.png "Linode Tutorial Image 77")
 
 **Leave the servers you have deployed running for use in the next tutorial in the series.**
 

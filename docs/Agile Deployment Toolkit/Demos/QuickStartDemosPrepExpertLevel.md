@@ -2,13 +2,15 @@
 
 #### TLDR;
 
+This will deploy servers in the London region by default. 
+
 You need
 
 1. The public key of your linux laptop
 2. The IP address of your laptop
 3. The username and email address of your Linode account
 4. A full access PAT (Personal Access Token) for your Linode Account
-5. Full access Access Key and Secret Key for your Object Storage
+5. Full Access Key and Secret Key for your Object Storage (for the london region)
 6. A Domain name with a DNS provider with its name servers set to: NS1.LINODE.COM  NS2.LINODE.COM  NS3.LINODE.COM  NS4.LINODE.COM  NS5.LINODE.COM
 7. A VPC (adt-vpc) with subnet range 10.0.1.0/24 for the region you are deploying to
 8. A firewall (adt-build-machine) for your build machine (blocking all access except to port 1035 from the IP address gathered in step 2 above)

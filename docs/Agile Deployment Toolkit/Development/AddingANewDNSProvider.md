@@ -10,8 +10,8 @@ To add a new DNS provider you will need to review and add to the following files
 >     adt-build-machine-scripts/services/security/firewall/GetProxyDNSIPs.sh
 >     adt-build-machine-scripts/services/server/ObtainSSLCertificate.sh
 >     adt-build-machine-scripts/templatedconfigurations/ValidateTemplate.sh
->     adt-build-machine-scripts/templatedconfigurations/quick_specification.dat
->     adt-build-machine-scripts/templatedconfigurations/specification.md
+>     adt-build-machine-scripts/specifications/quick_specification.dat
+>     adt-build-machine-scripts/specifications/specification.md
 
 >     adt-webserver-scripts/services/webserver/configuration/InstallNginxConfigurationForAuthenticator.sh
 >     adt-webserver-scripts/services/webserver/configuration/InstallNginxConfigurationFromRepo.sh

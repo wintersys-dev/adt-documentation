@@ -26,7 +26,7 @@ and enter the password "BUILDMACHINE_PASSWORD" that you configured in the user d
 
 >     ${BUILD_HOME}/templatedconfigurations/templates/${CLOUDHOST}
 
-You can choose template 1, 2 or 3 depending on whether you are deploying a virgin, baseline or temporal type of build. You will then need to configure your chosen template according to your deployment needs and in accordance with **[The Specification](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/templatedconfigurations/specification.md)**. If you look through the [tutorials](../Tutorials/TutorialsMenu.md) for your provider you can see more detail on how to configure your template (pay particular attention to any fields in the template maked MANDATORY because you must provide live values for those in all circumstances)
+You can choose template 1, 2 or 3 depending on whether you are deploying a virgin, baseline or temporal type of build. You will then need to configure your chosen template according to your deployment needs and in accordance with **[The Specification](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/specifications/specification.md)**. If you look through the [tutorials](../Tutorials/TutorialsMenu.md) for your provider you can see more detail on how to configure your template (pay particular attention to any fields in the template maked MANDATORY because you must provide live values for those in all circumstances)
 
 6. Once your template is configured you can run the script "ExpeditedAgileDeploymentToolkit.sh" by issuing the commands
 

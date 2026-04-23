@@ -4,8 +4,8 @@ I am not a CMS developer (in fact I have never built a complete site with a CMS)
 
 Perform step 1 or 2 below according to your experience and apply the overrides to your StackScript as described below for your desired demo type before you click "Create Linode"
 
-1. If you are a beginner, follow [here](./QuickStartDemosPrepBeginnerLevel.md)  
-2. If you are an expert, follow [here](./QuickStartDemosPrepExpertLevel.md)
+<span style="color:red">1. IF YOU ARE A BEGINNER, follow [here](./QuickStartDemosPrepBeginnerLevel.md)</span>  
+<span style="color:red">2. IF YOU ARE AN EXPERT (any experienced techie), follow [here](./QuickStartDemosPrepExpertLevel.md)</span>
 
 -------------------------
 

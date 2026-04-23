@@ -5,8 +5,8 @@ the following files have to be updasted to support these new versions:
 
 >     adt-build-machine-scripts/services/server/GetOperatingSystemVersion.sh
 >     adt-build-machine-scripts/templatedconfigurations/ValidateTemplate.sh
->     adt-build-machine-scripts/templatedconfigurations/quick_specification.dat
->     adt-build-machine-scripts/templatedconfigurations/specification.md
+>     adt-build-machine-scripts/specifications/quick_specification.dat
+>     adt-build-machine-scripts/specifications/specification.md
 
 >     adt-webserver-scripts/installation/InstallPHPBase.sh
 

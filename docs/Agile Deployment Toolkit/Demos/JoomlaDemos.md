@@ -9,7 +9,7 @@ Perform step 1 or 2 below according to your experience and apply the overrides t
 
 -------------------------
 
-#### QUICK DEMO OVERRIDE EXAMPLES
+#### Joomla Demos
 
 Once you have performed the mandatory steps above you can action specific demos by overriding the mentioned settings in the StackScript before you deploy it. By overriding different settings as described below, you will deploy different application types using the same StackScript.
 

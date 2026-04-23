@@ -7,8 +7,8 @@ The core supports joomla,wordpress,drupal and moodle. If you want to support fur
 >     adt-build-machine-scripts/processing/*
 >     adt-build-machine-scripts/services/application/*
 >     adt-build-machine-scripts/templatedconfigurations/ValidateTemplate.sh
->     adt-build-machine-scripts/templatedconfigurations/quick_specification.dat
->     adt-build-machine-scripts/templatedconfigurations/specification.md
+>     adt-build-machine-scripts/specifications/quick_specification.dat
+>     adt-build-machine-scripts/specifications/specification.md
 
 >     adt-webserver-scripts/application/configuration/*
 >     adt-webserver-scripts/application/monitoring/CheckServerAlive.sh

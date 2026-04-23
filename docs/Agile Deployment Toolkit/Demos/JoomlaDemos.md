@@ -19,3 +19,6 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+![](images/joomla-cassio-screenshot.png "Joomla Cassio Screenshot") 
+
+

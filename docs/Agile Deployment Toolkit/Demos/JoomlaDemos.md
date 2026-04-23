@@ -16,5 +16,5 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 ### Demo 1 (Cassiopeia template with sample data installed installed from a baseline)
 
-
+![](images/joomla-cassio.png "Joomla Cassio") 
 

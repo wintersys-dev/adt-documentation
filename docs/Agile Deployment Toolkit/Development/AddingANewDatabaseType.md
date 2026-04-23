@@ -7,8 +7,8 @@ To support a new database engine type you will need to modify or add to the foll
 >     adt-build-machine-scripts/initialisation/InitialiseDatabaseService.sh
 >     adt-build-machine-scripts/application/moodle/SetApplicationConfig.sh
 >     adt-build-machine-scripts/services/dbaas/AdjustDBaaSFirewall.sh
->     adt-build-machine-scripts/templatedconfigurations/quick_specification.dat
->     adt-build-machine-scripts/templatedconfigurations/specification.md
+>     adt-build-machine-scripts/specifications/quick_specification.dat
+>     adt-build-machine-scripts/specifications/specification.md
 
 >     adt-database-scripts/application/db/*
 >     adt-database-scripts/installation/InstallDatabaseClient.sh

@@ -112,9 +112,8 @@ When I ran my baseline build the output I got from the ADT was as follows:
 ![](images/expedited/exo36.png "Exoscale Tutorial Image 36")
 
 If you follow these steps, then, you will have a copy of your community builder customised Joomla application running on exoscale.
-When I went to my url www.drpatient.uk, this is what I saw, the baselined version of community builder running:
 
-![](images/expedited/exo37.png "Exoscale Tutorial Image 37")
+![](images/expedited/exo54.png "Exoscale Tutorial Image 54")
 
 **Leave the servers you have deployed running for use in the next tutorial in the series.**
 

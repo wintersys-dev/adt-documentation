@@ -253,9 +253,9 @@ When I ran the build process when writing this tutorial it looked as follows:
 ![](images/expedited/do-40.png "Digital Ocean Tutorial Image 40")
 ![](images/expedited/do-41.png "Digital Ocean Tutorial Image 41")
 
-<span style="color:red">NOTE: To display the joomla application you must go to your website URL in your browser such as https://www.drpatient.uk/installation/index.php</span>   
+The Deployed application will look like:  
 
-![](images/expedited/do-42.png "Digital Ocean Tutorial Image 42")
+![](images/expedited/do-66.png "Digital Ocean Tutorial Image 42")
 
 Assuming that you have your Joomla application online that's this tutorial through.   
 

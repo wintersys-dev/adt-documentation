@@ -75,7 +75,7 @@ When I ran a temporal build process, I saw the following output from the ADT
 ![](images/expedited/lin68.png "Vultr Tutorial Image 68")
 ![](images/expedited/lin69.png "Vultr Tutorial Image 69")
 ![](images/expedited/lin70.png "Vultr Tutorial Image 70")
-![](images/expedited/lin71.png "Vultr Tutorial Image 71")
+![](images/expedited/lin77.png "Vultr Tutorial Image 77")
 
 
 

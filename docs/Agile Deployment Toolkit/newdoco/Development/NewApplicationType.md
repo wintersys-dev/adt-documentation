@@ -40,7 +40,7 @@ Put any validation checks that can help when people are making an Expedited Buil
 
 #### Webserver Scripts
 
-On the websever machine you will need to provide the following scripts for the new application that you want to integrate into the toolkit. The scripts I have provided show a basic pattern for how you will want to go about implementing support for a new application type but your application will no doubt have quirks that make the patterns I have used similar or at least good guidance but not a step by step process for how to implement support for a new bespoke application type.
+On the websever machine you will need to provide the following scripts for the new application that you want to integrate into the toolkit. The scripts I have provided show a basic pattern for how you will want to go about it. Each application will no doubt have quirks that make the patterns I have used good guidance but not a step by step process for how to implement support for a new bespoke application type.
 
 >     application/installation/cms|3rd-party/<application>/InstallVirginApplication.sh
 You need to provide this script as a way to install your application. You might want to use checsums if they are avaialble. Sometime CLI tools for your application type can help with the installation and its often also possible in a lot of cases to clone git repos as a way of downloading your application sourcecode. The applications I provide support for have examples of the different approaches to the installation processes. Drupal for example uses composer, wordpress uses the wordpress CLI tool and so on. 

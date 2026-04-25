@@ -1,4 +1,4 @@
-INTEGRATING A NEW CUSTOM APPLICATION
+### INTEGRATING A NEW CUSTOM APPLICATION
 
 If you want to integrate a new application type such as (for example) "NextCloud" or "Elgg" then this toolkit is structured to make that as easy as possible. There's a good chance there will be specific quirks with any application that you want to integrate because they are all a little different but I have endeavoured to structure this project as best I can to make it possible for you to accomodate any quirky behaviours you encounter. 
 
@@ -67,7 +67,7 @@ These are the webserver configurations for each application type. I am NOT an ex
 
 --------------------------------------
 
-#####Autoscaler Scripts
+#### Autoscaler Scripts
 
 On the autoscaler machine you will need to have two scripts available to to support your new application. They are straight forward and self explanatory:
 

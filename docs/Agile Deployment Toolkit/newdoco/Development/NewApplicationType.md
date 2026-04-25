@@ -53,7 +53,7 @@ This is likely the most involved script that you need to provide to integrate a 
 This script simply looks at what files are expected to be on the file system for a given application type. The list of files to expect can be set in your descriptor and if all the files and directories that the descriptor specifies as needing to be present are present on the file system then the application is considered to be fully present on the filesystem of your webserver. Its just a way of checking that we are good to go. 
 
 >     services/cron/ExecuteApplicationSpecificCronjob.sh
-#If your application has any specific cron jobs that need to be run periodically then you can put them in this script with a suitable periodicity for invocation
+If your application has any specific cron jobs that need to be run periodically then you can put them in this script with a suitable periodicity for invocation
 
 >     utilities/security/EnforcePermissions.sh
 If there's an application specific persmissions quirks that need to be set you can put add them here but most likely you won't need to do anything with this. 

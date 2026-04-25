@@ -56,7 +56,7 @@ This script simply looks at what files are expected to be on the file system for
 If your application has any specific cron jobs that need to be run periodically then you can put them in this script with a suitable periodicity for invocation
 
 >     utilities/security/EnforcePermissions.sh
-If there's an application specific persmissions quirks that need to be set you can put add them here but most likely you won't need to do anything with this. 
+If there's an application specific permission quirks that need to be set you can put add them here but most likely you won't need to do anything with this. 
 
 
 >     webserver/configuration/application/nginx/site-available.conf.<APPLICATION>

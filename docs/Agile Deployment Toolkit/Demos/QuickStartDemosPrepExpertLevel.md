@@ -1,6 +1,6 @@
 ### QUICK-START DEMOS (EXPERT STYLE) 
 
-#### TLDR;
+#### TL;DR
 
 This will deploy servers in the London region by default. 
 

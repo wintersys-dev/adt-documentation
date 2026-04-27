@@ -25,7 +25,7 @@ You need
 
 The purpose of these quick start demos is to show you that with just some parameters you can achieve a lot using the Agile Deployment Toolkit with the possibility of going much deeper into it if you choose to.
 
-For more information about parameter configuration please see the [spec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/templatedconfigurations/specification.md) and [quickspec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/templatedconfigurations/quick_specification.dat)
+For more information about parameter configuration please see the [spec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/specifications/specification.md) and [quickspec](https://github.com/wintersys-dev/adt-build-machine-scripts/blob/main/specifications/quick_specification.dat)
 
 **These initial steps are only required the first time you make a deployment. The result of these first steps can be used repeatedly for subsequent demo deployments.** 
 

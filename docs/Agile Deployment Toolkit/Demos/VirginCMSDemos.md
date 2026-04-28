@@ -111,7 +111,7 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-To deploy a Postgres based version change the values in your Stackscript of 
+To deploy a Postgres based virgin version of joomla change the values in your Stackscript of 
 
 1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
 
@@ -160,7 +160,7 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-To deploy a Postgres based version change the values in your Stackscript of 
+To deploy a Postgres based virgin version of drupal change the values in your Stackscript of 
 
 1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
 
@@ -182,7 +182,7 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-To deploy a Postgres based version change the values in your Stackscript of 
+To deploy a Postgres based virgin version of moodle change the values in your Stackscript of 
 
 1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
 

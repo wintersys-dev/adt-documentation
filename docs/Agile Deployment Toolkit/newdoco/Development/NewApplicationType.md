@@ -2,6 +2,8 @@
 
 If you want to integrate a new application type such as (for example) "NextCloud" or "Elgg" then this toolkit is structured to make that as easy as possible. There's a good chance there will be specific quirks with any application that you want to integrate because they are all a little different but I have endeavoured to structure this project as best I can to make it possible for you to accomodate any quirky behaviours you encounter. 
 
+I included an application called "Social Messenger" which shows you how to integrate a new application type as easily as possible. Other application types such as moodle or drupal are a bit more involved to integrate so if you are interested in integrating an additional application type such as "NextCloud" or "Elgg" or another CMS type then I suggest starting by looking at what I have done for the Social Messenger application type integration. I am well versed in my own toolkit and it took me  an afternoon to integrate the "Social Messenger" if you are starting fresh it might take a while longer particularly if its a complex application. 
+
 The structure of how an application is to be integrated works like this
 
 -----------------------------------

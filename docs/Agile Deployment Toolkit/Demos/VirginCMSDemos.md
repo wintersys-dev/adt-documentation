@@ -111,6 +111,16 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+To deploy a Postgres based version change the values in your Stackscript of 
+
+1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
+
+  >     virginjoomlapostgres-webroot-sourcecode-baseline
+
+2. "BASELINE DB REPOSITORY"
+
+  >     virginjoomlapostgres-db-baseline
+
 -----------------
 
 ### Demo 7 (StackScript overrides for a virgin installation of the Wordpress CMS from a baselined repository)  
@@ -150,6 +160,16 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+To deploy a Postgres based version change the values in your Stackscript of 
+
+1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
+
+  >     virgindrupalpostgres-webroot-sourcecode-baseline
+
+2. "BASELINE DB REPOSITORY"
+
+  >     virgindrupalpostgres-db-baseline
+
 --------------------------------------
 
 ### Demo 9 (StackScript overrides for a virgin installation of the Moodle CMS from a baselined repository) 
@@ -161,3 +181,13 @@ Wait for the application install to have been completed and available at:
 >      https://<dns-url>
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
+To deploy a Postgres based version change the values in your Stackscript of 
+
+1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
+
+  >     virginmoodlepostgres-webroot-sourcecode-baseline
+
+2. "BASELINE DB REPOSITORY"
+
+  >     virginmoodlepostgres-db-baseline

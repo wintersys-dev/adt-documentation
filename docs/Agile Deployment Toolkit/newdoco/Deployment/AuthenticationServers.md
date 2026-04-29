@@ -22,11 +22,11 @@ Anyway to use the firewall technique, my firewall.dat file has configuration 8 u
 
 Your stackscript should look something like this to deploy a setup that controls access using the firewall on the reverse proxy machines.
 
-![](images/basic-auth0.png "Basic Auth Authentication Screen") 
+![](images/firewall-0.png "Firewall Authentication Screen") 
 
 Once your machines are provisioned it should look similar to the following:
 
-
+![](images/firewall-1.png "Firewall Authentication Screen") 
 
 When your machines are fully provisioned if you go to your main website it will timeout so you need to gain access to your website through the authentication server. In my case this is auth.nuocial.uk (remember the authentication server will need its own domain which is different from the domain to your main website. This is so that the DNS can be controlled independently (because in my case I want to use cloudflare for by authentication server and linode DNS for my main website). If your website was called nuocial.uk you  could call your authentication server nuocialauth.uk thereby enabling you to control your nameservers independently and use different DNS providers if you want to.
 

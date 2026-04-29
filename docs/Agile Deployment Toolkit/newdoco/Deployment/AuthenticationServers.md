@@ -12,12 +12,14 @@ Access to servers can be controlled using the basic authentication technique. Yo
 
 To configure for a basic auth method of authentication you need to provision authentication server(s) and set yourself up with basic auth as your authentication method. Under Linode your stackscript settings should look something like:
 
-![](images/basic-auth2.png "Basic Auth Stackscript") 
+
 
 Once the servers have deployed your server dashboard should look something like:
 
 
 If you try to access your main website you will be presented with the basic auth dialogue where you need to provide your email address and password to satisfy the basic auth credentials requirement. If you haven't got a basic auth password you need to generate one and you can do that by going to your authentication server (in this case, auth.nuocial.uk)
+
+![](images/basic-auth2.png "Basic Auth Authentication Screen") 
 
 You then need to enter your email address (which has to be a nuocial.uk issued email address) and leave the second field as "none". When you click submit you will receive an email with a password. Go to your email account (check spam if need be) and obtain the password for basic auth that the system has generated for you. Go back to your main website and when the basic auth popup displays, enter your email address in my case (webmaster@nuocial.uk) and also enter the password that you received to your email address. 
 

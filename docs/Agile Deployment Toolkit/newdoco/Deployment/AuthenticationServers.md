@@ -6,7 +6,31 @@ Authentication servers can be deployed when you want some additional level of pr
 
 #### Access Controlled by Firewall
 
+The first thing you need to do if you want to govern access to your webservers using the firewall is to switch off all public accessibility to your reverse proxies and webservers in 
+
+${BUILD_HOME}/configurations/firewall.dat
+
+I use configuration 8 in the default firewall.dat which is set as follows to make use of the firewall based authentication method. Remember with all authentication server methods you  need to be deploying reverse proxy machines the toolkit is not configured to restrict access to the webservers themselves the toolkit is designed to restict access to the reverse proxies and to require authentication to the reverse proxies and by  doing that control access to the webservers which are behind them.
+
+Anyway to use the firewall technique, my firewall.dat file has configuration 8 uncommented which looks like this:
+
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
+Your stackscript should look something like this to deploy a setup that controls access using the firewall on the reverse proxy machines.
+
 ![](images/basic-auth0.png "Basic Auth Authentication Screen") 
+
+Once your machines are provisioned it should look similar to the following:
+
+
+
+When your machines are fully provisioned if you go to your main website it will timeout so you need to gain access to your website through the authentication server. In my case this is auth.nuocial.uk (remember the authentication server will need its own domain which is different from the domain to your main website. This is so that the DNS can be controlled independently (because in my case I want to use cloudflare for by authentication server and linode DNS for my main website). If your website was called nuocial.uk you  could call your authentication server nuocialauth.uk thereby enabling you to control your nameservers independently and use different DNS providers if you want to.
+
+So, now I go to my authentication server auth.nuocial.uk (my  main website is www8.the-galley.uk) which is confused naming perhaps but I didn't want to splash out for a specific auth domain. 
 
 ------------------------------------
 

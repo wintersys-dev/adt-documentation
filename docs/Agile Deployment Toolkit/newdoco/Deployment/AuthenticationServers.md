@@ -26,11 +26,25 @@ Your stackscript should look something like this to deploy a setup that controls
 
 Once your machines are provisioned it should look similar to the following:
 
-![](images/firewall-1.png "Firewall Authentication Screen") 
+![](images/firewall-1.png "Firewall Authentication Screen 1") 
 
 When your machines are fully provisioned if you go to your main website it will timeout so you need to gain access to your website through the authentication server. In my case this is auth.nuocial.uk (remember the authentication server will need its own domain which is different from the domain to your main website. This is so that the DNS can be controlled independently (because in my case I want to use cloudflare for by authentication server and linode DNS for my main website). If your website was called nuocial.uk you  could call your authentication server nuocialauth.uk thereby enabling you to control your nameservers independently and use different DNS providers if you want to.
 
 So, now I go to my authentication server auth.nuocial.uk (my  main website is www8.the-galley.uk) which is confused naming perhaps but I didn't want to splash out for a specific auth domain. 
+
+The authentication server will present you with a very basic screen (if anyone wants to improve it, right on)
+
+![](images/firewall-2.png "Firewall Authentication Screen 2") 
+
+I fill in my email address which has to be a nuocial.uk email address all other email addresses are rejected
+
+![](images/firewall-3.png "Firewall Authentication Screen 3")
+
+I then get presented with a confirmation screen
+
+![](images/firewall-4.png "Firewall Authentication Screen 4")
+
+I then have to find the email in my inbox (check spam perhaps) and then I click on the link and use "whatsmyip.com" to obtain the IP address of my machine and enter it into the form. Once the IP address is submitted, there is a short delay and then access will be granted to the main website. If its not granted in short order, then, there is something wrong. You may be better off using one of the other techniques rather than this one because every time your IP address changed (if you  are out and about using a mobile network, for example, the IP address of your phone often changes based on location as your phone connects to different mobile masts). This firewall technique is here because it might suit you if you have a fixed IP address and it might be useful if you are doing development work and so on or if you have  a LAN with a lot of "workers" on the lan it might (I haven't tested this) be possible to grant access to the whole lan (in other words, everyone on your lan can access the website) and nobody else. This might be useful if you wanted to restrict access to be from work only which depending on your security requirements might sometimes be necessary. 
 
 ------------------------------------
 

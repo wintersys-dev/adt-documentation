@@ -8,7 +8,7 @@ Authentication servers can be deployed when you want some additional level of pr
 
 The first thing you need to do if you want to govern access to your webservers using the firewall is to switch off all public accessibility to your reverse proxies and webservers in 
 
-${BUILD_HOME}/configurations/firewall.dat
+>     ${BUILD_HOME}/configurations/firewall.dat
 
 I use configuration 8 in the default firewall.dat which is set as follows to make use of the firewall based authentication method. Remember with all authentication server methods you  need to be deploying reverse proxy machines the toolkit is not configured to restrict access to the webservers themselves the toolkit is designed to restict access to the reverse proxies and to require authentication to the reverse proxies and by  doing that control access to the webservers which are behind them.
 

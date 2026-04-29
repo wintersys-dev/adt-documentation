@@ -4,7 +4,7 @@ Authentication servers can be deployed when you want some additional level of pr
 
 Access Controlled by Firewall
 
-
+![](images/basic-auth0.png "Basic Auth Authentication Screen") 
 
 Access Controlled by Basic Auth
 
@@ -12,7 +12,7 @@ Access to servers can be controlled using the basic authentication technique. Yo
 
 To configure for a basic auth method of authentication you need to provision authentication server(s) and set yourself up with basic auth as your authentication method. Under Linode your stackscript settings should look something like:
 
-![](images/basic-auth0.png "Basic Auth Authentication Screen") 
+
 
 Once the servers have deployed your server dashboard should look something like:
 

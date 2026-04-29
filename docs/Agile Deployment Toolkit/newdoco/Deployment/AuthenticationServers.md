@@ -1,12 +1,12 @@
-#### AUTHENTICATION SERVERS
+### AUTHENTICATION SERVERS
 
 Authentication servers can be deployed when you want some additional level of protection for your reverse proxy servers. Authentication servers only work when you are using reverse proxies to route requests to your main webservers. In other words, its the IP adresses of your reverse proxies that are public facing and your webservers are only accessible from your VPC.
 
-Access Controlled by Firewall
+#### Access Controlled by Firewall
 
 ![](images/basic-auth0.png "Basic Auth Authentication Screen") 
 
-Access Controlled by Basic Auth
+#### Access Controlled by Basic Auth
 
 Access to servers can be controlled using the basic authentication technique. You can understand basic auth [here](https://medium.com/@loydngei/understanding-basic-authentication-and-session-authentication-ff17ec692d27).
 

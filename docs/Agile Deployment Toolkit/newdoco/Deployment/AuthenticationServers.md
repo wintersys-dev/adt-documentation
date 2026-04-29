@@ -12,7 +12,7 @@ Access to servers can be controlled using the basic authentication technique. Yo
 
 To configure for a basic auth method of authentication you need to provision authentication server(s) and set yourself up with basic auth as your authentication method. Under Linode your stackscript settings should look something like:
 
-![](images/basic-auth1.png "Basic Auth Stackscript") 
+![](images/basic-auth2.png "Basic Auth Stackscript") 
 
 Once the servers have deployed your server dashboard should look something like:
 

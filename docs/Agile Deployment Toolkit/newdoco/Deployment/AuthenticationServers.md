@@ -2,6 +2,8 @@
 
 Authentication servers can be deployed when you want some additional level of protection for your reverse proxy servers. Authentication servers only work when you are using reverse proxies to route requests to your main webservers. In other words, its the IP adresses of your reverse proxies that are public facing and your webservers are only accessible from your VPC.
 
+NOTE: you will want a separate domain for your authentication servers. So, if my "main" webservers are at a URL of "www.nuocial.uk" then I most likely want a completely separate domain "www.nuocial-auth.uk" (for example) as opposed to "auth.nuocial.uk" so that the DNS system can be completely separate from the main webservers which means that I can use, for example Cloudflare, to afford protection to my authentication servers and I can have my main server DNS systems catered for by another DNS service which have my own protection mechanisms built in. 
+
 -----------------------------------
 
 #### Access Controlled by Firewall

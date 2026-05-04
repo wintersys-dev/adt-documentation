@@ -54,6 +54,14 @@ I then have to find the email in my inbox (check spam perhaps) and then I click 
 
 Access to servers can be controlled using the basic authentication technique. You can understand basic auth [here](https://medium.com/@loydngei/understanding-basic-authentication-and-session-authentication-ff17ec692d27).
 
+The basic auth method if authentication controls access to the server fleet through the reverse proxy machines. The firewall settings need to look as follows:
+
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
 To configure for a basic auth method of authentication you need to provision authentication server(s) and set yourself up with basic auth as your authentication method. Under Linode your stackscript settings should look something like:
 
 ![](images/basic-auth5.png "Basic Auth Authentication Screen") 

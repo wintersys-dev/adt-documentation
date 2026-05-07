@@ -2,7 +2,7 @@ The autoscaling system is configured by writing a given number of webservers to 
 
 To set how many webservers you want to deploy you have to use the script:
 
->     ${BUILD_HOME}/helpers/AdjustScaling.sh
+>     ${BUILD_HOME}/helpers/services/AdjustScaling.sh
 
 1. If you follow the script and set the value to scale to to be 10, then, if there is one autoscaler machine running, then
 

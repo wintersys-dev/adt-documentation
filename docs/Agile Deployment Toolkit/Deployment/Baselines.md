@@ -6,12 +6,12 @@ A baseline will consist of a copy of your webroot in a git repository and a dump
 
 To create a baseline you can do it from your build machine by running
 
->     ${BUILD_HOME}/helpers/PeformWebsiteBaseline.sh  
+>     ${BUILD_HOME}/helpers/baseline/PeformWebsiteBaseline.sh  
 
 
 and
 
->     ${BUILD_HOME}/helpers/PerformDatabaseBaseline.sh  
+>     ${BUILD_HOME}/helpers/baseline/PerformDatabaseBaseline.sh  
 
 
 The scripts should be straight forward to follow as they run. Rudimentary checking is done that your baseline is created correctly but you should always go take a look to insure that the files you expect to be there once the scripts are run are written to the repository. 

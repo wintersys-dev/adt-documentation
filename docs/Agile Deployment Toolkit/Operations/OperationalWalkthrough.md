@@ -6,15 +6,15 @@ To use this toolkit productively its necessary to understand the intended workfl
 2. The customisation of the the virgin application (installing modules/components and plugins) that you have deployed in 1 until it meets your business need
 3. Making a baseline of your completed application to a (private) repository by running on the build machine the
 
->     for the website baseline: ${BUILD_HOME}/helpers/PerformWebsiteBaseline.sh
+>     for the website baseline: ${BUILD_HOME}/helpers/baseline/PerformWebsiteBaseline.sh
 
->     for the website baseline: ${BUILD_HOME}/helpers/PerformDatabaseBaseline.sh
+>     for the website baseline: ${BUILD_HOME}/helpers/baseline/PerformDatabaseBaseline.sh
 
  4. Once you have a baselined application (once you make very sure that the database/webroot) do not contain any sensitive information you can either share that baseline with 3rd parties who have a similar business need or you can use it yourself. It is essential that you are very sure that your baselined application repositories do not contain any sensitive information before you make them public of you share them. If you aren't sure about this I would advise you not to share them.
 
 5. If your intention is to use your new application in a production scenario for yourself then you will need to generate temporal backups of your application to preferably to both git repositories and your datastore as well. The way you generate your temporal backups is to run the following scripts on your build machine:
 
->     for the website temporal backup:  ${BUILD_HOME}/helpers/PerformWebsiteBackup.sh
->     for the database temporal backup: ${BUILD_HOME}/helpers/PerformDatabaseBackup.sh
+>     for the website temporal backup:  ${BUILD_HOME}/helpers/backup/PerformWebsiteBackup.sh
+>     for the database temporal backup: ${BUILD_HOME}/helpers/backup/PerformDatabaseBackup.sh
 
 6. You can then take your development servers offline and deploy in production mode by customising a template 3 to your needs complete with autoscaler provisioning and so on.

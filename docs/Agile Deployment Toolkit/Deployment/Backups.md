@@ -20,9 +20,9 @@ What this means is that backups of the webroot and your database will be automat
 
 You can make a manual backup on from the build machine by runining the backup scripts from the build machine: 
 
->     ${BUILD_HOME}/helpers/PerformWebsiteBackup.sh 
+>     ${BUILD_HOME}/helpers/backup/PerformWebsiteBackup.sh 
 
->     ${BUILD_HOME}/helpers/PerformDatabaseBackup.sh  
+>     ${BUILD_HOME}/helpers/backup/PerformDatabaseBackup.sh  
  
 
 ---------------------------------------------------------------------------------------------------------

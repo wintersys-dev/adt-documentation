@@ -61,11 +61,11 @@ During a **hardcore build**, you need to
 
 5. You now need to generate an override template that you will be using in the hardcore build method
 
->     /bin/sh ./helpers/GenerateOverrideTemplate.sh and answer the questions as it asks them  
+>     /bin/sh ./helpers/templates/GenerateOverrideTemplate.sh and answer the questions as it asks them  
 
 6. You now need to generate a user data script which you can do:
 
->     /bin/sh ./helpers/GenerateHardcoreUserDataScript.sh and answer the questions as it asks them  
+>     /bin/sh ./helpers/templates/GenerateHardcoreUserDataScript.sh and answer the questions as it asks them  
 
 7. Then you need to use your user data script that you generated in step 6 in the as the cloud-init script of a VPS server with your chosen VPS provider
 

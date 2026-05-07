@@ -47,7 +47,7 @@ The configration bucket as a whole is cleaned out for each new build and so has 
 
 In most cases you aren't going to want to touch anything in the S3 configuration bucket directly, an exception to this is the scaling mechanism. You will find a script
 
->     ${BUILD_HOME}/helpers/AdjustScaling.sh
+>     ${BUILD_HOME}/helpers/services/AdjustScaling.sh
 
 on the build client machine which you can run to adjust the number of webservers being provisioned.
 

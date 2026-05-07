@@ -1,7 +1,7 @@
 You can use the scripts against the template of your choice:
 
->     ${BUILD_HOME}/helpers/GenerateOverrideTemplate.sh
->     ${BUILD_HOME}/helpers/GenerateHardcoreUserDataScript.sh
+>     ${BUILD_HOME}/helpers/templates/GenerateOverrideTemplate.sh
+>     ${BUILD_HOME}/helpers/templates/GenerateHardcoreUserDataScript.sh
 
 to generate hardcore userdata scripts which you can simply paste into the cloud-init area of a newly provisioned machine in order to make a deployment
 correspoding to how your userdata script is configured. 

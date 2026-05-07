@@ -4,7 +4,7 @@ For Linode it's possible to use "StackScripts" to make your deployment. What you
 
 2. On the same machine that you performed (and tested) the expedited build run the script:  
 
->     ${BUILD_HOME}/helpers/GenerateOverrideScript.sh  
+>     ${BUILD_HOME}/helpers/templates/GenerateOverrideTemplate.sh
     
 You should select the provider and template number (1, 2 or 3) that you wish to generate from  
     
@@ -14,7 +14,7 @@ Once the script has completed successsfully it will be available in
     
 3. To generate the Stackscript, run
     
->     ${BUILD_HOME}/helpers/GenerateHardcoreUserDataScript.sh stack  
+>     ${BUILD_HOME}/helpers/templates/GenerateHardcoreUserDataScript.sh stack  
     
 This will write the User Data / Stack Script to   
     

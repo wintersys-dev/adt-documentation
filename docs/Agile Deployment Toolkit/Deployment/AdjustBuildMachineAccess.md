@@ -17,9 +17,9 @@ The interfaces that the firewall "adt-build-machine" applies to
 
 You will need to already have access to your build machine to be able to use this method in order to add secondary allowed ip addresses. You might want to do this if you already have access to the build machine and you want to grant access to your trusted colleague's ip address as well. 
 
-You can use the helperscript:  
+You can use the this script:  
 
->     ${BUILD_HOME}/helpers/AdjustBuildMachineFirewall.sh
+>     ${BUILD_HOME}/services/security/firewall/AdjustBuildMachineFirewall.sh
 
 to adjust access to your build machine or you can use the manual process described below, if you need to.
 

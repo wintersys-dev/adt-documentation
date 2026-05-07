@@ -106,7 +106,7 @@ To generate a new keypair you can follow: [keygen](https://www.ssh.com/academy/s
      
    18. On the autoscaler(s) machines are scaled according to scaling requirements which can be set by running:
      
->     ${BUILD_HOME}/helpers/AdjustScaling.sh  
+>     ${BUILD_HOME}/helpers/services/AdjustScaling.sh  
 
    When a machine is built in response to a scaling requirement it can be built as a regular build, a build from snasphot build, or a build from backup build  
 

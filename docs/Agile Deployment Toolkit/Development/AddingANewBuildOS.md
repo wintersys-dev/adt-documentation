@@ -20,7 +20,7 @@ I am not sure how possible this is but if you wanted to have a go at deploying t
 >     adt-autoscaler-scripts/utilities/software/UpdateSoftware.sh
 
 >     adt-build-machine-scripts/ExpeditedAgileDeploymentToolkit.sh
->     adt-build-machine-scripts/helpers/RunServiceCommand.sh
+>     adt-build-machine-scripts/helpers/service/RunServiceCommand.sh
 >     adt-build-machine-scripts/initialisation/InitialiseCompatibilityChecks.sh
 >     adt-build-machine-scripts/initialisation/InitialiseCompatibilityChecks.sh
 >     adt-build-machine-scripts/installation/*

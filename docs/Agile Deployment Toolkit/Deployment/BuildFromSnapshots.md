@@ -11,7 +11,7 @@ If you deploy your server fleet as you normally would so that you have an autosc
 1. Deploy your server fleet
 2. Once your server fleet is deployed and only, on you build machine run the script for each machine type
 
->     ${BUILD_HOME}/helpers/ObtainWholeMachineSnapshot.sh
+>     ${BUILD_HOME}/helpers/snapshot/ObtainWholeMachineSnapshot.sh
 
 
 and this will generate snapshots of your machines that you provisioned in step 1. The unique identifiers of your snasphots will be stored in 

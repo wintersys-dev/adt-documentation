@@ -1,4 +1,4 @@
-#### APPLICATION ASSETS STORAGE
+### APPLICATION ASSETS STORAGE
 
 When it comes to "application assets" there are various options that are provided for.
 

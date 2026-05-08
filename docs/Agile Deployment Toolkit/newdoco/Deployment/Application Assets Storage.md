@@ -2,14 +2,14 @@
 
 
 NEED TO ADD DESCRIPTION OF ELASTIC FILESYSTEM AND HOW IT IS ONLY AVAILABLE IN LOCAL REGIONS AND HOW IT MIGHT BE POSSIBLE TO EXTEND THE TOOLKIT TO NFS
-MOUNT OVER THE INTERNET AN ELASIIC FILESYSTEM TO ALL OF YOUR SERVERS FROM A 3rd PARTY PROVIDER SUCH AS AWS. OBVIOUSLY A PERFORMANCE PENALTY FOR BEING OVER THE INTERNET BUT YOU MIGHT PREFER IT TO HAVING S3 BACKED SOLUTIONS AS A PSEUDO FILESYSTEM AS OFFERED IN 3
+MOUNT OVER THE INTERNET AN ELASIIC FILESYSTEM TO ALL OF YOUR SERVERS FROM A 3rd PARTY PROVIDER SUCH AS AWS. OBVIOUSLY A PERFORMANCE PENALTY FOR BEING OVER THE INTERNET BUT YOU MIGHT PREFER IT TO HAVING S3 BACKED SOLUTIONS AS A PSEUDO FILESYSTEM AS OFFERED IN 3. If you are in a single region (and your provider offers EFS solution then you can mount your whole webroot as the elastic filesystem and you don't need to worry about asset mount points at all). 
 
 
 
 
 ### APPLICATION ASSETS STORAGE
 
-When it comes to "application assets" there are various options that are provided for.
+When it comes to "application assets" there are various options that are provided for. You will have to decide which solution is the best fit for you and your requirements because based on what you are doing it could be possible that any of these solutions will be your solution of choice. 
 
 1. Your application doesn't have or expect to have many assets, for example if its a personal blog you might not ever create more than a couple of GB of asset data so you can simply use the webserver's native filesystem to store your assets without any hassle at all. 
 

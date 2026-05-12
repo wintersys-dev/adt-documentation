@@ -1,7 +1,7 @@
 
 ### APPLICATION ASSETS STORAGE
 
-#### Elatic file system support:
+#### ELASTIC FILE SYSTEM SUPPORT
 
 I didn't put in support for mounted elastic filesystems because 
 

@@ -1,4 +1,7 @@
 
+### APPLICATION ASSETS STORAGE
+
+#### Elatic file system support:
 
 I didn't put in support for mounted elastic filesystems because 
 
@@ -8,7 +11,7 @@ c) Not all the cloudhosts I use even have elastic filesystem offerings.
 
 You are welcome to make updates to support elastic filesystems if you want to or if you have a need for them. If all of the providers I used supported elastic filesystems then I would probably add in support for mounted elastic filesystems in addition to the (probably inferior but cheaper way I operate here using S3). 
 
-### APPLICATION ASSETS STORAGE
+
 
 When it comes to "application assets" there are various options that are provided for. You will have to decide which solution is the best fit for you and your requirements because based on what you are doing it could be possible that any of these solutions will be your solution of choice. 
 

@@ -1,11 +1,12 @@
 
 
+I didn't put in support for mounted elastic filesystems because 
 
-NEED TO ADD DESCRIPTION OF ELASTIC FILESYSTEM AND HOW IT IS ONLY AVAILABLE IN LOCAL REGIONS AND HOW IT MIGHT BE POSSIBLE TO EXTEND THE TOOLKIT TO NFS
-MOUNT OVER THE INTERNET AN ELASIIC FILESYSTEM TO ALL OF YOUR SERVERS FROM A 3rd PARTY PROVIDER SUCH AS AWS. OBVIOUSLY A PERFORMANCE PENALTY FOR BEING OVER THE INTERNET BUT YOU MIGHT PREFER IT TO HAVING S3 BACKED SOLUTIONS AS A PSEUDO FILESYSTEM AS OFFERED IN 3. If you are in a single region (and your provider offers EFS solution then you can mount your whole webroot as the elastic filesystem and you don't need to worry about asset mount points at all). 
+a) its pricey to do so compared to S3 
+b) the elastic filesystem support that is available for the cloudhosts I use is tied to only one region 
+3) Not all the cloudhosts I use even have elastic filesystem offerings. 
 
-
-
+You are welcome to make updates to support elastic filesystems if you want to or if you have a need for them. If all of the providers I used supported elastic filesystems then I would probably add in support for mounted elastic filesystems in addition to the (probably inferior but cheaper way I operate here using S3). 
 
 ### APPLICATION ASSETS STORAGE
 

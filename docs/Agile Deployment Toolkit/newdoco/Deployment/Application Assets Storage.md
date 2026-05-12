@@ -2,9 +2,9 @@
 
 I didn't put in support for mounted elastic filesystems because 
 
-a) its pricey to do so compared to S3 
-b) the elastic filesystem support that is available for the cloudhosts I use is tied to only one region 
-3) Not all the cloudhosts I use even have elastic filesystem offerings. 
+a) Its pricey to do so compared to S3   
+b) The elastic filesystem support that is available for the cloudhosts I use is tied to only one region   
+c) Not all the cloudhosts I use even have elastic filesystem offerings.   
 
 You are welcome to make updates to support elastic filesystems if you want to or if you have a need for them. If all of the providers I used supported elastic filesystems then I would probably add in support for mounted elastic filesystems in addition to the (probably inferior but cheaper way I operate here using S3). 
 

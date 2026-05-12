@@ -80,11 +80,11 @@ So, here's the workflow to go from nothing to a temporal backup based full deplo
 2. Once your custom application is ready make a baseline of the application
 3. Deploy the baselined application with the settings I showed you above in the first part and that will prepare the images directory with the assets that are in the baseline repository
 4. Either allow enough time for the system to make a temporal backup or make a temporal backup manually.
-5. You can then take your baselined application offline (shutdown your servers) and you can make a full scale deployment (the images directory will be absent from your temporal backup and will be expected to be provided from the S3 bucket that the system generated when you deployed the baselined application). And then using the same settings for WEBROOT_ASSET_DIRECTORIES, DATASTOREMOUNTTOOL and PERSIST_ASSETS_TO_DATASTORE that were set above and for the baseline and when you make the deployment from a temporal backup the images directory will be mounted from S3. 
+5. You can then take your baselined application offline (shutdown your servers) and you can make a full scale deployment (the images directory will be absent from your temporal backup and will be expected to be provided from the S3 bucket that the system generated when you deployed the baselined application). And then using the same settings for WEBROOT_ASSET_DIRECTORIES, DATASTOREMOUNTTOOL and PERSIST_ASSETS_TO_DATASTORE that were set above and for the baseline and when you make the deployment from a temporal backup the images directory will be mounted from S3.
 
 So, in summary
 
-Make a baseline of your application
-Deploy your baseline setup to persist its specified assets to the datastore
-Take the baseline application offline once a temporal backup has been generated/created
-Deploy the full temporal deployment of your application expecting the assets to be mounted from the S3 datastore.
+Make a baseline of your application  
+Deploy your baseline setup to persist its specified assets to the datastore  
+Take the baseline application offline once a temporal backup has been generated/created  
+Deploy the full temporal deployment of your application expecting the assets to be mounted from the S3 datastore.  

@@ -14,13 +14,19 @@ When it comes to "application assets" there are various options that are provide
 
 ---------------------------------
 
+#### AN APPLICATION WITH NOT MANY ASSETS 
+
 Your application doesn't have or expect to have many assets, for example if its a personal blog you might not ever create more than a couple of GB of asset data so you can simply use the webserver's native filesystem to store your assets without any hassle at all. 
 
 -------------------------------
 
+#### APPLICATION WITH SUBSTANTIAL ASSETS OFFLOADED TO S3 AT AN APPLICATION LEVEL
+
 Your application is expected to create a substantial amount of asset data such as a social network with users uploading images and videos to your server. Your first choice in this case should be to offload your application assets to an S3 storage system. You can do that using an application level plugin such as [Amazon S3 Offload](https://extensions.joomla.org/extension/amazon-s3-filesystem/) or [Offload to S3](https://en-gb.wordpress.org/plugins/amazon-s3-and-cloudfront/). Using one of these plugins will mean that your application has the full capacity of an S3 bucket. "Amazon S3 buckets have virtually unlimited total storage capacity, allowing users to store an infinite amount of data, ranging from gigabytes to exabytes" providing of course you have got very deep pockets. 
 
 -----------------------------------
+
+#### APPLICATION WITH SUBSTANTIAL ASSETS OFFLOADED TO S3 IMPLICIT TO THIS TOOLKIT
 
 If your application doesn't have the ability to use a plugin to offload assets to s3 buckets then you can begrudgingly mount an S3 bucket using our toolkit directly into the "assets" directory of your application. The options that are available for doing this are "S3fs", "goofys", "rclone" and "geesefs". You might want to spend some time tuning your mount tool of choice if you decide to use one of these so it has optimal caching and so on. You can use these S3 mount tools bidirectionally in order to write assets to s3 via your local looking filesystem or to fetch assets from s3 via your local looking filesystem. This will likely have a heavy footprint. But if you are using cloudflare (for example) you can use the S3 mount tools listed above to upload the assets to S3 and then you might be able to use cloudflare to redirect read requests for assets to s3 rather than reading the assets via the mount system and through the mount tool such as rclone. To see how this might be possible to do please read [Cloudflare redirect assets to S3](https://developers.cloudflare.com/rules/cloud-connector/examples/route-images-to-s3/). Its possible that if you are deploying reverse proxies you can redirect requests for images and so on directly to the S3 bucket that your application is uploading user updates to through the S3 mount tools.
 

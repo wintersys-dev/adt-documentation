@@ -30,7 +30,7 @@ Your application is expected to create a substantial amount of asset data such a
 
 If your application doesn't have the ability to use a plugin to offload assets to s3 buckets then you can begrudgingly mount an S3 bucket using our toolkit directly into the "assets" directory of your application. The options that are available for doing this are "S3fs", "goofys", "rclone" and "geesefs". You might want to spend some time tuning your mount tool of choice if you decide to use one of these so it has optimal caching and so on. You can use these S3 mount tools bidirectionally in order to write assets to s3 via your local looking filesystem or to fetch assets from s3 via your local looking filesystem. This will likely have a heavy footprint. But if you are using cloudflare (for example) you can use the S3 mount tools listed above to upload the assets to S3 and then you might be able to use cloudflare to redirect read requests for assets to s3 rather than reading the assets via the mount system and through the mount tool such as rclone. To see how this might be possible to do please read [Cloudflare redirect assets to S3](https://developers.cloudflare.com/rules/cloud-connector/examples/route-images-to-s3/). Its possible that if you are deploying reverse proxies you can redirect requests for images and so on directly to the S3 bucket that your application is uploading user updates to through the S3 mount tools.
 
-##### WORKFLOW/EXPLANATION FOR HOW TO MOUNT ASSETS FROM S3 USING THIS TOOLKIT
+WORKFLOW/EXPLANATION FOR HOW TO MOUNT ASSETS FROM S3 USING THIS TOOLKIT
 
 Part one of how to use S3 as your asset store
 

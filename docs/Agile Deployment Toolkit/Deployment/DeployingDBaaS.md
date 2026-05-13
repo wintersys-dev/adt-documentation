@@ -1,3 +1,5 @@
+#### DEPLOYING A MANAGED DATABASE
+
 
 The managed database you describe here will spin up automatically through the build process. The way you setup your deployment to make use of a managed database is to go to your template and setup two values. The first value is   
 

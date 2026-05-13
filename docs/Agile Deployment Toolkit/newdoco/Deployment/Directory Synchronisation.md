@@ -15,6 +15,18 @@ So, the logic of the webroot synchronisation process from a high level is as fol
 
 As a high level overview that is what is happening with the heavyweight (recommended) webroot syncing process
 
+To switch on webroot synchronisation you need to set
+
+>     WEBROOT_SYNC="1"
+
+In your template or your StackScript.
+
+When you set WEBROOT_SYNC="1" behind the scenes setting that value will initiate the following process in the crontab of your webserver:
+
+
+
+
+
 #### THE LIGHTWEIGHT FILESYSTEM SYNCING PROCESS
 
 The lightweight technique for synchronising directories ISN'T suitable for all scenarios and that's why it is called "lightweight". The lightweight solution only works for filesystems where there are occassional updates of single files or a handfull of files. It doesn't work if there are mass updates such as might occur if you were performing an application update and so the lightweight method is NOT suitable for webroot synchronisation but it might work well for you for synchronising config directories that only have occassional single config file updates. 

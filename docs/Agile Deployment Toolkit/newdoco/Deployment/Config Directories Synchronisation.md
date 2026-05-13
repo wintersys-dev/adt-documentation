@@ -1,4 +1,4 @@
-To enable the tool based config directory synchronisation process (recommended), set the following
+To enable the tool based config settings synchronisation process (recommended), set the following
 
 >     ${BUILD_HOME}/configuration/software.dat
 
@@ -6,7 +6,7 @@ To enable the tool based config directory synchronisation process (recommended),
 >     #DATASTORECONFIGSTYLE:lightweight
 >     #DATASTORECONFIGSTYLE:heavyweight
 
-To enable the heavyweight config synchronisation process, set the following
+To enable the heavyweight config settings ynchronisation process, set the following
 
 >     ${BUILD_HOME}/configuration/software.dat
 
@@ -15,7 +15,7 @@ To enable the heavyweight config synchronisation process, set the following
 >     DATASTORECONFIGSTYLE:heavyweight
 
 
-To enable the lightweight config directory synchronisation process, set the following
+To enable the lightweight config settings synchronisation process, set the following
 
 >     ${BUILD_HOME}/configuration/software.dat
 

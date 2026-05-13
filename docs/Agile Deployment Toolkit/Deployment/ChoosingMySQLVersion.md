@@ -30,4 +30,4 @@ mysql-server_**9.3.0**-1ubuntu**24.04**_amd64.deb-bundle.tar
 
 on the mysql site. 
 
-So, you need to match the version of MySQL and the version of the OS you are deploying with the MySQL archive I have pointed you towards and if those versions match the archive then the deployment should work OK. 
+So, you need to match the version of MySQL and the version of the OS you are deploying with the MySQL archive I have pointed you towards and if those versions match the archive then the installation should work OK. 

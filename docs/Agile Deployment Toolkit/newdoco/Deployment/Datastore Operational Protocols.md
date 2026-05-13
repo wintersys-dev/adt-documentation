@@ -1,3 +1,46 @@
+#### DATASTORE OPERATIONS
+
+I provide tooling to facilitate the following operational interactions with the datastore system
+
+
+>     ${BUILD_HOME}/services/datastore/operations/DeleteFromDatastore.sh
+
+This will delete a specified object from the datastore and can be applied across multiple regions from one invocation as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/GetFromDatastore.sh
+
+This will obtain a specified object and should only be applied to the local region as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/ListFromDatastore.sh
+
+This will list a specified object and should only be applied to the local region as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/MountDatastore.sh
+
+This will mount a datastore of a given name and can be applied across multiple regions from one invocation as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/MoveDatastore.sh
+
+This will move an object inside a datastore and can be applied across multiple regions from one invocation as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/PutToDatastore.sh
+
+This will put an object from the local filesystem into the datastore and can be applied across multiple regions in from one invocation as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/SyncDatastore.sh
+
+This will sync between datastores of different names 
+
+>     ${BUILD_HOME}/services/datastore/operations/SyncFromDatastore.sh
+
+This will sync the given datastore to the local filesystem and should only be applied to the local region as described below
+
+>     ${BUILD_HOME}/services/datastore/operations/SyncToDatastore.sh
+
+This will sync from the local filesystem to a datastore and can be applied across multiple regions from one invocation as described below
+
+--------------------
+
 #### DATASTORE NOMENCLATURE
 
 The nomenclature of the various datastore buckets that they system uses is as follows:

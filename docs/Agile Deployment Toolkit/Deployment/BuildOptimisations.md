@@ -1,10 +1,9 @@
+#### BUILD OPTIMSATION RECOMMENDATIONS
 
-There are several ways that the time to build your servers can be shortened but they all require a little bit of upfront investment. 
+1. Set up a reusable library of cloud-init or user-data scripts that can be reused with minor modifications for multiple builds
+2. Set up a permanent build machine that can be used for all your builds. This will be faster once set up because the build machine doesn't have to be built and configured for each build cycle like it does with the hardcore build style so that's one less machine in the build cycle
+3. You can set IN_PARALLEL to "1" in your template which means your servers (webservers, database, autoscalers) and so on will be provisioned in parallel rather than sequentially which can hasten your build process substantially.
+4. You can generate snapshots to build your machines from which can be a speed improvement (as well as less resource intensive) because the snasphot already has the software that your machine needs installed on it. Please see [generate snapshots](https://www.wintersys-dev.uk/Agile%20Deployment%20Toolkit/Deployment/BuildFromSnapshots/)
 
-1. If you follow the Quick Demos/Hardcore approach then the build will take longer because a build machine has to be provisioned and configured before the process of building webservers autoscalers and databases can even start. Using the quick build approach a new build machine is provisioned and configured for each build cycle. Using this approach might also take longer because you have to get it right because there's no sanity checking (that's why its hardcore) so if you have got a typo in your deployment settings then the build will likely fail and you will have to restart the whole process including time spent figuring out why it failed. Its a good apprach for quick demos and so on where the settings have been sanity checked.
 
-2. If you provision a build machine for the long term that you intend to run multiple build cycles on then the builds will be quicker because the build machine isn't provisioned and configured for each build, it is provisioned once and reused on subsequent builds.
 
-3. You can set your autoscalers, webservers and database machines to build in parallel by setting "INPARALLEL=1" in your template, this will shorten how long a build take by building your servers in parallel. 
-
-4. You can [generate snapshots](https://www.wintersys-dev.uk/Agile%20Deployment%20Toolkit/Deployment/BuildFromSnapshots/) of your machines and make subsequent deployments using the snapshots instead of building from scratch that should give you a speed boost. 

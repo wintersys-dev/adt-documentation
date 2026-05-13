@@ -16,3 +16,15 @@ So, the logic of the webroot synchronisation process from a high level is as fol
 As a high level overview that is what is happening with the heavyweight (recommended) webroot syncing process
 
 #### THE LIGHTWEIGHT WEBSERVER SYNCING PROCESS
+
+The lightweight technique for synchronising directories ISN'T suitable for all scenarios and that's why it is called "lightweight". The lightweight solution only works for filesystems where there are occassional updates of single files or a handfull of files. It doesn't work if there are mass updates such as might occur if you were performing an application update and so the lightweight method is NOT suitable for webroot synchronisation but it might work well for you for synchronising config directories that only have occassional single config file updates. 
+
+The reason why the lightweight mechanism for directory sync updates doesn't work for bulk updates to the file system is because it uses a tool called "inotifywait" and inotifywait generates events based on interaction with the filesystem. In my testing I found that when many files were updated at once each additional or modified file update creates an event but (in my testing anyway) inotifywait loses or drops events when there is a mass update to the filesystem. 
+
+In terms of the logic of the lightweight directory synchronisation mechanism the processing is as follows:
+
+The inotifywait tool listens for events on the directory that you want to synchronise 
+
+>     /usr/bin/inotifywait -q -m -r -e delete,modify,create ${active_directory} | while read DIRECTORY EVENT FILE 
+
+When an event occurs it is analysed to see if it is a create, modify or a delete event and based on which type of event it is the datastore that is used to synchronise the filesystems is updated to reflect the change that has been initiated. 

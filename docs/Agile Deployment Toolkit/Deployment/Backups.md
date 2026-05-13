@@ -1,10 +1,12 @@
+#### HOW TO GENERATE BESPOKE BACKUPS OF YOUR WEBROOT AND DATABASE
+
 **NOTE:** 
 
 You can also use your cloudhost's backup service to make backups of your machines if you want super safe backups above and beyond what is provided here. Using your provider's backup service will usually incur extra costs but it should give you the ability to recover in the case of an absolute disaster. 
 
 **NOTE1:**  
 
-You can make multi-region backups simply by configuring the value for S3_HOST_BASE to be multi-region resilient by providing multi-region values for it in your template. For example if you set:  
+You can make multi-region backups simply by configuring the value for S3_HOST_BASE to be multi-region resilient (please see Datastore Operational Protocols to see how to make your backups mutli-region). For example you would have to set **S3_HOST_BASE** as well as the S3 related settings to multi-region which will look something like this: 
 
 **S3_HOST_BASE="nl-ams-1.linodeobjects.com:us-southeast-1.linodeobjects.com:in-maa-1.linodeobjects.com"**  
 
@@ -27,7 +29,7 @@ You can make a manual backup on from the build machine by runining the backup sc
 
 ---------------------------------------------------------------------------------------------------------
 
-**HOW TEMPORAL BACKUPS ARE MADE FROM CRON**
+#### HOW TEMPORAL BACKUPS ARE MADE FROM CRON
 
 The backups are created by calling the script
 
@@ -53,16 +55,17 @@ and
 
 on the database machine  
 
-You pass in the build periodicity **"HOURLY", "DAILY", "WEEKLY", "MONTHLY", "BIMONTHLY", "SHUTDOWN" or "MANUAL"** and also the **BUILD_IDENTIFIER** and that will then create a backup in your S3 datastore. The backup will be identifiable by "BUILD_IDENTIFIER" and "periodicity" in the datastore.   
+The build periodicity is passed to the script **"HOURLY", "DAILY", "WEEKLY", "MONTHLY", "BIMONTHLY", "SHUTDOWN" or "MANUAL"** and also the **BUILD_IDENTIFIER** and that will then create a backup in your S3 datastore. The backup will be identifiable by "BUILD_IDENTIFIER" and "periodicity" in the datastore.   
 
 -------------------------------------------------------------------------------------------------------------
 
-**IF THE APPLICATION IS CONFIGURED TO STORE ASSETS IN THE CLOUD AND THEN MOUNTED THEY ARE NOT PART OF THE BACKUPS (PERSIST_ASSETS_TO_DATASTORE=1)**
-	
-Its normal (and required) to set 
+** ASSETS MOUNTED FROM S3**
 
->     PERSIST_ASSETS_TO_DATASTORE to 0
+If your assets are mounted from S3 into your webroot because you have configured
 
-for baselines and virgin builds. This is because the cloud is only used to offload assets for a PRODUCTION class build.  
+>     PERSIST_ASSETS_TO_DATASTORE to 1
 
-So ordinarily if your application users are going to be generating assets you want them to be stored in your datastore and distributed from there (see elsewhere in this doco). Note, if your assets are stored in the cloud i.e. PERSIST_ASSETS_TO_DATASTORE is set to 1, then, it is the only place where those assets are stored, there aren't any backups, so if you were to delete the assets from the bucket they are stored in by mistake, for example, it might hose your application. Therefore it is up to you to set up a backup policy for the assets that are stored in you S3 bucket. Its just a bucket with assets in it at the end of the day, so its not hard to make backups if you want to but some applications can generated GBs and GBs of assets and so can be hard to backup. Bottom line, be very cautious deleting image and media assets that are stored in S3 when PERSIST_ASSETS_TO_DATASTORE is set to 1 because by default they are the only copy you have of those assets. 
+and have set which directories you want to be mounted from S3 then you don't want those assets in your backup. So, the scripts automatically exclude whatever directories have been configured as mounted from the datastore. 
+
+NOTE: Up to the point where you have baselined an application you are developing you certainly don't want to have PERSIST_ASSETS_TO_DATASTORE set to "1" because you will want the assets to be part of your baseline its only once you have a baseline to work from that you will want to start considering setting  PERSIST_ASSETS_TO_DATASTORE to "1"
+

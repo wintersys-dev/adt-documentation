@@ -135,7 +135,6 @@ export APPLICATION_NAME="Demo Application"
 <span style="color:red">export S3_SECRET_KEY="eAlmwh3y7eJovZSN/JDJkS7RZrsbdvjvburfr7whs"  #MANDATORY</span>    
 export S3_HOST_BASE="ams1.vultrobjects.com"  
 export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"  
-export DIRECTORIES_TO_MOUNT="" #This should always be unset for a virgin and baseline deployments  
 export PERSIST_ASSETS_TO_DATASTORE="0" #This should always be set to 0 for a virgin and baseline deployment  
      
 \#####OS Settings#########  
@@ -269,15 +268,12 @@ What I would do if I wanted to build a Wordpress, Moodle or Drupal installation 
 **For Wordpress:**
 
 >     export APPLICATION="wordpress"
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="WORDPRESS" #MANDATORY 
 
 **For Drupal:**
 
 >     export APPLICATION="drupal"
->     export DRUPAL_VERSION="11.0.1" 
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="DRUPAL:11.0.1" #MANDATORY 
+
 
 **For Moodle:**  
 
 >     export APPLICATION="moodle"
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="MOODLE" #MANDATORY 

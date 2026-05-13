@@ -29,8 +29,8 @@ the webserver relevant line as:
 
 >     WEBSERVERCUSTOMPORTS:8080|ipv4|0.0.0.0/0  
 
-When you run the build process your if the firewall native to your provider is configured to be active then this port
-will be open as specified in your native firewall for your webserver machine and if the OS firewall is active (either
+When you run the build process your if the provider firewall native is configured to be active in addition to ufw or iptables
+then this port will be open as specified in your native firewall for your webserver machine and if the OS firewall is active (either
 ufw or iptables) then the OS firewall will be configured to grant access through that port to the ip address you have
 specified.
 
@@ -49,8 +49,11 @@ are:
 
 **STEP 1**
 
-Edit the customfirewall.dat file on the appropriate machine type and if you want to firewall off port 8080 again
-on the current machine, edit the file to look like this:
+Edit the 
+
+>     ${HOME}/runtime/firewall.dat
+
+file on the appropriate machine type and if you want to firewall off port 8080 again on the current machine, edit the file to look like this:
 
 >     AUTHENTICATORCUSTOMPORTS:  
 >     REVERSEPROXYCUSTOMPORTS:  
@@ -59,7 +62,8 @@ on the current machine, edit the file to look like this:
 >     DATABASECUSTOMPORTS:  
 
 What this will then do is revoke the access rights to that IP address to port 8080 by raising the firewall again. This will
-ONLY AFFECT the OS firewall it will not affect the provider native firewall. 
+ONLY AFFECT the OS firewall it will not affect the provider native firewall. If you have port 8080 open on 5 webservers, for example
+you will need to ssh onto each webserver and modify the firewwall rules on each machine separately. 
 
 **STEP 2**
 
@@ -96,7 +100,7 @@ IP addresses then your configuration file would look like:
 >     WEBSERVERCUSTOMPORTS:8080|ipv4|85.14.120.84/32 5142|ipv4|0.0.0.0/0  
 >     DATABASECUSTOMPORTS:5142|ipv4|0.0.0.0/0  
 
-I think that's the basic usecases for custom firewall ports as it is currently implemented. Whatever your requirements are it should be some 
+I think that's the basic use cases for custom firewall ports as it is currently implemented. Whatever your requirements are it should be some 
 combination of these steps. 
 
 

@@ -1,16 +1,22 @@
-Cloudflare has two authentication methods. One is a global API key and the other is "account" or "user" tokens. Account or user tokens are considered more secure because you can limit their scope and function so if your key leaks there's much less that can be done with it. What we are going to do, then is use tokens rather than the global API key for our authentication needs. 
+#### CLOUDFLARE AUTHENTICATION METHODS
 
-In order to generate a token for yourself you can follow [this](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). You need to create a token with **DNS edit** scope.
+Cloudflare has two authentication methods. One is a global API key and the other is "account" or "user" tokens. Account or user tokens are considered more secure because you can limit their scope and function so if your key leaks there's much less that can be done with it to your cloudflare account. What we are going to do, then, is use tokens rather than the global API key for our authentication needs. 
 
-Lets imagine you have generated a token with DNS edit scope and its value is: **EJUj0k4faJxERLyLUwEJ00lxwqw8et6olUi2a-x3**
+##### GENERATING AND CONFIGURING USER TOKEN
 
-You also need your account ID which you can find by by logging in to your cloudflare account and going to you domain name. The address in the browser will then look something like:
+In order to generate a token to manage your Cloudflare DNS for yourself you can follow [this](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). For our use you need to create a token with **DNS edit** scope.
+
+Lets imagine you have now generated a token with "DNS edit scope" and its value is: **EJUj0k4faJxERLyLUwEJ00lxwqw8et6olUi2a-x3**
+
+You also need your account ID which you can find by by logging in to your Cloudflare account and going to you domain name. The address in the browser will then look something like:
 
 >     https://dash.cloudflare.com/8bbdhjf84jfbdu8gfhb4i8fjbndkk92/wintersys.uk
 
 The account ID is: **8bbdhjf84jfbdu8gfhb4i8fjbndkk92**
 
-What you now need to do is in your template provide the account ID and the token you have generated as the DNS_SECURITY_KEY setting in your template. The way you do this is by going to your template and setting
+You can alternatively find your Cloudflare [account ID](https://developers.cloudflare.com/fundamentals/account/find-account-and-zone-ids/) 
+
+What you now need to do is in your template provide the account ID and the token you have generated as the DNS_SECURITY_KEY setting in your template. The way you do this is by going to your template or cloud-innt script and setting
 
 >     DNS_SECURITY_KEY="\<account-id\>:::\<api-token\>"
 

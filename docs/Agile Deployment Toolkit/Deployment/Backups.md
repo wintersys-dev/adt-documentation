@@ -59,13 +59,17 @@ The build periodicity is passed to the script **"HOURLY", "DAILY", "WEEKLY", "MO
 
 -------------------------------------------------------------------------------------------------------------
 
-** ASSETS MOUNTED FROM S3**
+#### ASSETS MOUNTED FROM S3
 
 If your assets are mounted from S3 into your webroot because you have configured
 
 >     PERSIST_ASSETS_TO_DATASTORE to 1
 
-and have set which directories you want to be mounted from S3 then you don't want those assets in your backup. So, the scripts automatically exclude whatever directories have been configured as mounted from the datastore. 
+and have set which directories (WEBROOT_ASSET_DIRECTORIES) you want to be mounted from S3 in
 
-NOTE: Up to the point where you have baselined an application you are developing you certainly don't want to have PERSIST_ASSETS_TO_DATASTORE set to "1" because you will want the assets to be part of your baseline its only once you have a baseline to work from that you will want to start considering setting  PERSIST_ASSETS_TO_DATASTORE to "1"
+>     ${BUILD_HOME}/application/${APPLICATION}/descriptor.dat
+
+then you don't want those assets in your backup. So, the scripts automatically exclude whatever directories have been configured as mounted from the datastore. 
+
+NOTE: Up to the point where you have baselined an application in your application workflow you are developing you certainly don't want to have PERSIST_ASSETS_TO_DATASTORE set to "1" because you will want the assets to be part of your baseline its only once you have a baseline to work from that you will want to start considering setting  PERSIST_ASSETS_TO_DATASTORE to "1" which means that the backup and baseline process will exclude any S3 mounted assets from the baseline or backup that is generated
 

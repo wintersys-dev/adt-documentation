@@ -1,7 +1,6 @@
-BUILDING FROM SNAPSHOTS
+#### BUILDING FROM SNAPSHOTS
 
 **NOTE 1: Building servers from snapshots is only possible using the Expedited build method the tookit isn't setup for snapshot builds in hardcore mode**  
-
 **NOTE 2: You must always make sure that the configuration of the template you are using to deploy from snapshots is consistent with the snapshots you are deploying. For example if your snapshot is built for using apache and your template is configured to use NGINX, you will obviously have issues**  
 
 There can be some performance (meaning quicker deployments of, in particular webservers spawned during autoscaling events) if snapshots are pre-prepared and our server instances provisioned using snapshots so I thought I would go over how to use snapshots.

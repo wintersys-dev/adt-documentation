@@ -23,9 +23,12 @@ In your template or your StackScript.
 
 When you set WEBROOT_SYNC="1" behind the scenes setting that value will initiate the following process in the crontab of your webserver:
 
+>     */1 * * * * export HOME="${HOME}" && /bin/sleep 2 && ${HOME}/services/datastore/filesystems-sync/heavyweight/FileSystemsSyncingController.sh '2' '/var/www/html' 'webroot-sync
+>     */1 * * * * export HOME="${HOME}" && /bin/sleep 15 && ${HOME}/services/datastore/filesystems-sync/heavyweight/FileSystemsSyncingController.sh '15' '/var/www/html' 'webroot-sync'
+>     */1 * * * * export HOME="${HOME}" && /bin/sleep 30 && ${HOME}/services/datastore/filesystems-sync/heavyweight/FileSystemsSyncingController.sh '30' '/var/www/html' 'webroot-sync'
+>     */1 * * * * export HOME="${HOME}" && /bin/sleep 45 && ${HOME}/services/datastore/filesystems-sync/heavyweight/FileSystemsSyncingController.sh '45' '/var/www/html' 'webroot-sync'
 
-
-
+Which means that evey 15 or so seconds the webroot syncing process is initated between your webservers
 
 #### THE LIGHTWEIGHT FILESYSTEM SYNCING PROCESS
 

@@ -1,4 +1,6 @@
-This is a brief look at the directory structure of how you can arrange intialisation and configuration files for your databases. Here we only look at "selfmanaged" but it works the same for "dbaas" deployments as well where you need custom configuration or intitialisation for your use case. 
+DATABASE INITIALISATION AND CONFIGURATION SCRIPTS
+
+The databases need to be initialised and configured before they are used. They need to be initialised with usernames and privileges as well as have their configuration values set according to the use case. These initialisation scripts and configuration scripts are held in the files located under the relevent class of database. And so here I simply list the locations of the different files which are config or initialisation files. You will notice that there is a "live" direcory and an "inactive" directory. This means that you can keep different configurations "inactive" and copy them into and out of the "live" directory depending on which configuration or initilisation type you want to have "live" or "active". As soon as you copy a configuration or intialisation file into the "live" directory (as long as it has the correct name as shown here) that file will become the "active" or "live" initialisation or configuration file for the next deployment of the corresponding database.
 
 
 >     ${HOME}/services/database/selfmanaged/postgres/live:  

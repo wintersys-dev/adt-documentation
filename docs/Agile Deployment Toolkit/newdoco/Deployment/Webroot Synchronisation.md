@@ -6,7 +6,7 @@ I will give you a brief overview of how the webroot synchronisation method that 
 
 NOTE: You will have to synchronise your webroots if you have multiple webservers as it is the webroot synchronisation process that pushes out updates that you make as an administator to, for example, configuration.php for joomla or wp-config.php for wordpress to all the servers in your server fleet. 
 
-So, the logic of the webroot synvhronisation process from a high level is as follows:
+So, the logic of the webroot synchronisation process from a high level is as follows:
 
 1. Each webserver has a set of incoming and outgoing file system changes and these changes are categorised as additions and deletions
 2. Each webserver writes its current additions and deletions to the datastore in a machine identifiable way in order for the other webservers to be able to apply the updates to themselves

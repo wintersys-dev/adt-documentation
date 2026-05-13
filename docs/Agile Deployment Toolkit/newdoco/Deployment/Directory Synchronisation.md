@@ -1,4 +1,4 @@
-#### THE HEAVYWEIGHT WEBSERVER SYNCING PROCESS
+#### THE HEAVYWEIGHT FILESYSTEM SYNCING PROCESS
 
 A common issue with multi webserver configurations is keeping the webroot directories in sync. Often this is achieved by mounting a single filesystem over NFS or some other solution meaning that there is a single point of truth but unless you have a serious setup doing it that way is a single point of failure. It can be done using elastic file systems in the same way but in my case not all the cloudhost providers I support have an option for elastic filesystem usage so that isn't a runner for all my use cases. So, (let me know if there's some other easy win way that I am overlooking) but, I wrote a bespoke script to perform the synchronisation between the webroots of the n webservers that are currently deployed in my setup. 
 
@@ -15,7 +15,7 @@ So, the logic of the webroot synchronisation process from a high level is as fol
 
 As a high level overview that is what is happening with the heavyweight (recommended) webroot syncing process
 
-#### THE LIGHTWEIGHT WEBSERVER SYNCING PROCESS
+#### THE LIGHTWEIGHT FILESYSTEM SYNCING PROCESS
 
 The lightweight technique for synchronising directories ISN'T suitable for all scenarios and that's why it is called "lightweight". The lightweight solution only works for filesystems where there are occassional updates of single files or a handfull of files. It doesn't work if there are mass updates such as might occur if you were performing an application update and so the lightweight method is NOT suitable for webroot synchronisation but it might work well for you for synchronising config directories that only have occassional single config file updates. 
 

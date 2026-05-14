@@ -1,7 +1,16 @@
+#### LIST OF NAMERSERVER SETTINGS
+
 You will need to obtain your domain name registrar such as [fasthosts](https://www.fasthosts.co.uk)
 
 That done, you will need to point the nameservers to the service you are using for your DNS resolving.
 
+--------------------------------
+
+**CLOUDFLARE**
+
+As far as I know, nameservers are allocated on an account by account basis and you will have to refer to your account as to which nameservers you have been allocated. Cloudflare operates hundreds of nameservers which you can find a list of [here](https://github.com/indianajson/cloudflare-nameservers).
+
+To understand more about Cloudflare nameservers [this](https://developers.cloudflare.com/dns/nameservers) might interest you. 
 
 ---------------  
 

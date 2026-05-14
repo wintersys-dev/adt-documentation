@@ -1,16 +1,18 @@
-It will likely go easier on you if you develop the applications you wish to deploy using the ADT using the ADT but if you do have an application that you have developed elsewhere this process might make it possible for you to perform a successful migration. 
+#### MIGRATION STRATEGY FROM A DIFFERENT HOSTING SYSTEM TO THE ADT
 
-#### WEBROOT
+It will likely go easier on you if you develop the applications you wish to deploy using the ADT using the ADT but if you do have an application that you have developed using an alternative hosting solution this (untested) process might make it possible for you to perform a successful migration. 
+
+##### WEBROOT
 
 - Download a copy of your website's webroot sourcecode from your current provider to your Linux laptop
 - Extract it (if it needs extracting, if not copy it) into a working directory (${working_dir} for example /home/bob/scratch).
-- Depending on what application you are deploying files which might be outside the webroot (for example moodledata for moodle) or private (for drupal) you need to make sure that if there are such directories they are present at the top level of your webroot. You can look at what is expected during installation of drupal by reviewing  [this](https://github.com/wintersys-dev/adt-webserver-scripts/blob/main/application/customise/drupal/CustomiseApplication.sh)
+- Depending on what application you are deploying files which the ADT might require to be outside the webroot (for example moodledata for moodle) or private (for drupal) will need to be at a level above your webroot
 
 IF YOU WANT TO GIVE YOUR MIGRATED WEBSITE A DIFFERENT DOMAIN NAME TO WHAT IT PREVIOUSLY HAD, FOLLOW THIS NEXT STEP   
 (you can search and replace in a gui tool instead if you want across the entire webroot instead if you have a recursive find and replace function)  
 IF YOU ARE DEPLOYING TO THE SAME DOMAIN NAME AS YOU PREVIOUSLY WERE, YOU CAN SKIP THIS NEXT STEP  
 
-- Copy and paste this shellscript to your Linux laptop and call it RemoveApplicationBranding.sh
+- Copy and paste this shellscript to your Linux laptop where your webroot sourcecode is and call it RemoveApplicationBranding.sh
 
 >     #!/bin/sh
 >     
@@ -21,7 +23,7 @@ IF YOU ARE DEPLOYING TO THE SAME DOMAIN NAME AS YOU PREVIOUSLY WERE, YOU CAN SKI
 >     
 >     /usr/bin/find ${working_directory} -type f -exec sed -i -e "s/${website_url}/applicationdomainwww.tld/g" -e "s/${root_domain}/applicationrootdomain.tld/g" {} \;
 
-Run the script RemoveApplicationBranding.sh passing in the domain name that your website was deployed with for the provider that you are migrating from and the working directory where you extracted your webroot to as parameters, for example:  
+Run the script RemoveApplicationBranding.sh passing in the domain name that your website was originally deployed with for the provider that you are migrating from and the working directory where you extracted your webroot to as parameters, for example:  
 
 >     /bin/sh ./RemoveApplicationBranding.sh www.nuocial.uk /home/bob/scratch
 
@@ -46,7 +48,7 @@ and push the entire contents of your working directory to the repository in a si
 
 ---------------------
 
-#### DATABASE
+##### DATABASE
 
 - download a copy of a database dump of your website to your laptop and call it (mandatory exact naming don't call it anything else) "applicationDB.sql" for MySQL or "applicationDB.psql" for Postgres
 
@@ -68,11 +70,11 @@ IF YOU ARE DEPLOYING TO THE SAME DOMAIN NAME AS YOU PREVIOUSLY WERE, YOU CAN SKI
 >     /bin/sed -i "s/@${root_domain}/@applicationdomain.tld/g" ./applicationDB.sql
 >     /bin/sed -i "s/${root_domain}/applicationdomain.tld/g" ./applicationDB.sql
 
-Run the script RemoveApplicationBranding.sh passing in the domain name that your website was deployed, for example:  
+Change directory to the directory where your applicationDB.sql file resides (for example /home/bob/scratch) and run the script RemoveApplicationBranding.sh passing in the domain name that your website was deployed, for example:  
 
 >     /bin/sh ./RemoveApplicationBrandingDB.sh www.nuocial.uk
 
-**NOTE:** If you are changing the domain name of your website and you are deploying a wordpress application you will need to run applicationDB.sql through a tool called "serfix" for it to work correctly. You can find serfix [here](https://github.com/astockwell/serfix)
+**NOTE:** If you are changing the domain name of your website and you are deploying a Wordpress application you will need to run applicationDB.sql through a tool called "serfix" for it to work correctly. You can find serfix [here](https://github.com/astockwell/serfix)
 
 - Create a private repository called
 

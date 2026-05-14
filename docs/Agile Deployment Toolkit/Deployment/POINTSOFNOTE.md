@@ -1,3 +1,5 @@
+#### POINTS OF NOTE:
+
 - To shutdown your infrastructure it is important not to simply shutdown the machines using a provider's GUI system or the cli tools. There's a script in the **helpers** directory called **ShutdownInfrastructure.sh** which you must run each time you want to shut your system down. This gives the machines a chance to clean up, make backups and so on which means that your data will be consistent. If your application is online and you need to shutdown your servers for some reason, then, if your most recent backup was 1 hour ago then if you don't make a "shutdown" backup then there's the potential for an hour's worth of data to be lost, worse still if you only make daily backups. This is why it is ESSENTIAL that you shutdown using the helpers in the scenario where your systems are in active usage by real users. All I am saying is "have a little think" about what your processes are should you need to take machines offline and so on. I am confident it can be managed without dataloss if a resilient procedure is used.
 
  ------------------------

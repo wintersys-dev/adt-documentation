@@ -20,23 +20,23 @@ When making a multi region deployment you will need to provide the public DBaaS 
 
 Every region will need to provision its own reverse proxy machines because multi-region deployments are only possible when each individual region uses reverse proxies to forward traffic to the fleet of webservers for that region. 
 
-Here I have used one build machine running  in the gb-lon to perform the builds for all regions of the multi region deployment but you could have a different build machine in/for each region and that would encapsulate each region nicely and make it simpler to have different teams responsible for primary, and secondary and even tertiary regions. 
+Here I have used one build machine running  in the gb-lon to perform the builds for all regions and providers of the multi region deployment but you could have a different build machine in/for each region and that would encapsulate each region nicely and make it simpler to have different teams responsible for primary, and secondary and even tertiary regions. 
 
 ---------------------
 
 #### EXAMPLE 1 (PRIMARY REGION Linode running gb-lon)
 
-Shown below are my template configurations if I want to deploy a primary region of gb-lon and a secondary region of nl-ams for my application on the linode platform.You need to take a similar approach with other providers if you want to deploy to multiple regions.
+Shown below are my template configurations if I want to deploy a primary region of gb-lon and a secondary region of nl-ams for my application on the Linode platform.You need to take a similar approach with other providers if you want to deploy to multiple regions within the same provider.
 
 For this example, you first need to deploy a build machine in the gb-lon region which you can do by following [this](https://www.wintersys-dev.uk/Agile%20Deployment%20Toolkit/Tutorials/linode/build-machine/)
 
-TEMPLATE FOR THE PRIMARY REGION (gb-lon)
+##### TEMPLATE SETTINGS FOR THE PRIMARY REGION (gb-lon)
 
-When you make a multi region deployment the advice is that you should set the BUILD_IDENTIFER to include the region that is being deployed to, for example, testdeploy-gb-lon for the gb-lon domain and testdeploy-nl-ams for the nl-ams domain under linode. I have one build machine in the gb-lon region.
+When you make a multi region deployment within one provider, the advice is that you should set the BUILD_IDENTIFER to include the region that is being deployed to, for example, testdeploy-gb-lon for the gb-lon domain and testdeploy-nl-ams for the nl-ams domain under linode. 
 
 Highlighted in red are the settings in the templates that you need to take particular care with when making a multi-region deployment
 
-
+##### THE TEMPLATE THAT WILL PROVISION THE MACHINES OF THE PRIMARY REGION
 
 \###############################################################################################  
 \# Refer to: ${BUILD_HOME}/specifications/specification.md
@@ -166,8 +166,9 @@ export CLOUDHOST="linode"
 
 ---------------------------
 
-Here is my template for the nl-ams region when I am deploying to a primary region of gb-lon using the template above and to a secondary region to nl-ams using the template below both (in this case) under Linode
+Now we need a template for the nl-ams region when I have  deployed the machines I need to a primary region of gb-lon using the template above.
 
+##### THE TEMPLATE THAT WILL PROVISION THE MACHINES OF THE SECONDARY REGION
 
 \###############################################################################################  
 \# Refer to: ${BUILD_HOME}/specifications/specification.md  
@@ -294,10 +295,9 @@ export IN_PARALLEL="1"
 <span style="color:red">export BUILD_IDENTIFIER="test-nl-ams"</span>    
 export CLOUDHOST="linode"  
 
+You will need to first deploy the primary region infrastrucuture (gb-lon) and once that is complete and online, deploy the secondary region and any further regions that you want to deploy for. The DBaaS instance is in the gb-lon region and the machines in nl-ams will connect to the database instance in the gb-lon domain across the Internet. As I understand it the traffic is encrypted by default but to be sure don't take my word for it check it out with Linode because it might be necessary to provide SSL certs when connecting to the DBaaS system across the Internet, I am no expert. 
 
-You will need to first deploy the primary region infrastrucuture (gb-lon) and once that is complete and online, deploy the secondary region and any further regions that you want to deploy for. The DBaaS instance is in the gb-lon region and the machines in nl-ams will connect to the database instance in the gb-lon domain across the Internet. As I understand it the traffic is encrypted by default but to be but don't take my word for it check it out with linode because it might be necessary to provide SSL certs when connecting to the DBaaS system across the Internet. 
-
-I then made a deployment to a third region (with a different vendor, exoscale) and this is what my template looked like when I made a deployment to a different vendor and had all the different regions tied together through the cloudflare DNS system and all having them access the shared Linode DBaaS system. Remember I chose to intitiate all these builds from the same build machine running on Linode. 
+Once, I had my machines running in a primary and secondary region within the Linode provider I then made a deployment to a third region (with a different vendor, Exoscale) and below is what my template looked like when I made a deployment to a different vendor and had all the different regions tied together into a unified interface through the Cloudflare DNS system and all having them access the shared Linode DBaaS system. Remember I chose to intitiate all these builds (including the Exoscale machines) from the same build machine running on Linode but with the different template configurations that I have shown here. 
 
 \###############################################################################################  
 \# Refer to: ${BUILD_HOME}/specifications/specification.md  
@@ -429,7 +429,7 @@ export CLOUDHOST="exoscale"
 
 #### EXAMPLE 2 (PRIMARY REGION Exoscale running ch-gva)
 
-In this example, the Exoscale vendor is the PRIMARY_REGION with the machine marked "VM....." as the build machine from which the servers of all vendors are built and deployed from. In other words, its the machine on which the templates are configured.  The DBaaS service used in this example is the DBaaS service offering from Exoscale and all the other vendors connect in to the DBaaS deployed through the primary domain mechanism across the Internet (performance seems to be OK as far as it goes).
+In this example, (without showing all the detailed templates which I showed above) I made a deployment across 4 diffferent vendors with the Exoscale vendor as the PRIMARY_REGION with the machine marked "VM....." as the build machine from which the servers of all vendors are built and deployed from. In other words, its the machine on which the templates are configured.  The DBaaS service used in this example is the DBaaS service offering from Exoscale and all the other vendors connect in to the DBaaS deployed through the primary domain mechanism across the Internet (performance seems to be OK as far as it goes).
 
 ![](images/exoscale-servers.png "Exoscale Servers Image")
 
@@ -444,13 +444,13 @@ The Vultr servers are running as a 4th region
 
 ![](images/vultr-servers.png "Vultr Servers Image")
 
-If you notice that there's a reverse proxy machine on for each vendor and as there are 4 vendors with one reverse proxy each we would expect there to be four ip addresses added to the DNS system and there are. 
+If you notice that there's a reverse proxy machine on for each vendor and as there are 4 vendors with one reverse proxy each we would expect there to be four ip addresses added to the DNS system and there are. If you look closely you will see that the Cloudflare DNS IP addresses are the IP addresses of the reverse proxy machines for each region. 
 
 ![](images/cloudflare-dns.png "Cloudflare DNS Image")
 
-In a live deployment you would most likely want 2 reverse proxies per vendor for resilience. I might as well note here as well that you will see that only exoscale has a DB layer deployed which is a single point of failure (in terms of backups and so on) so in a live system you will most likely want a DB layer on a second region as well, which you can do by setting DB_INSTALL_MODE to 2 ("2" because the primary domain is active already) although you could also set it to zero but this might leave a single point of failure (in terms of application backups but not in terms of application function)  because you only have the database VPS running in the primary region and not in any of the additional regions.
+In a live deployment you would most likely want at least 2 reverse proxies per region for resilience. I might as well note here as well that you will see that only Exoscale has a bespoke DB layer deployed which is a single point of failure (in terms of backups and so on) so in a live system you will most likely want a DB layer on a second region as well, which you can do by setting DB_INSTALL_MODE to 2 ("2" because the primary domain is active already) although you could also set it to zero but this might leave a single point of failure (in terms of application backups but not in terms of application function)  because you only have the bespoke database VPS running in the primary region and not in any of the additional regions.
 
-You can see the DBaaS system on Exoscale has had its ip-filter to allow the database (VPS) machine runnning on the exoscale server fleet (ip address: 185.19.28.170) to have access to the DBaaS system along with all the webserver ip addresses acrosss all the vendors. This list of IP addresses that have been granted access to our DBaaS system (the rest of the world is firewalled off) look as follows showing our 6 ip addresses that have been granted access to the DBaaS system:
+You can see the DBaaS system on Exoscale has had its ip-filter set to allow the database (VPS) machine runnning on the Exoscale server fleet (ip address: 185.19.28.170) to have access to the DBaaS system along with all the webserver ip addresses acrosss all the vendors. This list of IP addresses that have been granted access to our DBaaS system (the rest of the world is firewalled off) look as follows showing our 6 ip addresses that have been granted access to the DBaaS system:
 
 ![](images/dbaas-ipfilter.png "Exoscale DBaaS ip-filter Image")
 
@@ -458,7 +458,7 @@ So, for fun I scaled up the server fleet running on the Vultr vendor to 5 webser
 
 ![](images/vultr-servers-scaledup.png "Vultr Servers Scaledup")
 
-And then you can see that the scaling up process opens up the ip-filter to allow the ip addresses of our new webservers as you can see here:
+And then you can see that the scaling up process opens up the ip-filter of the DBaaS system to allow the ip addresses of our new webservers as you can see here:
 
 ![](images/dbaas-ipfilter-scaleup.png "Exoscale DBaaS ip-filter scale up Image")
 
@@ -472,7 +472,7 @@ I then ran a one off apache bench test and here are the results:
 
 ### RESILIENCE IN MULTI REGION DEPLOYMENTS
 
-In the examples I have given, there is one build machine in one region and all the other regions on different vendors are built from that one build machine. If you want maximum resilience, then, what you need to do is have a build machine for each region that you are deploying to. That way a whole region can be taken offline (whilst other regions are kept online) with no difference in result to the end user. If a region has a problem then it can be swapped out and rebuilt or deployed to a different region if there is a regional issue and so on. This makes the way you are approaching your deployment resilient to regional outages and if you are deploying to different vendors, an outage at a particular provider. 
+In the examples I have given, there is one build machine in one region and all the other regions on different vendors are built from that one build machine. If you want maximum resilience, then, what you need to do is have a build machine for each region that you are deploying to. That way a whole region can be taken offline (whilst other regions are kept online) with no difference in result to the end user. If a region has a problem then it can be swapped out and rebuilt or deployed to a different region if there is a regional issue and so on. This makes the way you are approaching your deployment resilient to regional outages because if you only have one build machine like I have done with these examples and if you are deploying to different vendors, an outage at a particular provider might snooker your ability to build or scale in all your regions. 
 
 -------------------------
 
@@ -484,24 +484,4 @@ If you really wanted to go to town it might be possible to use "multi region DBa
 
 [Amazon Aurora Global Database](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html)  
 [Amazon Aurora Write Forwarding](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html)  
-
------------------------------
-
-### RESILIENCE OF AUTHENTICATOR MACHINES IN MULTI-REGION DEPLOYMENTS
-
-I only support one active authenticator type server at a time as the simplest design approach. That can seem like a single point of failure, but, what you can do if you don't want to risk that problem is deploy multiple backup authenticator machines in different regions but only have the IP address of one of those machines active at any one time in the DNS system. In other words, you can have "n" authenticator machines running but only "1" active in the DNS system (in other words, only one machine that is accessible by your customers through  DNS lookup).  If your active authenticator machine fails for some reason what you can do is switch over the authenticator machine that is active by altering the DNS record to be your secondary or tertiary authenticator machine whilst you work on resolving the problem with your original authentication machine. This will mean as little disruption as possible for your users. 
-
---------------------------
-
-### AUTHENTICATION SERVER
-
-You can deploy authentication servers to multiple regions but only the ip address of the authenticator in the primary region will have its ip address added to the DNS system. This is done for design reasons, in other words, you can't have more than one authenticator machine in the DNS system at once. The purpose for having authentications servers which are not used in secondary regions is for resilience. Having only one authentication server in the primary domain is a single point of failure and so by having backup autentication machines in other regions you can swap out the ip of the primary domain authenticator if it has a problem and swap in a secondary domain authenticator which will then do the same job. 
-
----------------------------------
-
-### MULTI-PROVIDER DATASTORE SYNCING
-
-I haven't done anything to implement this, but, just to make a mental note that you are likely only relying on one provider as your datastore service and using that samee provider for all datastore activities even in multi-provider deployments.
-If you want complete resilience to catastrophy you might want to consider replicating your datastore buckets from one provider to other providers so that you have backups, for example that are multi-provider resilient.
-You can do this (replicate your datastore buckets to other providers) using rclone and how to do that is described [here](https://forum.rclone.org/t/server-side-copy-sync-between-to-s3-buckets-different-providers/30597)
 

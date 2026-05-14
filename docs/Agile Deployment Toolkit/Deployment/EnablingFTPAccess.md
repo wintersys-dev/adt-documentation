@@ -1,3 +1,4 @@
+#### ENABLING FTP ACCESS
 
 >     useradd ftp_46732
 >     usermod -a -G www-data ftp_46732  

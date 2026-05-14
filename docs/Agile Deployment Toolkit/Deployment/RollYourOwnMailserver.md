@@ -1,12 +1,18 @@
-There are a few solutions to providing email services for your users:
+#### ROLL YOUR OWN MAILSERVER
 
-1. Allow any domain email addresses in your application, like gmail, yahoo and so on.
-2. If you want your users to have their own custom domain, you might have to pay for a custom domain email service, free ones seemed a bit thin on the ground to me. Not having used any of them I won't recommend, but, I am sure you know you can search the Internet for an email service providers for unlimited mailboxes for your custom domain. 
-3. If you want to run your own email server, you can run one using "iRedmail" or "Mail in a box", "Modoba", "Postie" or "Stalwart" or another offering of your choice. If you do so you will have your own email server running and your users will have email addresses for your custom domain but bear in mind that running your own email server is a responsible thing to do because your users might be relying on the email service you provide so if you hit some snag in providing them with service that might not be convenient for them.  
+The way that this toolkit is designed, if you want to use the authentication servers, for example, it expects you to issue your users with an email address with a specified custom domain so that only email addresses for that custom domain are considered valid. Now you can use "Cloudflare Email Routing" to route emails for your custom domain to the user's end account which could be a gmail address, or a yahoo address and so on. But alternatively you could give someone a job in your organisation of running and maintaining an email server for your domain and this would be "rolling your own solution" in terms of email provision because you can provide custom domain email addresses to your users and that means that because you control their email addresses you can issue them with security sensitive items based on their email address domain because no one should have one of your email addresses without them being considered as above board by you. So, I made a reconnoiter of the different self hosted email solutions that are out there and this the offerings that I liked the look of 
 
-**NOTE** Cloudflare are providing an email routing service which you can setup to route people's emails through your domain to their own email address on gmail, hotmail or whatever. This requires that your domain is setup with Cloudflare, however and it remains to be seen if email addresses routing through Cloudflare can be setup programmatically through their API (in which case it would be great to have people register with their gmail address, detect it, and swap it out for a domain specific address which reroutes to their gmail address using Cloudflare email routing) or whether you would have to have an admin manually add people to the service directly as the register. I'm sure there's a workable workflow somehow. Of course, if you want to use this toolkit for your pre-existing organisation and your peeps already have custom email addresses that you provide, you can use the mail solution you already use or have.
+There are a few solutions to providing email services for your users so, in no particular order:
 
-The advantage that there sometimes is of self hosted domain specific email addresses is that you can require people to have one of your email addresses before you let them join your community. This is good from a couple of points of view. It means that you have control over who is joining and also, it enables the user to keep their business pertinent to your community separated from their other business. 
+1. [iRedmail](https://www.iredmail.org)
+2. [Mail in a box](https://mailinabox.email)
+3. [Modoba](https://modoboa.org/en)
+4. [Postie](https://poste.io)
+5. [Stalwart](https://stalw.art)
 
-If you would rather pay for an email service with unlimited domains and unlimited mailboxes you could try "mxroute.com" or "migadu".
+And so some of these solutions provide commercial offerings where they will host your email servers for you using their product but a) you have less control if you do that and b) it costs £
+
+So, the advice if you are serious about using my software for secured systems is to set aside some resources for running your own mail server and if you do that you will be able to make fuller use of what the ADT is offering you in terms of secured systems because the authentication servers will be able to be included in your build chain.  
+
+If you would rather pay for an email service with unlimited domains and unlimited mailboxes you could try "mxroute.com" or "migadu" although I haven't used either and cannot vouch for security, quality of service or reliability for either of them. 
 

@@ -10,9 +10,12 @@ There are a few solutions to providing email services for your users so, in no p
 4. [Postie](https://poste.io)
 5. [Stalwart](https://stalw.art)
 
+
 And so some of these solutions provide commercial offerings where they will host your email servers for you using their product but a) you have less control if you do that and b) it costs £
 
 So, the advice if you are serious about using my software for secured systems is to set aside some resources for running your own mail server and if you do that you will be able to make fuller use of what the ADT is offering you in terms of secured systems because the authentication servers will be able to be included in your build chain.  
 
-If you would rather pay for an email service with unlimited domains and unlimited mailboxes you could try "mxroute.com" or "migadu" although I haven't used either and cannot vouch for security, quality of service or reliability for either of them. 
+If you would rather pay for an email service with unlimited domains and unlimited mailboxes you could try 
 
+1. [MXRoute](https://mxroute.com)
+2. [Migadu](https://migadu.com)

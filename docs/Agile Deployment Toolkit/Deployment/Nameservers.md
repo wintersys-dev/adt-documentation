@@ -11,6 +11,7 @@ That done, you will need to point the nameservers to the service you are using f
 As far as I know, nameservers are allocated on an account by account basis and you will have to refer to your account as to which nameservers you have been allocated. Cloudflare operates hundreds of nameservers which you can find a list of [here](https://github.com/indianajson/cloudflare-nameservers).
 
 To understand more about Cloudflare nameservers [this](https://developers.cloudflare.com/dns/nameservers) might interest you. 
+You can also read about setting up namservers on Cloudflare [here:](https://support.cloudflare.com/hc/en-us/articles/200169006-Setting-up-Custom-Nameservers-at-Cloudflare)
 
 ---------------  
 
@@ -42,8 +43,3 @@ Once you have changed the nameservers for your domain to linode with your domain
 
 Once you have changed the nameservers for your domain to vultr with your domain name registrar you have to add your domain to vultr you can do that by following [this](https://docs.vultr.com/introduction-to-vultr-dns)
 
-------------------
-
-**CLOUDFLARE**  
-
-**You will have some extra steps for Cloudflare which you can read about [here:](https://support.cloudflare.com/hc/en-us/articles/200169006-Setting-up-Custom-Nameservers-at-Cloudflare)**  

@@ -22,9 +22,9 @@ And each of these unique tokens is replaced with live data by the script
 Once these placeholder tokens have been replaced as part of the build intialisation, the updated copy of the file is available as
 
 
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/autoscaler_configuration_settings.dat
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/webserver_configuration_settings.dat
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/database_configuration_settings.dat
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/autoscaler_configuration_settings.dat
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/webserver_configuration_settings.dat
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/database_configuration_settings.dat
 
 These files containing live data are then passed and used when the cli call is made to provision the machine from the script:
 

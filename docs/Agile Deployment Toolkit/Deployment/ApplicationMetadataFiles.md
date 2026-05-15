@@ -1,3 +1,5 @@
+#### EACH OF THESE ARE A KIND OF APPLICATION METADATA FILE  
+
 **/var/www/html/dba.dat**
 
 This file is written to the webroot of every baselined application and it contains the name of the application type that this webroot is. 
@@ -37,7 +39,7 @@ The database prefix is written to this file so we can easily see which database 
 
 This is necessary for drupal based application deployments and can be set to:
 
-- "SOCIAL_DRUPAL" - if you are deploying Opensocial
 - "CMS_DRUPAL" - if you are deploying Drupal CMS
 - "DRUPAL" - If you are deploying regular Drupal
 
+You can include this file for any subsequent applications that you configure if you need to to distinguish different classes of application from the same root application type

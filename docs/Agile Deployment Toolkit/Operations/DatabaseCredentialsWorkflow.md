@@ -19,7 +19,7 @@ The credentials are then stored on the build machine for use later on at the bot
 
 If possible, a SSL certificate for DBaaS connections is obtained from the DBaaS provider where you have provisioned your database and stored in 
 
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/DBaaS_CERT
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/DBaaS_CERT
 
 
 If your database is self managed and it's just you spinning up a Mariadb, MySQL or Postgres instance on a VPS machine then all that this script does is assign some credentials to be used as the credentials for your database when it is spun up later in the build process as part of your build chain. The credentials that are defined here are also stored on the build machine for later usage.

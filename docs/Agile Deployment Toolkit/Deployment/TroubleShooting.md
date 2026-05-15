@@ -10,7 +10,7 @@ If a build doesn't complete or is "frozen" and you aren't sure why every .sh fil
 
 This function will write to 
 
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/logs/build-status-stream-${date-and-time}
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/logs/build-status-stream-${date-and-time}
 
 and so you can call this function from any of the .sh files on the build-machine by adding a status command to the part of the file that you suspect with any debug info that you need by calling
 

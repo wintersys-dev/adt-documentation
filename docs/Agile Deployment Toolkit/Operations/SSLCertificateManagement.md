@@ -19,8 +19,8 @@ In a bit more detail, this process can be described as:
 
 As part of the pre-build process on the build-machine a test is made to see if these files already exist in the datastore for our current domain from a previous build
 
->     ${BUILD_HOME}/services/datastore/GetFromDatastore.sh ${ssl_bucket}/fullchain.pem ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}
->     ${BUILD_HOME}/services/datastore/GetFromDatastore.sh ${ssl_bucket}/privkey.pem ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}
+>     ${BUILD_HOME}/services/datastore/GetFromDatastore.sh ${ssl_bucket}/fullchain.pem ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}
+>     ${BUILD_HOME}/services/datastore/GetFromDatastore.sh ${ssl_bucket}/privkey.pem ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}
 
 If we now have certificates from a previous build they are now available at:  
 

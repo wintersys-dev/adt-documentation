@@ -24,8 +24,8 @@ As part of the pre-build process on the build-machine a test is made to see if t
 
 If we now have certificates from a previous build they are now available at:  
 
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}/fullchain.pem 
->     ${BUILD_HOME}/runtimedata/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}/privkey.pem 
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}/fullchain.pem 
+>     ${BUILD_HOME}/runtime/${CLOUDHOST}/${BUILD_IDENTIFIER}/ssl/${WEBSITE_URL}/privkey.pem 
 
 If they exist then a check is made to see if they are valid certificates. If the certificates are valid they are copied to the config datastore. If they are not valid then new certificates are generated and stored in these same files and then copied to the S3 config datastore. A check is made to see that the certificates have copied successfully to the config datastore.
 

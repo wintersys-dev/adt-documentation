@@ -1,3 +1,5 @@
+#### SOFTWARE  CONFIGURATION (${BUILD_HOME}/configuration/software.dat)
+
 The file  
 
 >     ${BUILD_HOME}/configuration/software.dat

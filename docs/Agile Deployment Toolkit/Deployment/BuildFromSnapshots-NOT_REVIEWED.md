@@ -15,11 +15,11 @@ If you deploy your server fleet as you normally would so that you have an autosc
 
 and this will generate snapshots of your machines that you provisioned in step 1. The unique identifiers of your snasphots will be stored in 
 
->     ${BUILD_HOME}/runtimedata/wholemachinebackups/${WEBSITE_URL}/snapshots/snapshot_ids.dat
+>     ${BUILD_HOME}/runtime/wholemachinebackups/${WEBSITE_URL}/snapshots/snapshot_ids.dat
 
 and the database credentials for your snapshots in 
 
->     ${BUILD_HOME}/runtimedata/wholemachinebackups/${WEBSITE_URL}/snapshots/db_credentials.dat
+>     ${BUILD_HOME}/runtime/wholemachinebackups/${WEBSITE_URL}/snapshots/db_credentials.dat
 
 3. Check that all of your snapshots have been generated using the GUI system of your cloudhost and then take your original servers down. 
 
@@ -29,11 +29,11 @@ and the database credentials for your snapshots in
 
 5. Re-run the build process. This time when a server is provisioned the snapshot ids will be obtained from 
 
->     ${BUILD_HOME}/runtimedata/wholemachinebackups/${WEBSITE_URL}/snapshots/snapshot_ids.dat
+>     ${BUILD_HOME}/runtime/wholemachinebackups/${WEBSITE_URL}/snapshots/snapshot_ids.dat
 
 and the database credentials from 
 
->     ${BUILD_HOME}/runtimedata/wholemachinebackups/${WEBSITE_URL}/snapshots/db_credentials.dat
+>     ${BUILD_HOME}/runtime/wholemachinebackups/${WEBSITE_URL}/snapshots/db_credentials.dat
 
 And the machines will be provisioned based on the snapshots and database credentials that are stored there.
 

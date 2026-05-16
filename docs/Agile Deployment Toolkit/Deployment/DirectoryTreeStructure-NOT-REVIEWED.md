@@ -27,27 +27,27 @@ This is the directory where general (build-independent) configuration details an
 
 This is the dirctory where build specific configuration details and configuration files are generated as part of the build process
 
-```application``` - This directory holds the application specific descriptor which contains the configuration details necessary to install the application
-```APPLICATION:<application_name>``` - This tells us which application is currently being installed for this build cycle
-```autoscaler_configuration_settings.dat``` - This contains all the configuration settings necessary to build an autoscaler class of machine
-```build_environment``` - This is a file containing all the environment variables that were set in the template
-```cloud-init``` - This directory contains all the cloud-init scripts that will be passed to the servers when they are provisioned
-```credentials``` - Here are the credentials for the servers
-```CURRENTREGION``` - This file contains the current region for this build cycle
-```datastore_workarea``` - This is a work area for the datastore manipulation scripts to use during their functional operation
-```dbp.dat``` - This is the database prefix for our application
-```EMERGENCY_PASSWORD``` - This is the password for our servers that can be used through GUI based console connection if there is some deep problem with a server
-```ips``` - This directory can contain IP addresses of machines as needed for the correct functioning of our processes
-```keys``` - This directory contains the SSH keys that are needed by ${BUILD_HOME}/helpers/servers to connect to different classes of machine
-```logs``` - Here the log files that inform us about how the build process is going are stored and can be referred to when trouble shooting
-```ssl``` - This directory contains the ssl certificates for the current build cycle. This certificates will be long lasting if your webserver uptime is long lasting.
-```TOKEN``` - This is a file for storing the access token for our cloud provider CLI
-```VPC-ACTIVE``` - If this file exists then it tells us that the servers are running inside a VPC
-```autoscaler_configuration_settings.dat``` - this contains all the configuration settings necessary to build a autoscaler class of machine
-```authenticator_configuration_settings.dat``` - this contains all the configuration settings necessary to build a authenticator class of machine
-```reverseproxy_configuration_settings.dat``` - this contains all the configuration settings necessary to build a reverseproxy class of machine
-```database_configuration_settings.dat``` - this contains all the configuration settings necessary to build a database class of machine
-```webserver_configuration_settings.dat``` - this contains all the configuration settings necessary to build a webserver class of machine
+```application``` - This directory holds the application specific descriptor which contains the configuration details necessary to install the application  
+```APPLICATION:<application_name>``` - This tells us which application is currently being installed for this build cycle  
+```autoscaler_configuration_settings.dat``` - This contains all the configuration settings necessary to build an autoscaler class of machine  
+```build_environment``` - This is a file containing all the environment variables that were set in the template  
+```cloud-init``` - This directory contains all the cloud-init scripts that will be passed to the servers when they are provisioned  
+```credentials``` - Here are the credentials for the servers  
+```CURRENTREGION``` - This file contains the current region for this build cycle  
+```datastore_workarea``` - This is a work area for the datastore manipulation scripts to use during their functional operation  
+```dbp.dat``` - This is the database prefix for our application  
+```EMERGENCY_PASSWORD``` - This is the password for our servers that can be used through GUI based console connection if there is some deep problem with a server  
+```ips``` - This directory can contain IP addresses of machines as needed for the correct functioning of our processes  
+```keys``` - This directory contains the SSH keys that are needed by ${BUILD_HOME}/helpers/servers to connect to different classes of machine  
+```logs``` - Here the log files that inform us about how the build process is going are stored and can be referred to when trouble shooting  
+```ssl``` - This directory contains the ssl certificates for the current build cycle. This certificates will be long lasting if your webserver uptime is long lasting  
+```TOKEN``` - This is a file for storing the access token for our cloud provider CLI  
+```VPC-ACTIVE``` - If this file exists then it tells us that the servers are running inside a VPC  
+```autoscaler_configuration_settings.dat``` - this contains all the configuration settings necessary to build a autoscaler class of machine  
+```authenticator_configuration_settings.dat``` - this contains all the configuration settings necessary to build a authenticator class of machine  
+```reverseproxy_configuration_settings.dat``` - this contains all the configuration settings necessary to build a reverseproxy class of machine  
+```database_configuration_settings.dat``` - this contains all the configuration settings necessary to build a database class of machine  
+```webserver_configuration_settings.dat``` - this contains all the configuration settings necessary to build a webserver class of machine  
 
 ```${BUILD_HOME}/buildservers``` This directory is here for holding scripts which do the main builds of different machine types in the build chain such as autoscaler type machines, webserver type machines and database time machines. Other machine types can be added to build chains such as Caching machine types if you wanted to extend to the toolkit to provide support for caching systems as well.
 

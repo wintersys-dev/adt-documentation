@@ -69,43 +69,65 @@ This is the dirctory where build specific configuration details and configuratio
 
 #### Autoscaler  machines
 
-```${HOME}/runtime/AUTHORISED_TO_SCALE``` - once the intial scaling is completed after a new autoscaler is provisioned, this flag is set which we can then check for to verify if we can provision new machines or not  
+```${HOME}/runtime/beingbuiltips``` - this directory stores the ip addresses of the machines that are currently considered to be in the process of being built  
 
-```${HOME}/runtime/autoscalelock.file``` - this flag is a lock file such that it can be checked to see if an autoscaling cycle is active. If an autoscaling cycle is active then another autoscaling cycle can't be initiated.  
+```${HOME}/runtime/beingbuiltpublicips```  - this directory stores the public ip addresses of the machines that are currently considered to be in the process of being built  
 
-```${HOME}/runtime/AUTOSCALER_READY``` - this flag tells us that an actual autoscaler machine has successfully been built. It is checked from the build-machine if we want to have more confidence that an autoscaling machine has built correctly  
+```${HOME}/runtime/POTENTIAL_STALLED_BUILD:${private_ip}``` - A webserver build process is considered potentially stalled until the build completes. If this marker file is still present after a protracted period of time then the build is consider actually stalled. When the build for a webserver with a given IP address completes, this file is removed.   
 
-```${HOME}/runtime/AUTOSCALINGMONITOR``` - This file tells us that an actual webserver is in the process of being built on this autoscaler. Because each autoscaler can concurrently build multiple webservers, you will find this file indexed for each webserver that is provisioned so that we have a record we can check when we believe that that webserver is being provisioned  
+```${HOME}/runtime/AUTOSCALINGMONITOR:${1}``` - Webservers are built in batches. Once a batch of webservers have been actioned to be built, the scaling mechanism to action additional builds is blocked until all the webserver builds in the batch are either considered stalled or complete  
 
-```${HOME}/runtime/beingbuiltips``` - Once a webserver has its ip assigned we keep a record here that we can check to tell us that that particular ip address belongs to a provisioning webserver. Once the webserver is provisioned we remove it from the beingbuildips directory. We need this so that we don't think the machine is unresponsive whilst it is provisoning and consider it a termination candidate.  
+```${HOME}/runtime/INITIALLY_PROVISIONING-${buildno}.lock``` - when a webserver is actioned to be built, the initial machine provisioning is considered to be the "INITIALLY_PROVISIONING" state and it only once a new webserver machine is pingable that it is considered to have completed its INITIAL_PROVISIONING  
 
-```${HOME}/runtime/beingbuiltpublicips``` - this is the same as the beingbuilips but for the machines public ip addresses rather than their private ones  
+```${HOME}/runtime/probed_ips``` - In the process of checking whether webservers are online or not a list of probed IPs are kept and these probed IP addresses or the IP addresses that have been checked for their online status during the current cycle of checking are stored here.   
 
-```${HOME}/runtime/BUILDCLIENTIP``` - this is a placeholder for the build machine's ip address. It is stored here for convenience.  
+```${HOME}/runtime/potentialenders``` - When we are monitoing for webservers that need to be shutdown and destroyed, we keep a list of those webservers that we think potentially need to be ended in this directory  
 
-```${HOME}/runtime/BUILD_IN_PROGRESS``` - this is just a generic flag that tells us that some sort of webserver provisioning is taking place on this autoscaler. It doesn't tell us how many webservers or any details only that some sort of provisioning of webservers has taken place  
+```${HOME}/runtime/software.dat``` - this file is a configuration file obtained from the build machine which gives us the details of how software packages need to be installed on this autoscaler machine (for example are they to be built from sourcecode or repositories)  
 
-```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED, ${HOME}/runtime/LOW_DISK_ACKNOWLEDGED, ${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - this flag tells us whenever we have notified the user by email of some sort of low resource situation. Using this flag it means we only send emails periodically rather than multi times consequtively in short order as we might do without these flags  
+```${HOME}/runtime/firewall.dat``` - This is a configuration file obtained from the build machine which relates to how the firewall is configured  
 
-```${HOME}/runtime/FIREWALL-ACTIVE``` - this tells us that our firewall of choice is active. We can check this flag to see if we believe we have activated the firewall or not  
+```${HOME}/runtime/application.dat``` - This is a configuration file obtained from the build machine which holds what and how an application is being installed for this deployment  
 
-```${HOME}/runtime/INITIAL_BUILD_COMPLETED``` - This flag is created by the build machine and it is set when the build machine believes that the initial build it is responsible for is completed. This is different or can be different to when it is believed that the autoscaler itself completed its own provisioning. The initial build status is used to regulate the cooling down period before the autoscaling of any additional webservers begins. This is configured to 5 minutes by default but you can change this to any value you want to suit your taste.  
+```${HOME}/runtime/cloud-init``` - this directory contains the cloud-init scipts which will be used to initialise each webserver  
 
-```${HOME}/runtime/INITIALLY_PROVISIONING``` - This tells us that a machine is literally in its initial provisioning or start up phase. This value wraps its arms around the time between when the cli call to "create server" is made and the time when that naked server is first considerd "up" or "pingable".   
+```${HOME}/runtime/NOT_AUTHORISED_TO_SCALE``` - This marker file will be present when the current autoscaler is authorised to scale  
 
-```${HOME}/runtime/INITIALLY_SCALING_PROCESSSED``` - once the 5 minute cooling off period is processed after an autoscaler is provisioned this flag is set and we consider that the initial scaling has been processed which means that we are authorised to scale other new webservers now.   
+```${HOME}/runtime/AUTHORISED_TO_SCALE``` - This marker file will be present when the current autoscaler is authorised to scale  
 
-```${HOME}/runtime/installedsoftware``` - this directory serves as a record as to which software has been installed on this machine. It can be referred to if the software needs to be updated so that we know what packages to update and what pacakges to leave alone
+```${HOME}/runtime/filesystem_sync``` - this directory relates to the system process that will synchronise filesystems between machines when and as actioned from cron  
 
-```${HOME}/runtime/KNICKERS_ARE_UP``` - this is to do with the firewall it means that we have set our base condition which is to allow outgoing connections but dissalow all incoming connections and so basically, "knickers are up" because no one is let in.
+```${HOME}/runtime/datastore_workarea``` - this is a workarea related to datastore functions. The scripts which interact with the S3 datastore are welcome to write what they need to into this area as (like the name says), a workarea.   
 
-```${HOME}/runtime/NOT_AUTHORISED_TO_SCALE``` - If this is set then it means that we consider this autoscaler to be allowed to issue orders to scale
+```${HOME}/runtime/dbaas_allowed_ips``` -  When a DBaaS solution is being used in multi-region mode, then, this is the list of IP addresses of the webservers that are allowed to connect to the DBaaS instance. The public ip address of a webserver being run by a different vendor to where the DBaaS instance is running must have its public IP address in the list of allowed IP addresses of the DBaaS instance for it to be able to connect 
 
-```${HOME}/runtime/potentialenders``` - potential enders - this is a list of IPs that we can keep when we are checking which webservers (based on IP) might need to be shutdown or terminated for some reason such as unresponsiveness or failed or slow build and so on.
+```${HOME}/runtime/zoneid.dat``` - Cloudflare needs to know what the current zone is for its DNS interactions so this is where that information is stored.   
 
-```${HOME}/runtime/POTENTIAL_STALLED_BUILD``` - Every newly provisioned webserver is considered potentially stalled, because a build can stall for reasons out of our control on rare occassions such as networking outages and so on. A webserver machine is considered potentially stalled by default until we hear from it that it isn't and we continue on from there then.
+```${HOME}/runtime/SSMTP_INITIALISED``` - This marker file is present when it is considered that the SMTP system has been intialised (in other words, system emails can be actioned and sent)  
 
-```${HOME}/runtime/probed_ips/``` - this directory contains probed webserver ips so that we can keep track of which webservers ultimately are OK to keep running and which webservers (for example, failed to respond to a curl command) need to be terminated.
+```${HOME}/runtime/KNICKERS_ARE_UP``` - This maker file indicates that the incoming connections to our server have been initially blocked and that incoming connections will then be allowed on a discretionary basis  
+
+```${HOME}/runtime/FIREWALL-ACTIVE``` - This marker file tells us that the firewall is currently active  
+
+```${HOME}/runtime/FIREWALL-INITIALISED``` - This marker file tells us that the firewalling system has been initialised  
+
+```${HOME}/runtime/autoscaler_configuration_settings.dat``` - This is the configuration file obtained from the build machine for this current autoscaler  
+
+```${HOME}/runtime/webserver_configuration_settings.dat``` - This is the configuration file obtained from the build machine that will be utilised for the building and provisioning of any webservers by this autoscaler  
+
+```${HOME}/runtime/scaling``` - This directory will hold a record of how many webservers are expected to be provisioned by this autoscaler  
+
+```${HOME}/runtime/ssh-audit``` - we can look here to see what the ssh interactions have been for this current machine  
+
+```${HOME}/runtime/virus_report``` - If we want to scan for viruses (which can protect windows users in extremely rare cases, the report will be here)  
+
+```${HOME}/runtime/installedsoftware``` - This directory contains a list of bespoke marker files which tell us what software has been installed on our current machine  
+
+```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED``` - this marker file tell us that a notifcation has been made because of CPU Overload on the current machine  
+
+```${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - this marker file tell us that a notifcation has been made because of Low Memory on the current machine  
+
+```${HOME}/runtime/LOW_DISK_ACKNOWLEDGED```  - this marker file tell us that a notifcation has been made because of Low Disk space on the current machine
 
 ```${HOME}/autoscaler``` - This directory contains the scripts which provide the autoscaling mechanism and functionality
 
@@ -116,12 +138,6 @@ This is the dirctory where build specific configuration details and configuratio
 ```${HOME}/system``` - This is where all scripts related to third party providers are kept such as datastore providers, git providers and so on
 
 ```${HOME}/security``` - This directory has scripts that relate to security such as the firewall  
-
-```${HOME}/runtime/autoscaler_configuration_settings.dat ${HOME}/runtime/webserver_configuration_settings.dat ${HOME}/runtime/software.dat``` - these files are the configuration files for the autoscaler. You could alter the size of webservers that you are provisioning or change the SMTP provider being used or possibly other configuration settings by making alterations to these files  
-
-```${HOME}/runtime/cloud-init/webserver.yaml``` - The provider/vendor specific customised/generated yaml cloud-init file for webservers that the current autoscaler will be provisioning
-
-```${HOME}/runtime/dbaas_allowed_ips/ip_list.dat``` - When a DBaaS solution is being used in multi-region mode, then, this is the list of IP addresses of the webservers that are allowed to connect to the DBaaS instance. The public ip address of a webserver being run by a different vendor to where the DBaaS instance is running must have its public IP address in the list of allowed IP addresses of the DBaaS instance for it to be able to connect
 
 ----------------------------
 

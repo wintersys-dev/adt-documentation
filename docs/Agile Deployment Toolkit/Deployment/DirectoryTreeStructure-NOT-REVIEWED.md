@@ -11,8 +11,6 @@ Here you will find an expose on the directory structures of the various differen
 ```${BUILD_HOME}/configuration/software.dat``` - configuration of different build methods for the tools we want to work with  
 ```${BUILD_HOME}/configuration/firewall.dat``` - firewall settings of the different server machines  
 
-BUILD MACHINE runtime area
-
 ```${BUILD_HOME}/runtime```  
 This is the directory where general (build-independent) configuration details and files are generated as part of the build process. 
 

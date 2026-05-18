@@ -1,6 +1,6 @@
 Here you will find an expose on the directory structures of the various different machine types with a brief explanation of what you will find. 
 
-#### On the build machine
+#### On the Build Machine
 
 ```${BUILD_HOME}/descriptors/autoscaler_descriptor.dat``` - the autoscaler relevant environment variables  
 ```${BUILD_HOME}/descriptors/database_descriptor.dat``` - the database relevant environment variables  
@@ -65,7 +65,7 @@ This is the dirctory where build specific configuration details and configuratio
 
 ----------------------------
 
-#### Autoscaler  machines
+#### Autoscaler Machines
 
 ```${HOME}/runtime/beingbuiltips``` - this directory stores the ip addresses of the machines that are currently considered to be in the process of being built  
 
@@ -139,7 +139,7 @@ This is the dirctory where build specific configuration details and configuratio
 
 ----------------------------
 
-#### Webserver machines
+#### Webserver Machines
 
 ```${HOME}/runtime/WEBSERVER_READY``` - This is a marker file that tells us when a webserver has fully completed its build process  
 
@@ -284,7 +284,7 @@ This is the dirctory where build specific configuration details and configuratio
 
 ---------------------------------
 
-#### Datastore structure and function:
+#### Datastore Structure and Function:
 
 ```STATIC_SCALE:[no]``` - this tells us what the current number of webservers should be. If this number is changed then there will be a scale up or scale down of the number of webservers running
 

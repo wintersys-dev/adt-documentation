@@ -237,6 +237,18 @@ This is the dirctory where build specific configuration details and configuratio
 
 ```${HOME}/runtime/firewall.dat``` - this configuration file holds the configuration for the firewall
 
+```${HOME}/runtime/mariadb-init/initialiseDB-user.sql``` - customised sql script for creating a user during mysql DB initialisation using mariadb
+
+```${HOME}/runtime/mariadb-init/initialiseDB.sql``` - customised sql script for creating and initialising a database during  database initialisation using mariadb
+
+```${HOME}/runtime/mysql-init/initialiseDB-user.sql``` - customised sql script for creating a user during mysql DB initialisation using mysql
+
+```${HOME}/runtime/mysql-init/initialiseDB.sql``` - customised sql script for creating and initialising a database during  database initialisation using mysql
+
+```${HOME}/runtime/postgres-init/initialiseDB.psql``` - customised psql script for creating a user during mysql DB initialisation
+
+```${HOME}/runtime/mysql-init/initialiseDB.psql``` - customised psql script for creating and initialising a database during  database initialisation
+
 ```${HOME}/runtime/FIREWALL-INITIALISED``` - this marker file is set when the firewall is considered to have been initialised
 
 ```${HOME}/runtime/FIREWALL-ACTIVE``` - this marker file is set when the firewall has been made active
@@ -305,19 +317,6 @@ This is the dirctory where build specific configuration details and configuratio
 ```dbe.dat``` - marker file to remind us of which database the original install was made to
 
 ```joomla_configuration.php wordpress_config.php drupal_settings.php moodle_config.php``` - the various configuration files for our applications
-
-```${HOME}/runtime/mariadb-init/initialiseDB-user.sql``` - customised sql script for creating a user during mysql DB initialisation using mariadb
-
-```${HOME}/runtime/mariadb-init/initialiseDB.sql``` - customised sql script for creating and initialising a database during  database initialisation using mariadb
-
-```${HOME}/runtime/mysql-init/initialiseDB-user.sql``` - customised sql script for creating a user during mysql DB initialisation using mysql
-
-```${HOME}/runtime/mysql-init/initialiseDB.sql``` - customised sql script for creating and initialising a database during  database initialisation using mysql
-
-
-```${HOME}/runtime/postgres-init/initialiseDB.psql``` - customised psql script for creating a user during mysql DB initialisation
-
-```${HOME}/runtime/mysql-init/initialiseDB.psql``` - customised psql script for creating and initialising a database during  database initialisation
 
 
 

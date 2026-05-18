@@ -141,48 +141,67 @@ This is the dirctory where build specific configuration details and configuratio
 
 #### Webserver machines
 
-```${HOME}/runtime/AUTOSCALED_WEBSERVER_ONLINE``` - this flag is set from an autoscler on the current webserver to let us know that this webserver is online and was generated as a scaling event rather than as part of initial infrastructure provisioning  
+```${HOME}/runtime/WEBSERVER_READY``` - This is a marker file that tells us when a webserver has fully completed its build process  
 
-```${HOME}/runtime/APPLICATION_DB_GENERATED``` - this flag can be used when an application needs to install its database as part of the build process rather than through interaction with the user. This flag is set when the database is successfully installed. Moodle uses this flag to tell us when the initial database has been installed
+```${HOME}/runtime/datastore_workarea``` - This directory is what the datastore manipulation scripts can use as an adhoc work area
 
-```${HOME}/runtime/AUTOSCALED_WEBSERVER_ONLINE``` - this can be set if the current webserver is provisioned through an autoscaling event and is considered to be online and primed
+```${HOME}/runtime/application.dat``` - This is the configuration file for the currently installed application
 
-```${HOME}/runtime/BUILDCLIENTIP``` - this is a convenient place to hold the ip address of the build machine for easy access
+```${HOME}/runtime/backupworkarea```  - This is a directory which scripts related to backups and baselines can use as an adhoc work area
 
-```${HOME}/runtime/CACHE_CLEANED``` - if we want to clean our application cache at as the application installs this flag lets us know that the cache has been cleaned
+```${HOME}/runtime/filesystem_sync``` - When filesystems are being synced between machines, this can be used as a data area to facilitate the syncing process
 
-```${HOME}/runtime/DATASTORE_CACHE_PURGED``` - this is a flag that tells us when a datastore mounted filesystem has had its cache purged. We can test for this flag and purge the cache based on what we find. 
+```${HOME}/runtime/CONFIG_EMAIL_SENT```  - When an application is installed this flag stops there being mulitple emails set if a config installation fails
 
-```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED, ${HOME}/runtime/LOW_DISK_ACKNOWLEDGED, ${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - this flag tells us whenever we have notified the user by email of some sort of low resource situation. Using this flag it means we only send emails periodically rather than multi times consequtively in short order as we might do without these flags  
+```${HOME}/runtime/CONFIG_SITE_EMAIL_SENT``` - When an application is installed this flag stops there being mulitple emails set if a config installation fails
 
-```${HOME}/runtime/CREDENTIALS_PRIMED``` - once we have got the database credentials that were generated on the build machine on our current webserver we consider credentials to be primed (in other words, we know what our database credentials are if this is set).
+```${HOME}/runtime/INITIAL_CONFIG_SET``` - This flag tells us that the configuration of our current application has been completed successfully
 
-```${HOME}/runtime/INITIAL_CONFIG_SET``` - this is set when the application's initial configuration has been set. This stops it being set again unless there is a difference that needs to be taken into account
+```${HOME}/runtime/installedsoftware``` - Marker files for installed software are placed here, in other words, we can refer to this to see what software has been installed on our machine
 
-```${HOME}/runtime/drupal_settings.php``` - the drupal configuration file
-```${HOME}/runtime/wordpress_config.php``` - the wordpress configuration file
-```${HOME}/runtime/joomla_configuration.php``` - the joomla configuration file
-```${HOME}/runtime/moodle_config.php``` - the moodle configuration file
+```${HOME}/runtime/FIREWALL-ACTIVE``` - This marker file tells us that the firewall is considered active
 
-```${HOME}/runtime/FIREWALL-ACTIVE``` - this flag will be set if we consider the firewall active
+```${HOME}/runtime/SSMTP_INITIALISED``` - This marker files tells us that the SMTP system has been made operational
 
-```${HOME}/runtime/GARBAGE_CLEANED``` - if an application needs any cleaning up done during its install, this flag will have been set once the garbage is cleaned
+```${HOME}/runtime/authenticator```  - When there is an authentication server this directory is used to faciliate the authentication process
 
-```${HOME}/runtime/installedsoftware``` - this directory serves as a record as to which software has been installed on this machine. It can be referred to if the software needs to be updated so that we know what packages to update and what pacakges to leave alone
+```${HOME}/runtime/IP_FORWARDING_ENABLED```  - This marker file tells us that IP Forwarding has been enabled
 
-```${HOME}/runtime/KNICKERS_ARE_UP``` - this is to do with the firewall it means that we have set our base condition which is to allow outgoing connections but dissalow all incoming connections and so basically, "knickers are up" because no one is let in.
+```${HOME}/runtime/KNICKERS_ARE_UP```  - This marker file tells us that the firewall is blocking incoming connections by default
 
-```${HOME}/runtime/MARKEDFORSHUTDOWN``` - for ease we can mark a machine for shutdown and the shutdown will then be actioned
+```${HOME}/runtime/FIREWALL-INITIALISED```  - This marker file means that the firewalling system is considered initialised
 
-```${HOME}/runtime/PREPARE_MOUNTS``` - this means that the s3 mounts are prepared for datastore assets mounted to the current webroot
+```${HOME}/runtime/FIREWALL-ACTIVE``` - This marker file tells us that the firewalling system is considered active
 
-```${HOME}/runtime/SETTING_UP_ASSETS``` - this is present when datastore mount assets are being prepared. This means that you won't get two attempts to mount if a mount is already in process for some bizarre reason
+```${HOME}/runtime/firewall.dat``` - This is the configuration file related to the firewall
 
-```${HOME}/runtime/sslcertlock.file``` - this is a lock file for generating SSL certificates which must not be present if a new attempt to generate an SSL certificate can proceed. 
+```${HOME}/runtime/software.dat``` - This file configures how the software we are installing should be installed, for example, should a particular software program be installed from source or from repository
 
-```${HOME}/runtime/updated_webroot.dat``` - if there are any new files in the webroot their paths are stored here and then they are copied to the datastore for distribution to the other webroots
+```${HOME}/runtime/webserver_configuration_settings.dat``` - This file contains all the configuration settings for our current webserver
 
-```${HOME}/runtime/WEBSERVER_READY``` - this is set if the webserver has completed its initial build
+```${HOME}/runtime/SHUTDOWN-INITIATED``` - This marker file tells us that a Shutdown of the current webserver has been initiated
+
+```${HOME}/runtime/otherwebserverips``` - This is where a list of all the webserver IPs that are active in the system are recorded except the current webserver IP address
+
+```${HOME}/runtime/ssh-audit``` - This directory is where the ssh audit information is held
+
+```${HOME}/runtime/virus_report``` - This directory contains any virus reports that might have been generated   
+
+```${HOME}/runtime/INITIAL_BUILD_WEBSERVER_ONLINE``` - This is a marker file that tells us that our current webserver has completed its intial build
+
+```${HOME}/runtime/AUTOSCALED_WEBSERVER_ONLINE```  - This is a marker file that tell us that the current webserver has been build as the result of an autoscaling event
+
+```${HOME}/runtime/ATOP_RUNNING``` - This is a marker file which tells us that the ATOP process is running
+
+```${HOME}/runtime/MARKEDFORSHUTDOWN``` - This marker file will be present if a machine is a candidate for being shutdown and terminated
+
+```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED``` - This marker file tells us that a CPU overload event has been acknowledged
+
+```${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - This is a marker file that tell us that a low memory state has been acknowledged
+
+````${HOME}/runtime/LOW_DISK_ACKNOWLEDGED``` - This is a marker file that tells us that a low disk space state has been acknowledged
+
+```${HOME}/runtime/BESPOKE_APPLICATION_INSTALLED``` - This marker file tells us that our application is considered installed
 
 ```${HOME}/cron``` - This directory contains the scripts relating to cron functionality
 
@@ -191,10 +210,6 @@ This is the dirctory where build specific configuration details and configuratio
 ```${HOME}/system``` - This is where all scripts related to third party providers are kept such as datastore providers, git providers and so on
 
 ```${HOME}/security``` - This directory has scripts that relate to security such as the firewall  
-
-```${HOME}/runtime/webserver_configuration_settings.dat ${HOME}/runtime/software.dat``` - these files are the configuration settings for our current webserver  
-
-```${HOME}/runtime/ALL_CORE_SOFTWARE_INSTALLED``` - this is just a placeholder which tells us that the core software has all been installed
 
 ```${HOME}/runtime/WEBSERVER_CONFIG_LOCATION.dat``` - this stores the location of the webserver configuration file for ease of access elsewhere
 

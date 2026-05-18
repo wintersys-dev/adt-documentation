@@ -217,32 +217,47 @@ This is the dirctory where build specific configuration details and configuratio
 
 #### Database Machines
 
-```${HOME}/runtime/DB_APPLICATION_INSTALLED``` - If this file is present then it means that the system considers an application's data to have been installed into the database from an SQL dump file
+```${HOME}/runtime/datastore_workarea``` - this can be used by the scripts which interact with the datastore as a work area
 
-```${HOME}/runtime/BUILDCLIENTIP``` - this is a placeholder for the build machine's ip address. It is stored here for convenience.  
+```${HOME}/runtime/DB_APPLICATION_INSTALLED```  - this is a marker file which is set when  the application is successfully installed into the database
 
-```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED, ${HOME}/runtime/LOW_DISK_ACKNOWLEDGED, ${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - this flag tells us whenever we have notified the user by email of some sort of low resource situation. Using this flag it means we only send emails periodically rather than multi times consequtively in short order as we might do without these flags  
+```${HOME}/runtime/DATABASE_SYSTEM_INSTALLED``` - This is a marker file which tells us that the core database system is installed
 
-```${HOME}/runtime/CREDENTIALS_PRIMED``` - once we have got the database credentials that were generated on the build machine on our current webserver we consider credentials to be primed (in other words, we know what our database credentials are if this is set).
+```${HOME}/runtime/DATABASE_READY``` - this is a marker file which shows us that the database machine is considered to have been fully built and all software to have been installed
 
-```${HOME}/runtime/DATABASE_APPLICATION_UPDATING``` - this is set when the application database is being updated if a database machine is being provisioned using a snapshot
+```${HOME}/runtime/mysql-init``` - this is a directory for mysql intialisation scripts to be held
 
-```${HOME}/runtime/DATABASE_READY``` - if the database has completed its build, this file will be present
+```${HOME}/runtime/postgres-init``` - this is a directory for postgres initialisation scripts to be held
 
-```${HOME}/runtime/dbinstalllock.file``` - if prsent this means that the database is currenlty being installed. You can't install the actual database if this lock file is present
+```${HOME}/runtime/SSMTP_INITIALISED``` - this is a marker file which tells us that the SMTP system is installed and functional
 
-```${HOME}/runtime/FIREWALL-ACTIVE``` - this file is present if we believe that the firewall is active
+```${HOME}/runtime/KNICKERS_ARE_UP```  - this shows us that any inbound connections to the machines ports have been blocked unless explicitly authorised
 
+```${HOME}/runtime/FIREWALL-ACTIVE``` - this shows us that the firewalling system is considered active
 
-```${HOME}/runtime/mariadb-init/initialiseDB.sql``` - this is the intialisation configuration that creates the application database and username/password in your mariadb database
+```${HOME}/runtime/firewall.dat``` - this configuration file holds the configuration for the firewall
 
-```${HOME}/runtime/mysql-init/initialiseDB.sql``` - this is the intialisation configuration that creates the application database and username/password in your mysql database
+```${HOME}/runtime/FIREWALL-INITIALISED``` - this marker file is set when the firewall is considered to have been initialised
 
-```${HOME}/runtime/postgres-init/initialiseDB.sql``` - this is the intialisation configuration that creates the application database and username/password in your postgres database
+```${HOME}/runtime/FIREWALL-ACTIVE``` - this marker file is set when the firewall has been made active
 
-```${HOME}/runtime/installedsoftware``` - this directory serves as a record as to which software has been installed on this machine. It can be referred to if the software needs to be updated so that we know what packages to update and what pacakges to leave alone
+```${HOME}/runtime/software.dat``` - this configuration file holds the setting for the various softwares that the machine uses
 
-```${HOME}/runtime/KNICKERS_ARE_UP``` - this is to do with the firewall it means that we have set our base condition which is to allow outgoing connections but dissalow all incoming connections and so basically, "knickers are up" because no one is let in.
+```${HOME}/runtime/database_configuration_settings.dat``` - this configuration file holds the settings for the current database machine
+
+```${HOME}/runtime/ssh-audit``` - any ssh connection audit reports are stored here
+
+```${HOME}/runtime/virus_report``` - any virus scanning reports are stored here
+
+```${HOME}/runtime/installedsoftware``` - this directory contains a list of marker files that show us which softwwares are considered to have been successfully installed
+
+```${HOME}/runtime/ATOP_RUNNING``` - this is a marker file telling us that the TOP is running
+
+```${HOME}/runtime/CPU_OVERLOAD_ACKNOWLEDGED``` - this is a marker file telling us that CPU overload status has had a notification email sent
+
+```${HOME}/runtime/LOW_MEMORY_ACKNOWLEDGED``` - this is a marker file telling us that low memory status has had a notification email sent
+
+```${HOME}/runtime/LOW_DISK_ACKNOWLEDGED``` - this is a marker file telling us that low disk status has had a notification email sent
 
 ```${HOME}/applicationdb``` - the files to do with the specific application we are installing
 
@@ -254,7 +269,6 @@ This is the dirctory where build specific configuration details and configuratio
 
 ```${HOME}/security``` - This directory has scripts that relate to security such as the firewall  
 
-```${HOME}/runtime/database_configuration_settings.dat ${HOME}/runtime/software.dat``` - these files are the configuration settings for our current database machine
 
 ---------------------------------
 

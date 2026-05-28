@@ -56,7 +56,6 @@ The nomenclature of the various datastore buckets that they system uses is as fo
 >     <website-url>-<dns-choice>-snap                         (this will retain data related to snapshots)
 >     <website_url>-firewall-auth-laptop-ips                  (this defines which laptop ip addresses are allowed to access the reverse proxy machines when firewall based authentication servers are active)
 >     <website_url>-basic-auth-credentials                    (this defines the basic auth credentials for access to the reverse proxy servers when basic auth based authentication servers are active)
->     <website_url>-wireguard-config                          (this defines the wireguard config files for access to the reverse proxy servers when wiregard based authentication servers are active)
 
 --------------------------------
 

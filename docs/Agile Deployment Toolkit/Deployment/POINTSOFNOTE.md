@@ -73,13 +73,6 @@ I think its now possible to remove termination protection through the GUI, it pr
 
 ----------------------------------
 
-- The S3_ACCESS_KEY is used as a unique identifier but there is one issue to be aware of. If you rotate your S3 access keys whilst you have a deployment running you could potentially ssh onto each machine in your server fleet and update the S3 keys in your
-
->     ${BUILD_HOME}/runtime/*configuration.dat
-
-file. This will potentially break your system. If you rotate your S3 keys in the middle of a deployment you will need to perform a full redeployment to avoid the potential of the system breaking. You also need to be aware that the S3 ACCESS key whilst not regarded as "secret" by default should be regarded as "secret" when it is used in an ADT deployment situation. With other types of credential you can rotate them, for example, git personal access tokens and so on and you can update the configuration files manually on each of your servers in your server fleet and continue without issue but if you rotate your S3 keys you need to perform a redeploy of your infrastructure. A complete redeployment takes in the order of 10 minutes if you ever needed to do that. 
-
-More detail on this issue: To be more explicit the way that a rotation of the S3 ACCESS KEY will cause a problem is if you  have assets mounted from the datastore. I use the S3 ACCESS KEY as a way of generating a unique identifier without needing  an additional explicit "Secret token" variable in the templates. Using it as a unique identifier I use it to control access to the S3 assets buckets so that anyone that doesn't know the S3 ACCESS TOKEN will be blocked from accessing the assets in the bucket. Clearly if your S3 ACCESS KEY has been changed then your system won't know what the old one was anymore and so access will be blocked. An alternative approach is to unmount all your S3 mounted assets directories and let the system reinitialise with the new token. You  will also need to alter your webserver configurations to use the new token and restart the webservers.
 
 NOTE: If you uncover any other points of note about this toolkit that can make people's lives less hellish then please tell me about them and I will list them here. 
 

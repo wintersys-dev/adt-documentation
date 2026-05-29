@@ -71,6 +71,14 @@ I think its now possible to remove termination protection through the GUI, it pr
 
 - Please be aware that no machine name should be longer than 32 characters in total, for example a machine name can be ws-lhr-test-build-1-XgzR-2MMd at most. If a machine name is longer than 32 characters then in some cases things will break because this is a hard limit of the VPS provider for machine names
 
+----------------------------------
+
+- The S3_ACCESS_KEY is used as a unique identifier but there is one issue to be aware of. If you rotate your S3 access keys whilst you have a deployment running you could potentially ssh onto each machine in your server fleet and update the S3 keys in your
+
+>     ${BUILD_HOME}/runtime/*configuration.dat
+
+file. This will potentially break your system. If you rotate your S3 keys in the middle of a deployment you will need to perform a full redeployment to avoid the potential of the system breaking. You also need to be aware that the S3 ACCESS key whilst not regarded as "secret" by default should be regarded as "secret" when it is used in an ADT deployment situation. With other types of credential you can rotate them, for example, git personal access tokens and so on and you can update the configuration files manually on each of your servers in your server fleet and continue without issue but if you rotate your S3 keys you need to perform a redeploy of your infrastructure. A complete redeployment takes in the order of 10 minutes if you ever needed to do that.
+
 NOTE: If you uncover any other points of note about this toolkit that can make people's lives less hellish then please tell me about them and I will list them here. 
 
 

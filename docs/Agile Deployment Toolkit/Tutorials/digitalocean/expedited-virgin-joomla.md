@@ -116,14 +116,14 @@ I then update all fields marked "MANDATORY" (marked in red) referring to the val
 \#####MANDATORY - Bare minimum set of values that you must provide for a build to have any chance of succeeding  
 \#####NOT REQUIRED - isn't used by the Exoscale  
 
-###################################################################################################################
-##### !!!!!!!! Secret Identifier !!!!!!!!!
-#change this to your own secret value to secure your assets if don't change this to your own value, that is very bad
-#this need to be a 16 character alpha numeric string. If you forget what you set this value to you could under some 
-#circumstances have difficulty accessing your assets. 
-###################################################################################################################
-export SECRET_IDENTIFIER="ndjkfj12pdnc4sw1"  #MANDATORY - !!!!!CHANGE AND REMEMBER ME!!!!!
-###################################################################################################################
+\###################################################################################################################
+\##### !!!!!!!! Secret Identifier !!!!!!!!!
+\#change this to your own secret value to secure your assets if don't change this to your own value, that is very bad
+\#this need to be a 16 character alpha numeric string. If you forget what you set this value to you could under some 
+\#circumstances have difficulty accessing your assets. 
+\###################################################################################################################
+<span style="color:red">export SECRET_IDENTIFIER="ndjkfj12pdnc4sw1"  #MANDATORY - !!!!!CHANGE AND REMEMBER ME!!!!! </span>  
+\###################################################################################################################
  
 \#####Application Settings#########  
 <span style="color:red">export APPLICATION="joomla" #MANDATORY </span>  

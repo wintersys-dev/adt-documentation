@@ -205,6 +205,7 @@ export USER="root"
 export SYNC_WEBROOTS="0"  
 export AUTHENTICATION_SERVER="0"  
 export USER_EMAIL_DOMAIN=""  
+export LOAD_BALANCER="0"
 
 \#####Build Settings######  
 export PRODUCTION="0"  

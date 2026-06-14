@@ -393,8 +393,7 @@ export SYNC_WEBROOTS="1"
 export USER_EMAIL_DOMAIN=""  
 
 \#####Build Settings######  
-export PRODUCTION="1"  
-export DEVELOPMENT="0"  
+export DEPLOYMENT_MODE="PRODUCTION"  
 export NO_AUTOSCALERS="1"  
 <span style="color:red">export NO_REVERSE_PROXY="1" </span>   
 export AUTHENTICATION_SERVER="0"  

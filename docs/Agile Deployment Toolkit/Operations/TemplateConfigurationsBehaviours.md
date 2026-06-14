@@ -271,8 +271,7 @@ Set the timezone for your servers in any of your templates:
 
 To switch to development mode:
 
->     export PRODUCTION="0"
->     export DEVELOPMENT="1"
+>     export DEPLOYMENT_MODE="DEVELOPMENT"
 
 --------------------------------------------------------------------------------
 
@@ -280,8 +279,7 @@ To switch to development mode:
 
 To switch to production mode:
 
->     export PRODUCTION="1"
->     export DEVELOPMENT="0"
+>     export DEPLOYMENT_MODE="PRODUCTION"
 
 ------------------------------------------------------------------------------
 

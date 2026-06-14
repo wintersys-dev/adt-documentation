@@ -2,15 +2,13 @@
 
 There are two deployment modes depending upon what you want to be doing. There is development mode for when you are developing an application and there is production mode for when you want a live application with users and visitors. 
 
-To set development more to the active mode, you need to set the template values to:  
+To set development mode to the active mode, you need to set the following template value:  
 
->     DEVELOPMENT="1"
->     PRODUCTION="0"
+>     DEPLOYMENT_MODE="DEVELOPMENT"
 
-To set development mode to the active mode you need to set the template values to:  
+To set production mode to the active mode you need to set the following template value:  
 
->     DEVELOPMENT="0"
->     PRODUCTION="1"
+>     DEPLOYMENT_MODE="PRODUCTIOM"
 
 
 ##### DEVELOPMENT MODE

@@ -211,8 +211,7 @@ export USER_EMAIL_DOMAIN=""
 export LOAD_BALANCER="0"
 
 \#####Build Settings######  
-export PRODUCTION="0"  
-export DEVELOPMENT="1"  
+export DEPLOYMENT_MODE="DEVELOPMENT" 
 <span style="color:red">export BUILD_IDENTIFIER="tutorial" #MANDATORY </span>     
 export NO_AUTOSCALERS="0"  
 

@@ -133,9 +133,8 @@ export USER="root"
 export SYNC_WEBROOTS="0"  
 export USER_EMAIL_DOMAIN=""  
      
-\#####Build Settings###### 
-<span style="color:red">export PRODUCTION="1" </span>   
-<span style="color:red">export DEVELOPMENT="0"  </span>   
+\#####Build Settings######   
+<span style="color:red">export DEPLOYMENT_MODE="PRODUCTION" </span>   
 <span style="color:red">export NO_AUTOSCALERS="1"  </span>   
 <span style="color:red">export NO_REVERSE_PROXY="1"</span>   
 export AUTHENTICATION_SERVER="0"  

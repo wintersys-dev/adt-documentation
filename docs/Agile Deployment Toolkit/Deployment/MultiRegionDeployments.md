@@ -136,7 +136,7 @@ export USER_EMAIL_DOMAIN=""
 \#####Build Settings######   
 <span style="color:red">export DEPLOYMENT_MODE="PRODUCTION" </span>   
 <span style="color:red">export NO_AUTOSCALERS="1"  </span>   
-<span style="color:red">export NO_REVERSE_PROXY="1"</span>   
+<span style="color:red">export NO_REVERSE_PROXIES="1"</span>   
 export AUTHENTICATION_SERVER="0"  
 export BUILD_FROM_SNAPSHOT="0"  
      
@@ -267,7 +267,7 @@ export USER_EMAIL_DOMAIN=""
 \#####Build Settings######  
 <span style="color:red">export DEPLOYMENT_MODE="PRODUCTION" </span>   
 <span style="color:red">export NO_AUTOSCALERS="1"  </span>   
-<span style="color:red">export NO_REVERSE_PROXY="1"</span>    
+<span style="color:red">export NO_REVERSE_PROXIES="1"</span>    
 export AUTHENTICATION_SERVER="0"  
 export BUILD_FROM_SNAPSHOT="0"  
      
@@ -395,7 +395,7 @@ export USER_EMAIL_DOMAIN=""
 \#####Build Settings######  
 export DEPLOYMENT_MODE="PRODUCTION"  
 export NO_AUTOSCALERS="1"  
-<span style="color:red">export NO_REVERSE_PROXY="1" </span>   
+<span style="color:red">export NO_REVERSE_PROXIES="1" </span>   
 export AUTHENTICATION_SERVER="0"  
 export BUILD_FROM_BACKUP="0"  
  

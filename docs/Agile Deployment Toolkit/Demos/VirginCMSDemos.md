@@ -121,6 +121,10 @@ To deploy a Postgres based virgin version of joomla change the values in your St
 
   >     virginjoomlapostgres-db-baseline
 
+You will also need to set:  
+
+![](images/postgres.png "Virgin Joomla Baseline Installation Postgres") 
+
 -----------------
 
 ### Demo 7 (StackScript overrides for a virgin installation of the Wordpress CMS from a baselined repository)  
@@ -170,6 +174,10 @@ To deploy a Postgres based virgin version of drupal change the values in your St
 
   >     virgindrupalpostgres-db-baseline
 
+You will also need to set:  
+
+![](images/postgres.png "Virgin Joomla Baseline Installation Postgres") 
+
 --------------------------------------
 
 ### Demo 9 (StackScript overrides for a virgin installation of the Moodle CMS from a baselined repository) 
@@ -191,3 +199,7 @@ To deploy a Postgres based virgin version of moodle change the values in your St
 2. "BASELINE DB REPOSITORY"
 
   >     virginmoodlepostgres-db-baseline
+
+You will also need to set:  
+
+![](images/postgres.png "Virgin Joomla Baseline Installation Postgres") 

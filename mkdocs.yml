@@ -11,7 +11,7 @@ theme:
 extra_css:
  - stylesheets/extra.css
 
-use_directory_urls: false
+use_directory_urls: false #set this to false if deploying to S3 set this to true if deploying to cloudflare
 
 not_in_nav: |
   TutorialsMenu.md 

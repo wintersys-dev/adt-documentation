@@ -7,6 +7,9 @@ theme:
   hljs_style: purebasic
   hljs_languages:
     - bash
+    
+plugins:
+    - mkdocs-video
 
 extra_css:
  - stylesheets/extra.css

@@ -259,7 +259,6 @@ When I ran the build process when writing this tutorial it looked as follows:
 ![](images/expedited/vultr28.png "Vultr Tutorial Image 28")
 ![](images/expedited/vultr29.png "Vultr Tutorial Image 29")
 ![](images/expedited/vultr30.png "Vultr Tutorial Image 30")
-![](images/expedited/vultr31.png "Vultr Tutorial Image 31")
 
 
 <span style="color:red">NOTE: In this image or this part of the output you will find the credentials you must set for your joomla application</span>   

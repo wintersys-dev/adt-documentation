@@ -31,6 +31,6 @@ Have a look at the userdata script
 
 >     vi ${BUILD_HOME}/userdatascripts/${userdatascript} 
 
-Now, substitute this userdata script that you have generated instead of the default initial script when you follow  [Build Machine Setup](./buildmachine.md). When you use your userdata script instead of the default init script, the build will proceed automatically with no need for interaction from you. Once you have a user data script you can use it for repeated deployments tweaky it as necessary for each deployment cycle.
+Now, substitute this userdata script that you have generated instead of the default initial script when you follow  [Build Machine Setup](./build-machine.md). When you use your userdata script instead of the default init script, the build will proceed automatically with no need for interaction from you. Once you have a user data script you can use it for repeated deployments tweaky it as necessary for each deployment cycle.
 
 <span style="color:red">**NOTE: remember to set SELECTED_TEMPLATE in your user data script when you are deploying your own hardcore style user data script </span>

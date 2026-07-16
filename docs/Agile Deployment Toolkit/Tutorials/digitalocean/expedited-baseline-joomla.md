@@ -17,8 +17,8 @@ In order to create the baseline of my custom application, I need to do the follo
 
 In my case it looks like the following when I create these repos in my "adt-apps" github account:
 
-![](images/expedited/exo26.png "Exoscale Tutorial Image 26")
-![](images/expedited/exo27.png "Exoscale Tutorial Image 27")
+![](images/expedited/do-26.png "Digital Ocean Tutorial Image 26")
+![](images/expedited/do-27.png "Digital Ocean Tutorial Image 27")
 
 Once these two repositories have been created (in my case in my adt-demos) account you are ready to make a baseline of the joomla install that you have modified. 
 
@@ -34,7 +34,7 @@ Once that starts running, you need to answer the questions you are prompted for 
 
 In a minute or two your website baseline will have been generated and you should check in its repository that sourceode has been generated to it. 
 
-![](images/expedited/exo28.png "Exoscale Tutorial Image 28")
+![](images/expedited/do-28.png "Digital Ocean Tutorial Image 28")
 
 Now you need to generate a baseline of the database. To do that you need to issue the command:
 
@@ -44,7 +44,7 @@ Once that starts running, you need to answer the questions you are prompted for 
 
 In short order, my database is backed up to the Github repository and again, I should check that the repository I have chosen has been updated using the github console.
 
-![](images/expedited/exo29.png "Exoscale Tutorial Image 29")
+![](images/expedited/do-29.png "Digital Ocean Tutorial Image 29")
 
 -----------------------------------------------
 

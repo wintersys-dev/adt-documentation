@@ -10,13 +10,13 @@ An expedited build type will involve the following steps to give you a high leve
 
 1. Configure a build machine according to your cloudhost provider type:
    
-   [digitalocean](../Tutorials/digitalocean/buildmachine.md)  
+   [digitalocean](../Tutorials/digitalocean/build-machine.md)  
   
-   [exoscale](../Tutorials/exoscale/buildmachine.md)  
+   [exoscale](../Tutorials/exoscale/build-machine.md)  
   
-   [linode](../Tutorials/linode/buildmachine.md)  
+   [linode](../Tutorials/linode/build-machine.md)  
   
-   [vultr](../Tutorials/vultr/buildmachine.md)  
+   [vultr](../Tutorials/vultr/build-machine.md)  
  
 
 2. Assuming that you have followed the correct set of instructions in 1. you should have ssh'd onto your build machine and you should then issue the following command

@@ -136,11 +136,11 @@ So you will need to add 2 rules
 
 You can see in these images that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 	
-![](images/expedited/exo13.png "DigitalOcean Tutorial Image 13") 
-![](images/expedited/exo14.png "DigitalOcean Tutorial Image 14") 
-![](images/expedited/exo15.png "DigitalOcean Tutorial Image 15") 
-![](images/expedited/exo16.png "DigitalOcean Tutorial Image 16") 
-![](images/expedited/exo17.png "DigitalOcean Tutorial Image 17") 
+![](images/expedited/do-13.png "DigitalOcean Tutorial Image 13") 
+![](images/expedited/do-14.png "DigitalOcean Tutorial Image 14") 
+![](images/expedited/do-15.png "DigitalOcean Tutorial Image 15") 
+![](images/expedited/do-16.png "DigitalOcean Tutorial Image 16") 
+![](images/expedited/do-17.png "DigitalOcean Tutorial Image 17") 
 
 ---------------
 

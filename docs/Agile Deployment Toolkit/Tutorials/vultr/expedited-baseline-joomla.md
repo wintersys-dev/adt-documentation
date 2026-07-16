@@ -15,11 +15,6 @@ In order to create the baseline of my custom application, I need to do the follo
 >     communitybuilder-webroot-sourcecode-baseline
 >     communitybuilder-db-baseline
 
-In my case it looks like the following when I create these repos in my "adt-apps" github account:
-
-![](images/expedited/exo26.png "Exoscale Tutorial Image 26")
-![](images/expedited/exo27.png "Exoscale Tutorial Image 27")
-
 Once these two repositories have been created (in my case in my adt-demos) account you are ready to make a baseline of the joomla install that you have modified. 
 
 3. To generate your baseline, you have to run two commands on your build machine. At the command prompt of your build machine cd into the **helpers** directory of your agile deployment toolkit installation. In my case it is like this:
@@ -34,17 +29,12 @@ Once that starts running, you need to answer the questions you are prompted for 
 
 In a minute or two your website baseline will have been generated and you should check in its repository that sourceode has been generated to it. 
 
-![](images/expedited/exo28.png "Exoscale Tutorial Image 28")
-
-Now you need to generate a baseline of the database. To do that you need to issue the command:
 
 >     /bin/sh PerformDatabaseBaseline.sh
 
 Once that starts running, you need to answer the questions you are prompted for entering, "communitybuilder" (which must match the repository names you set above) when you are prompted for an identifier. 
 
 In short order, my database is backed up to the Github repository and again, I should check that the repository I have chosen has been updated using the github console.
-
-![](images/expedited/exo29.png "Exoscale Tutorial Image 29")
 
 -----------------------------------------------
 

@@ -9,7 +9,7 @@ theme:
     - bash
     
 plugins:
-    - mkdocs-video
+ - mkdocs-video
 
 extra_css:
  - stylesheets/extra.css

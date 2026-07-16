@@ -17,8 +17,10 @@ In order to create the baseline of my custom application, I need to do the follo
 
 In my case it looks like the following when I create these repos in my "adt-apps" github account:
 
-![](images/expedited/do-26.png "Digital Ocean Tutorial Image 26")
-![](images/expedited/do-27.png "Digital Ocean Tutorial Image 27")
+![](images/expedited/do-68.png "Digital Ocean Tutorial Image 68")
+![](images/expedited/do-69.png "Digital Ocean Tutorial Image 69")
+![](images/expedited/do-70.png "Digital Ocean Tutorial Image 70")
+![](images/expedited/do-71.png "Digital Ocean Tutorial Image 71")
 
 Once these two repositories have been created (in my case in my adt-demos) account you are ready to make a baseline of the joomla install that you have modified. 
 

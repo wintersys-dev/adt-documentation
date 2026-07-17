@@ -1,7 +1,7 @@
-# WINTERSYS PROJECTS
+# WINTERSYS INITIATIVES
 --------------------
 
-#### AVAILABLE PROJECTS
+#### AVAILABLE INITIATIVES
 
 1. [Agile Deployment Toolkit](<Agile Deployment Toolkit/IntialOverviewOfADT.md>) (still under development take a look if interested)
 

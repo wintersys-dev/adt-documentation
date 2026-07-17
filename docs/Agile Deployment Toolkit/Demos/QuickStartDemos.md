@@ -1,6 +1,6 @@
 ## FURTHER QUICK DEMOS
 
-<span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  
+<span style="color:red">If you like the demo below and you want to try further demos other than our default one outlined below click [HERE](./CustomisedDemos.md)</span>  
 
 You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
 
@@ -16,7 +16,7 @@ For more information about parameter configuration please see the [spec](https:/
 
 **NOTE1:** The onus of these demos is on the word "Quick" and what I mean by that is that throughout these demos I suggest using security keys and tokens which have "full access rights" for all function of your account and therefore can be generated once and reused across all function rather than "limited access keys" which can only be used for particular function according to their scoping. Obviously this is not the most secure approach and if you were doing processes similar to this for real you would want to follow the "principle of least privileges" meaning that you would generate key sets for specific function within your account and with limited access rights.   
 
-**NOTE2:** The first time you deploy these demos to a specific domain name an SSL certificate will be generated for that domain which can take some time. If you make subsequent deployments if you use the same domain name for separate deployments the certificates previously issued will be reused and the time take for the deployment to be made will be sped up. If you choose a different domain name, then, a new certificate will be generated for that specific domain which will cause the deployment to take longer. 
+**NOTE2:** The first time you deploy these demos to a specific domain name an SSL certificate will be generated for that domain which can take some time. If you make subsequent deployments if you use the same domain name for separate deployments the certificates previously issued will be reused and the time taken for the deployment to be made will be sped up. If you choose a different domain name, then, a new certificate will be generated for that specific domain which will cause the deployment to take longer. 
 
 **NOTE3:** A copy of the credentials when you are making a virgin CMS deployment can be found by running 
 
@@ -26,9 +26,11 @@ on your build machine.
 
 ------------------------------
 
-## MANDATORY INITIAL CONFIGURATION STEPS
+## DEFAULT DEMO
 
-THIS WILL INSTALL THE DEFAULT DEMO  
+THIS BELOW STEPS WILL INSTALL THE DEFAULT DEMO
+
+#### MANDATORY INITIAL CONFIGURATION STEPS  
 
 <span style="color:red">1. IF YOU ARE A BEGINNER, follow [here](./QuickStartDemosPrepBeginnerLevel.md)</span>  
 <span style="color:red">2. IF YOU ARE AN EXPERT (any experienced techie), follow [here](./QuickStartDemosPrepExpertLevel.md)</span>

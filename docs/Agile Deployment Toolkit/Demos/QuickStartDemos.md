@@ -61,7 +61,7 @@ then do a
 
 ## DEPLOYING THESE DEMOS USING CLOUD-INIT 
 
-With the slight modification of following the step that says "Quick Demo" or "if you are making Quick Demo deployments" you can achieve the same thing as you have achieved using a StackScript but with a "UserData" or "Cloud Init" script instead. UserData scripts have the disadvantage of being more complex to look at but the advantage of being platform independent. Stackscripts are only available on the Linode platform.
+By following the aprooriate link below and taking care to follow the 'QUICK DEMO BUILD STYLE:' step and not the 'HARDCORE BUILD STYLE:' you can achieve the same thing as you achieve using a StackScript but with a "UserData" or "Cloud Init" script instead. UserData scripts have the disadvantage of being more complex to look at but the advantage of being platform independent. Stackscripts are only available on the Linode platform. The default demo makes use of a Stackscript as it presents with the least friction for anyone wanting to try a quick demo with us.
 
 [DigitalOcean](../Tutorials/digitalocean/build-machine.md)  
 [Exoscale](../Tutorials/exoscale/build-machine.md)  

@@ -1,6 +1,6 @@
 ## FURTHER QUICK DEMOS
 
-<span style="color:red">If you like the demo below and you want to try further demos other than our default one outlined below click [HERE](./CustomisedDemos.md)</span>  
+<span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  
 
 You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
 
@@ -28,7 +28,7 @@ on your build machine.
 
 ## DEFAULT DEMO
 
-THIS BELOW STEPS WILL INSTALL THE DEFAULT DEMO
+THE BELOW STEPS WILL INSTALL THE DEFAULT DEMO
 
 #### MANDATORY INITIAL CONFIGURATION STEPS  
 
@@ -61,7 +61,7 @@ then do a
 
 ## DEPLOYING THESE DEMOS USING CLOUD-INIT 
 
-With the slight modification of following the step that says "Quick Demo" or "if you are making Quick Demo deployment" you can achieve the same thing as you have achieved using a StackScript but with a "UserData" or "Cloud Init" script instead. UserData scripts have the disadvantage of being more complex to look at but the advantage of being platform independent. 
+With the slight modification of following the step that says "Quick Demo" or "if you are making Quick Demo deployments" you can achieve the same thing as you have achieved using a StackScript but with a "UserData" or "Cloud Init" script instead. UserData scripts have the disadvantage of being more complex to look at but the advantage of being platform independent. Stackscripts are only available on the Linode platform.
 
 [DigitalOcean](../Tutorials/digitalocean/build-machine.md)  
 [Exoscale](../Tutorials/exoscale/build-machine.md)  

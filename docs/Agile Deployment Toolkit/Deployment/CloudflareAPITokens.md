@@ -1,8 +1,20 @@
-#### CLOUDFLARE AUTHENTICATION METHODS
+### CLOUDFLARE AUTHENTICATION METHODS
 
-Cloudflare has two authentication methods. One is a global API key and the other is "account" or "user" tokens. Account or user tokens are considered more secure because you can limit their scope and function so if your key leaks there's much less that can be done with it to your cloudflare account. What we are going to do, then, is use tokens rather than the global API key for our authentication needs. 
+Cloudflare has two authentication methods. One is a global API key and the other is "account" or "user" tokens. Account or user tokens are considered more secure because you can limit their scope and function so if your key leaks there's much less that can be done with it to your cloudflare account. 
 
-##### GENERATING AND CONFIGURING USER TOKEN
+#### GENERATING AND CONFIGURING A GLOBAL API KEY
+
+You can generate a global API key for Cloudflare by following: [Global API Key](https://developers.cloudflare.com/fundamentals/api/get-started/keys/). You can then set the API Key you have generated for use by the toolkit simply by setting:  
+
+>     export DNS_SECURITY_KEY="<global-api-key>"
+
+for example:  
+
+>     export DNS_SECURITY_KEY="8bbdhjf84jfbdu8gfhb4i8fjbndkk92"
+
+------------------------------------
+
+#### GENERATING AND CONFIGURING USER TOKEN
 
 In order to generate a token to manage your Cloudflare DNS for yourself you can follow [this](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). For our use you need to create a token with **DNS edit** scope.
 

@@ -124,7 +124,7 @@ Deploy your baseline setup to persist its specified assets to the datastore
 Take the baseline application offline once a temporal backup has been generated/created  
 Deploy the full temporal deployment of your application expecting the assets to be mounted from the S3 datastore using reverse proxies if you want to. 
 
-**NOTE:** at the time of writing its not possible to use lighttpd for the reverse proxy AND have access to the object storage bucket restricted using a unique referrer because I couldn't figure out how to do that with the lighttpd config file (I am not an expert). If you know how this can be done using lighttpd like I have done for nginx and apache then if you could let me know, I will integrate your technique. 
+**NOTE:** at the time of writing its not possible to use lighttpd for the reverse proxy AND have access to the assets object storage bucket restricted using a unique referrer because I couldn't figure out how to do that with the lighttpd config file (I am not an expert). If you know how this can be done using lighttpd like I have done for nginx and apache then if you could let me know, I will integrate your technique. 
 
 -----------------------------
 

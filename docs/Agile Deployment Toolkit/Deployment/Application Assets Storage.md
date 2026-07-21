@@ -123,6 +123,7 @@ Make a baseline of your application
 Deploy your baseline setup to persist its specified assets to the datastore  
 Take the baseline application offline once a temporal backup has been generated/created  
 Deploy the full temporal deployment of your application expecting the assets to be mounted from the S3 datastore using reverse proxies if you want to.  
+
 -----------------------------
 
 #### ELASTIC FILE SYSTEM SUPPORT

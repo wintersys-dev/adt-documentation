@@ -73,3 +73,16 @@ then you don't want those assets in your backup. So, the scripts automatically e
 
 NOTE: Up to the point where you have baselined an application in your application workflow you are developing you certainly don't want to have PERSIST_ASSETS_TO_DATASTORE set to "1" because you will want the assets to be part of your baseline its only once you have a baseline to work from that you will want to start considering setting  PERSIST_ASSETS_TO_DATASTORE to "1" which means that the backup and baseline process will exclude any S3 mounted assets from the baseline or backup that is generated
 
+------------------------------------------------------
+
+#### Alternative method of backing up your application webroot:
+
+If you go to the directory
+
+>    ${BUILD_HOME}/helpers/servers
+
+You will find a script called "ExecuteOnRemoteMachine.sh". If you run this script with the "backup" parameter and answer the questions you can make a backup of a specific webserver rather than leaving it to the system to decide which webserver to use for the backup
+
+>    /bin/sh ./ExecuteOnRemoteMachine.sh "backup"
+
+

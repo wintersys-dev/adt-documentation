@@ -23,6 +23,7 @@ This script will perform a backup of your database for you it will be stored and
 This script will perform a backup of your webroot for you it will be stored and accessible in your datastore under the url of your website along with the periodicity of the backup itself
 
 ----------------------------------
+
 ----------------------------------
 
 >     ${BUILD_HOME}/helperscripts/baseline/PerformDatabaseBaseline.sh

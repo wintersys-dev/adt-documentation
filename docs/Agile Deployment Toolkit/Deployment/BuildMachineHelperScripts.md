@@ -135,4 +135,24 @@ This allows us to run various service commands like stopping and starting ssh or
 
 >     ${BUILD_HOME}/helpers/services/SetVariableValue.sh
 
-Thiis will set a variable in the build environment
+This will set a variable in the build environment
+
+------------------------------------------
+
+>     ${BUILD_HOME}/helpers/snapshots/ObtainWholeMachineSnapshot.sh
+
+This script can be used to obtain snapshots of machines in the infrastructure which can then be used to make new deployments possibly in short order compared to a full build based webserver deployment
+
+------------------------------------------
+
+>     ${BUILD_HOME}/helpers/templates/EditTemplate.sh
+
+You can edit a template using this script
+
+>     ${BUILD_HOME}/helpers/templates/GenerateHardcoreUserDataScript.sh
+
+This will generate a user data script that can be deployed using cloud-init or as a stackscript (on Linode) based on the the configuration of a template
+
+>     ${BUILD_HOME}/helpers/templates/GenerateOverrideTemplate.sh
+
+With this script you can generate your template overrides init script interactively rather than having to edit the template file directly.

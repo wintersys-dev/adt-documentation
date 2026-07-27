@@ -85,4 +85,8 @@ You will find a script called "ExecuteOnRemoteMachine.sh". If you run this scrip
 
 >    /bin/sh ./ExecuteOnRemoteMachine.sh "backup"
 
+You can make a backup of your database by running:
+
+>    /bin/sh ./ExecuteOnRemoteMachine.sh "backup-db"
+
 

@@ -23,6 +23,7 @@ This script will perform a backup of your database for you it will be stored and
 This script will perform a backup of your webroot for you it will be stored and accessible in your datastore under the url of your website along with the periodicity of the backup itself
 
 ----------------------------------
+----------------------------------
 
 >     ${BUILD_HOME}/helperscripts/baseline/PerformDatabaseBaseline.sh
 
@@ -34,11 +35,13 @@ This script will generate a baseline of your database for you that you can then 
 This script will generate a baseline of your webroot for you that you can then deploy from. An empty repository of the naming convention "<identifier>-webroot-sourcecode-baseline" needs to have been created.
 
 -----------------------------------
+----------------------------------
 
 >     ${BUILD_HOME}/helpers/datastore/CleanupDatastore.sh
 
 You can run this script if you want to clean up your datastore. BE CAUTIOUS because you may delete buckets that are needed and or are not associated with this toolkit if you don't keep a tight rein on how you are using this. The point is, after multiple deployments you will likely want to clean up at the very least the hangover authentication buckets that this toolkit generates. 
 
+----------------------------------
 ----------------------------------
 
 >     ${BUILD_HOME}/helpers/development/InitialiseToolkitForDevelopment.sh
@@ -58,7 +61,8 @@ This script will push updates to your git repository
 
 This script will sync the scripts in the development area with the live scripts area
 
----------------------------
+----------------------------------
+----------------------------------
 
 >     ${BUILD_HOME}/helpers/security/AuditSSHConnections.sh
 
@@ -72,8 +76,8 @@ This can be run daily from cron to check if the SSL ceritificates that a particu
 
 This script can be run periodically to check for viruses. The reason for this is to protect windows users because viruses that can infect windows can still be relayed through a linux machine according to my understanding anyway? Correct me if I am wrong and this is a waste of time.
 
-----------------------------
-
+----------------------------------
+----------------------------------
 
 >     ${BUILD_HOME}/helpers/servers/ConnectToRemoteMachine.sh
 
@@ -95,7 +99,8 @@ With  this script you can execute a command on remote machine(s). If you wanted 
 
 and run that command across multiple machines in sequence. 
 
-------------------------------
+----------------------------------
+----------------------------------
 
 >     ${BUILD_HOME}/helpers/services/AdjustScaling.sh
 
@@ -138,11 +143,13 @@ This allows us to run various service commands like stopping and starting ssh or
 This will set a variable in the build environment
 
 ------------------------------------------
+------------------------------------------
 
 >     ${BUILD_HOME}/helpers/snapshots/ObtainWholeMachineSnapshot.sh
 
 This script can be used to obtain snapshots of machines in the infrastructure which can then be used to make new deployments possibly in short order compared to a full build based webserver deployment
 
+------------------------------------------
 ------------------------------------------
 
 >     ${BUILD_HOME}/helpers/templates/EditTemplate.sh

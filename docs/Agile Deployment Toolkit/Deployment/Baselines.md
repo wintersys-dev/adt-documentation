@@ -16,3 +16,19 @@ and
 
 The scripts should be straight forward to follow as they run. Rudimentary checking is done that your baseline is created correctly but you should always go take a look to insure that the files you expect to be in the repository are there once the scripts are completed.  
 
+------------------------------------------------------
+
+#### Alternative method of making a baseline of your application webroot:
+
+If you go to the directory
+
+>    ${BUILD_HOME}/helpers/servers
+
+You will find a script called "ExecuteOnRemoteMachine.sh". If you run this script with the "baseline" parameter and answer the questions you can make a baseline of a specific webserver rather than leaving it to the system to decide which webserver to use for the baseline. Most often you will be making a baseline from "DEVELOPMENT" mode which means only one webserver will be running and active and so the baseline will be made from that.
+
+>    /bin/sh ./ExecuteOnRemoteMachine.sh "baseline"
+
+You can make a baseline of your database by running:
+
+>    /bin/sh ./ExecuteOnRemoteMachine.sh "baseline-db"
+

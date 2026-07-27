@@ -19,3 +19,5 @@ If you would rather pay for an email service with unlimited domains and unlimite
 
 1. [MXRoute](https://mxroute.com)
 2. [Migadu](https://migadu.com)
+
+I can't personally vouch for either of these but they seem to have a good enough reputation to be commended to you.

@@ -79,14 +79,14 @@ NOTE: Up to the point where you have baselined an application in your applicatio
 
 If you go to the directory
 
->    ${BUILD_HOME}/helpers/servers
+>     ${BUILD_HOME}/helpers/servers
 
 You will find a script called "ExecuteOnRemoteMachine.sh". If you run this script with the "backup" parameter and answer the questions you can make a backup of a specific webserver rather than leaving it to the system to decide which webserver to use for the backup
 
->    /bin/sh ./ExecuteOnRemoteMachine.sh "backup"
+>     /bin/sh ./ExecuteOnRemoteMachine.sh "backup"
 
 You can make a backup of your database by running:
 
->    /bin/sh ./ExecuteOnRemoteMachine.sh "backup-db"
+>     /bin/sh ./ExecuteOnRemoteMachine.sh "backup-db"
 
 

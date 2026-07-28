@@ -63,6 +63,9 @@ for iptables
 
 In this configuration no access is possible to port 443 by default. 
 
+----------------------------------
+
+----------------------------------
 
 ##### Basic Auth based approach
 

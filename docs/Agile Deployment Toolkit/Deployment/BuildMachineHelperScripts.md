@@ -39,6 +39,14 @@ This script will generate a baseline of your webroot for you that you can then d
 
 ----------------------------------
 
+>     ${BUILD_HOME}/helpers/database/ObtainDatabaseCredentials.sh
+
+This script can be used to obtain all the credentials that you need in order to connect to a running database
+
+-----------------------------------
+
+-----------------------------------
+
 >     ${BUILD_HOME}/helpers/datastore/CleanupDatastore.sh
 
 You can run this script if you want to clean up your datastore. BE CAUTIOUS because you may delete buckets that are needed and or are not associated with this toolkit if you don't keep a tight rein on how you are using this. The point is, after multiple deployments you will likely want to clean up at the very least the hangover authentication buckets that this toolkit generates. 

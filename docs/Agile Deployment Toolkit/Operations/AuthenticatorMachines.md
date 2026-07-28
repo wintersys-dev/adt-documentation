@@ -22,7 +22,12 @@ where the machine ip address is the ip address of the current authenticator
 
 2. Once all the ip addresses have been processed, the file containing above is written to the datastore under tag firewall-auth-laptop-ips. What that means is that any point in time n authenticators are all writing the list of ip addresses that they have accepted for the current iterationn to the datastore distinguised by the ip address of the authenticator itself so that they don't overwrite each others updates because if there was a single file with the ip addresses there would be a race condition in regards to which authenticator gets its updates persisted. I use sleep periods to try and ensure that when multiple authenticators don't update the datastore concurrently but, by using the IP addresses to distinguish the updates makes absolutely sure there is no contention.
 
-3. A period of time later every reverse proxy machine in our infrastructure will obtain the ipaddresses.dat.${machine_ip} files from the firewall-auth-laptop-ips. This is done by the script:
+The file with the ip addresses for the current authenticator are sent to the datastore:
+
+>     ${HOME}/services/datastore/operations/MountDatastore.sh "firewall-auth-laptop-ips" "distributed" 
+>     ${HOME}/services/datastore/operations/PutToDatastore.sh "firewall-auth-laptop-ips" ${HOME}/runtime/authenticator/ipaddresses.dat.${machine_ip} "firewall-laptop-ips" "distributed" "no"
+
+4. A period of time later every reverse proxy machine in our infrastructure will obtain the ipaddresses.dat.${machine_ip} files from the firewall-auth-laptop-ips. This is done by the script:
 
 >     ${HOME}/services/security/firewall/AllowAuthenticatorIPAddress.sh
 

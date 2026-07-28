@@ -129,7 +129,7 @@ where the machine ip address is the ip address of the current authenticator
 The file with the ip addresses for the current authenticator are sent to the datastore:
 
 >     ${HOME}/services/datastore/operations/MountDatastore.sh "whitelist-auth-laptop-ips" "distributed" 
->     ${HOME}/services/datastore/operations/PutToDatastore.sh "whitelist-auth-laptop-ips" ${HOME}/runtime/authenticator/ipaddresses.dat.${machine_ip} "firewall-laptop-ips" "distributed" "no"
+>     ${HOME}/services/datastore/operations/PutToDatastore.sh "whitelist-auth-laptop-ips" ${HOME}/runtime/authenticator/ipaddresses.dat.${machine_ip} "whitelist-laptop-ips" "distributed" "no"
 
 - A period of time later every reverse proxy machine in our infrastructure will obtain the ipaddresses.dat.${machine_ip} files from the whitelist-auth-laptop-ips. This is done by the script:
 

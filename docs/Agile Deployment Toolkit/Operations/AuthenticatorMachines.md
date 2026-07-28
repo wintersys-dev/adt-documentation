@@ -26,6 +26,10 @@ where the machine ip address is the ip address of the current authenticator
 
 >     ${HOME}/services/security/firewall/AllowAuthenticatorIPAddress.sh
 
+On your reverse proxy machines their crontabs will call this script:
+
+>     */1 * * * * export HOME="${HOME}" && ${HOME}/security/AllowAuthenticatorIPAddress.sh
+
 And on each reverse proxy this script will allow access to the port 443 from the ipaddresses that have been obtained from the authenticator machine. Access is granted depending on which firewall solution is active, iptables or ufw. Once the ipaddress is allowed through the firewall, the user should be able to access the reverse proxy machines (and therefore your webproperty) from their laptop. 
 
 NOTE1: The reverse proxy firewall provided by your VPS provider (if active) needs to allow more open access to port 443, in other words it allows through all IP addresses and its only the OS based firewall which limits access to individual IP addresses. 

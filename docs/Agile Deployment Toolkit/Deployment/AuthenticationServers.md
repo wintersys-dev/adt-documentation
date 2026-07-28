@@ -6,6 +6,8 @@ You can check [here](./RollYourOwnMailserver.md) for my thoughts about which ema
 
 You can deploy an authenticator machine to your current region if you want to require your users to go through initial authentication before they access your web property. Authentication can take place using the following methods. 
 
+To use an authentication server to control access you also need to have one or several reverse proxy machines running. In other words, you can't run authenticators unless you are also running reverse proxies.
+
 #### 1. Firewall based authentication.
 
 To use firewall based authentication you will need to be using reverse proxy(ies) in front of your webserver(s) and you will need to deny access by default to your reverse proxies by setting an appropriate value in firewall.dat, for example:
@@ -23,6 +25,17 @@ What will then happen with this method is that when a user tries to access your 
 "If you experience any timeouts please tell us your current IP address by going to the authentication server to regain access"
 
 NOTE: the firewall is not touched on the webserver(s) by this method the firewall access is controlled through the reverse proxy machines and so you have to be using reverse proxies for this method to be possible. 
+
+In your template to set up an authentication server if your webproperty is something like nuocial.uk and you are putting cloudflare in front of your authentication server you will need settings for firewall based authentication as something similar to:
+
+>     ######Authentication Server#####
+>     export NO_AUTHENTICATORS="1"
+>     export AUTHENTICATOR_TYPE="firewall"
+>     export AUTH_SERVER_URL="auth.nuocialsecurity.uk"
+>     export AUTH_DNS_USERNAME="webmaster@nuocial.uk" (or whatever the email address for your cloudflare account is)  
+>     export AUTH_DNS_SECURITY_KEY="X1234X"   (your cloudflare API key)
+>     export AUTH_DNS_CHOICE="cloudflare"
+>     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
 
 #### 2. Basic auth based authentication
 

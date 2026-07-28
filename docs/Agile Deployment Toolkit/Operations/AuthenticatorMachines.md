@@ -37,6 +37,16 @@ On your reverse proxy machines their crontabs will call this script:
 
 And on each reverse proxy this script will allow access to the port 443 from the ipaddresses that have been obtained from the authenticator machine. Access is granted depending on which firewall solution is active, iptables or ufw. Once the ipaddress is allowed through the firewall, the user should be able to access the reverse proxy machines (and therefore your webproperty) from their laptop. 
 
+And the reverse proxies will allow the supplied IP address through the firewall
+
+for ufw
+
+>     /usr/sbin/ipset add allowed-laptop-ips "${ip_address}/32"     
+
+for iptables
+
+>     /usr/sbin/ipset add allowed-laptop-ips ${ip_address}
+
 NOTE1: The reverse proxy firewall provided by your VPS provider (if active) needs to allow more open access to port 443, in other words it allows through all IP addresses and its only the OS based firewall which limits access to individual IP addresses. 
 
 NOTE2: If you are using this technique you need tech savvy users because if their IP address changes, for example, they registered their home laptop wifi IP address and then they are on the bus and they try to login with with their mobile phone using their mobile data their ip address will be different and they will need to know that the timeout means that they need to visit the authentication machine and register their new ip address in order to gain access.

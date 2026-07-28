@@ -47,13 +47,13 @@ for iptables
 
 >     /usr/sbin/ipset add allowed-laptop-ips ${ip_address}
 
-NOTE1: The reverse proxy firewall provided by your VPS provider (if active) needs to allow more open access to port 443, in other words it allows through all IP addresses and its only the OS based firewall which limits access to individual IP addresses. 
+**NOTE1:** The reverse proxy firewall provided by your VPS provider (if active) needs to allow more open access to port 443, in other words it allows through all IP addresses and its only the OS based firewall which limits access to individual IP addresses. 
 
-NOTE2: If you are using this technique you need tech savvy users because if their IP address changes, for example, they registered their home laptop wifi IP address and then they are on the bus and they try to login with with their mobile phone using their mobile data their ip address will be different and they will need to know that the timeout means that they need to visit the authentication machine and register their new ip address in order to gain access.
+**NOTE2:** If you are using this technique you need tech savvy users because if their IP address changes, for example, they registered their home laptop wifi IP address and then they are on the bus and they try to login with with their mobile phone using their mobile data their ip address will be different and they will need to know that the timeout means that they need to visit the authentication machine and register their new ip address in order to gain access.
 
-NOTE3: If you take your infrastructure offline and redeploy it then all accepted ip addresses will be reset meaning that all the users of the system will get timeouts and they will need to know that a timeout without any explanation means that their IP address isn't recognised and they need to register it through the authentictors (which is only a couple of minutes to do) to regain access.
+**NOTE3:** If you take your infrastructure offline and redeploy it then all accepted ip addresses will be reset meaning that all the users of the system will get timeouts and they will need to know that a timeout without any explanation means that their IP address isn't recognised and they need to register it through the authentictors (which is only a couple of minutes to do) to regain access.
 
-NOTE 4: For this style of authentication (in other words, firewall based) the firewall must be closed off by default on all reverse proxy machines for port 443 with access only allowed to authenticated ip addresses. This means that your firewall.dat file on your build machine should be configured similar to:
+**NOTE 4:** For this style of authentication (in other words, firewall based) the firewall must be closed off by default on all reverse proxy machines for port 443 with access only allowed to authenticated ip addresses. This means that your firewall.dat file on your build machine should be configured similar to:
 
 >     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
 >     REVERSEPROXYPORTS:
@@ -85,7 +85,7 @@ This machine identified file is then written to the datastore
 
 5. When a user goes to the main website they will see a "basic auth" dialog into which they will enter the email address and the password which was mailed to their inbox. If their username and password is correct they will be allowed access to the website on all reverse proxy machines in your setup. If their username (email address) and password aren't correct then they are denied access to the infrastructure. What that means is that we control access using basic auth and controlling the issuance of domain specific email addresses to authorised parties. 
 
-NOTE:  To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
+**NOTE:** To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
 
 >     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
 >     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0

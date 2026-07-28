@@ -10,7 +10,7 @@ To use an authentication server to control access you also need to have one or s
 
 NOTE: the firewall is not touched on the webserver(s) by this method the firewall access is controlled through the reverse proxy machines and so you have to be using reverse proxies for these authentication methods to be possible. 
 
-#### 1. Firewall based authentication.
+##### 1. Firewall based authentication.
 
 To use firewall based authentication you will need to be using reverse proxy(ies) in front of your webserver(s) and you will need to deny access by default to your reverse proxies by setting an appropriate value in firewall.dat, for example:
 
@@ -38,7 +38,7 @@ In your template to set up an authentication server if your webproperty is somet
 >     export AUTH_DNS_CHOICE="cloudflare"
 >     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
 
-#### 2. Basic auth based authentication
+##### 2. Basic auth based authentication
 
 To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
 
@@ -62,7 +62,7 @@ In your template to set up an authentication server if your webproperty is somet
 >     export AUTH_DNS_CHOICE="cloudflare"
 >     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
 
-#### 3. Whitelist based authentication.
+##### 3. Whitelist based authentication.
 
 To use whitelist based authentication you will need to be using reverse proxy(ies) in front of your webserver(s) and you will need to allow access by default to your reverse proxies by setting an appropriate value in firewall.dat, for example:
 

@@ -1,5 +1,7 @@
 #### Authenticator Machine Operational Processes
 
+All of these techniques protect the authentication server using cloudflare, but you aren't limited to having to do that because that makes it look like this solution is locked to a specific provider but cloudflare is only a recommended solution or option. 
+
 ##### Firewall based approach
 
 - The user will go to the authentication webserver and enter the email address that they have been provided with by your administrators. For example, if your domain email is nuocial@uk then the user might enter bob@nuocial.uk in order to receive an authentication email
@@ -97,3 +99,75 @@ This machine identified file is then written to the datastore
 >     DATABASEPORTS:
 
 In other words access is controlled using basic auth not the firewall. How robust basic auth is is another question but it is a way of at least making your web property a little more difficult to access. 
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+##### Whitelist based approach
+
+- The user will go to the authentication webserver and enter the email address that they have been provided with by your administrators. For example, if your domain email is nuocial@uk then the user might enter bob@nuocial.uk in order to receive an authentication email
+
+- If the user has entered a valid email address that user will receive a unique link in their inbox that will provide a temporary unique link to a file on your authentiction server. When they click that link they will be prompted to enter the ip address of their laptop
+
+- They enter their laptop IP address and it is appended (along with any other ipaddresses from other users that have been activated concurrently) to the file 
+
+>     /var/www/whitelist/ipaddresses.dat
+
+So, what we have now is a list of ip addresses that have requested access to our systems as a regular user and so we need to now process those ip addresses and grant them the requiste access to our webservers. 
+
+Processing of incoming IP addresses for whitelist based access
+
+- The incoming ip addresses are checked for validity and if they are a valid IP address then they are written to a file 
+
+>     ${HOME}/runtime/authenticator/ipaddresses.dat.${machine_ip}
+
+where the machine ip address is the ip address of the current authenticator
+
+- Once all the ip addresses have been processed, the file containing above is written to the datastore under tag whitelist-auth-laptop-ips. What that means is that any point in time n authenticators are all writing the list of ip addresses that they have accepted for the current iterationn to the datastore distinguised by the ip address of the authenticator itself so that they don't overwrite each others updates because if there was a single file with the ip addresses there would be a race condition in regards to which authenticator gets its updates persisted. I use sleep periods to try and ensure that when multiple authenticators don't update the datastore concurrently but, by using the IP addresses to distinguish the updates makes absolutely sure there is no contention.
+
+The file with the ip addresses for the current authenticator are sent to the datastore:
+
+>     ${HOME}/services/datastore/operations/MountDatastore.sh "whitelist-auth-laptop-ips" "distributed" 
+>     ${HOME}/services/datastore/operations/PutToDatastore.sh "whitelist-auth-laptop-ips" ${HOME}/runtime/authenticator/ipaddresses.dat.${machine_ip} "firewall-laptop-ips" "distributed" "no"
+
+- A period of time later every reverse proxy machine in our infrastructure will obtain the ipaddresses.dat.${machine_ip} files from the whitelist-auth-laptop-ips. This is done by the script:
+
+>     ${HOME}/services/security/whitelist/AllowAuthenticatorIPAddress.sh
+
+On your reverse proxy machines their crontabs will call this script:
+
+>     */1 * * * * export HOME="${HOME}" && ${HOME}/security/AllowAuthenticatorIPAddress.sh
+
+And on each reverse proxy this script will allow access to the port 443 from the ipaddresses that have been obtained from the authenticator machine. Access is granted depending on which firewall solution is active, iptables or ufw. Once the ipaddress is allowed through the firewall, the user should be able to access the reverse proxy machines (and therefore your webproperty) from their laptop. 
+
+And the reverse proxies will whitelist the supplied IP address as follows:
+
+for apache:
+
+>     /bin/echo "Require ip ${ip_address}" >> ${HOME}/runtime/authenticator/webserver_ip_whitelist.dat
+
+for nginx
+
+>     /bin/echo "deny all;" >> ${HOME}/runtime/authenticator/webserver_ip_whitelist.dat
+>     /bin/sed -i "1s/^/allow ${ip_address};\n/" ${HOME}/runtime/authenticator/webserver_ip_whitelist.dat
+
+for lighttpd
+
+>     vpc="`/bin/echo ${VPC_IP_RANGE} | /usr/bin/cut -d. -f-3`\\."
+>     ip_addresses="${ip_addresses}|${vpc}|127.0.0.1"
+>     /bin/sed -i "s;XXXXIP_ADDRESSESXXXX;${ip_addresses};" ${HOME}/runtime/authenticator/webserver_ip_whitelist.dat.$$
+
+**NOTE1:** Unlike the firewall based approach this whitelist approach will signpost users to the authentication server if they are blocked by the whitelist so it requires a slightly less level of sophistication than the firewall technique
+
+**NOTE2:** If you take your infrastructure offline and redeploy it then all accepted ip addresses will be reset meaning they will get a message to redirect to the authentication server if their IP address changes
+
+**NOTE 3:** For this style of authentication (in other words, whitelist based) the firewall must be open on port 443 on all reverse proxy machines with access being controlled by the webserver whitelist not the firewall
+
+>     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
+In this configuration access is possible to port 443 by default. 

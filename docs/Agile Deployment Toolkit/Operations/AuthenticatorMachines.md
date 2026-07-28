@@ -171,3 +171,7 @@ for lighttpd
 >     DATABASEPORTS:
 
 In this configuration access is possible to port 443 by default. 
+
+------------------------------------------
+
+------------------------------------------

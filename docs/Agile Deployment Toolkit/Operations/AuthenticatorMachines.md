@@ -52,3 +52,13 @@ NOTE1: The reverse proxy firewall provided by your VPS provider (if active) need
 NOTE2: If you are using this technique you need tech savvy users because if their IP address changes, for example, they registered their home laptop wifi IP address and then they are on the bus and they try to login with with their mobile phone using their mobile data their ip address will be different and they will need to know that the timeout means that they need to visit the authentication machine and register their new ip address in order to gain access.
 
 NOTE3: If you take your infrastructure offline and redeploy it then all accepted ip addresses will be reset meaning that all the users of the system will get timeouts and they will need to know that a timeout without any explanation means that their IP address isn't recognised and they need to register it through the authentictors (which is only a couple of minutes to do) to regain access.
+
+NOTE 4: For this style of authentication (in other words, firewall based) the firewall must be closed off by default on all reverse proxy machines for port 443 with access only allowed to authenticated ip addresses. This means that your firewall.dat file on your build machine should be configured similar to:
+
+>     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
+In this configuration no access is possible to port 443 by default. 

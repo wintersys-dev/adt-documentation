@@ -62,3 +62,35 @@ NOTE 4: For this style of authentication (in other words, firewall based) the fi
 >     DATABASEPORTS:
 
 In this configuration no access is possible to port 443 by default. 
+
+
+##### Basic Auth based approach
+
+1. The user will go to the url they have been provided with for the authentication process for example, auth.nuocial.uk and that website will ask them for their "nuocial.uk" (for example) domain email address. When they provide their email address a basic auth password will be sent to them and the website will tell them to check their inbox.
+
+2. Behind the scenes the basic auth credentials that have been generated are written from the authenticator machine(s) to the datastore as follows:
+
+The basic auth file where the credentials are generated to is stored in the basic_auth_file:
+
+>     ${HOME}/runtime/authenticator/basic-auth.dat.${machine_ip}
+
+This machine identified file is then written to the datastore
+
+>     ${HOME}/services/datastore/operations/MountDatastore.sh "basic-auth-credentials" "distributed" 
+>     ${HOME}/services/datastore/operations/PutToDatastore.sh "basic-auth-credentials" ${basic_auth_file} "basic-auth-credentials" "distributed" "no"
+
+3. The net result is that in the basic-auth-credentials datastore bucket is a set of basic auth credentials that all of our reverse proxies can check against.
+
+4. On the each reverse proxy machine, then, the authenticator specific basic auth credentials are aggregated into one file and set as the active authentication file for that reverse proxies webserver.
+
+5. When a user goes to the main website they will see a "basic auth" dialog into which they will enter the email address and the password which was mailed to their inbox. If their username and password is correct they will be allowed access to the website on all reverse proxy machines in your setup. If their username (email address) and password aren't correct then they are denied access to the infrastructure. What that means is that we control access using basic auth and controlling the issuance of domain specific email addresses to authorised parties. 
+
+NOTE:  To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
+
+>     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
+In other words access is controlled using basic auth not the firewall. How robust basic auth is is another question but it is a way of at least making your web property a little more difficult to access. 

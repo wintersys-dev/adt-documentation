@@ -49,13 +49,21 @@ The nomenclature of the various datastore buckets that they system uses is as fo
 >     <website_url>-multi-region  (bucket for holding any inter region data, in other words if you want to pass data between regions you can persist it here)
 >     <website_url>-webroot-sync-tunnel-<additional_specifier> (used for syncing the webroots of webserver machines)
 >     <website_url>-config-sync-tunnel-<additional_specifier> (used for syncing the config settings between machines when in heavyweight or lightweight mode)
->     <website_url>-config-<token>                            (config bucket where the configuration settings for the current machine are kept)
+>     <website_url>-config-<token>                            (config bucket where the configuration settings for the deployment are kept)
 >     <website_url>-assets-<additional_specifier>             (webserver assets can be kept here and made available for access using various toolings)
 >     authip-adt-allowed-<additional_specifier>               (this is where the Laptop IPs that have access to the build machine are stored, add an IP address here to grant that machine access)
 >     <website-url>-<dns-choice>-dbaas                        (data related to the managed database system is stored here)
 >     <website-url>-<dns-choice>-snap                         (this will retain data related to snapshots)
 >     <website_url>-firewall-auth-laptop-ips                  (this defines which laptop ip addresses are allowed to access the reverse proxy machines when firewall based authentication servers are active)
 >     <website_url>-basic-auth-credentials                    (this defines the basic auth credentials for access to the reverse proxy servers when basic auth based authentication servers are active)
+>     <website_url>-whitelist-auth-laptop-ips                  (this defines which laptop ip addresses are allowed to access the reverse proxy machines when whitelist based authentication servers are active)
+>     <website_url>-wireguard                                   (this is where wireguard configs are stored)
+>     <website_url>-wireguard-emails                            (this is the wireguard email addresses that have had configs generated for them)
+>     <website_url>-wireguard-emails-links                      (these are the short lived unique links that configs can be installed from)
+>     <website_url>-scaling-<additional_specifier>            (this is where the scaling configuration is set for this website url)
+>     <website_url>-backup-<additional_specifier>            (this is where the webroot backups are set for this website url)
+>     <website_url>-backup-db-<additional_specifier>            (this is where the database backups are set for this website url)
+
 
 --------------------------------
 

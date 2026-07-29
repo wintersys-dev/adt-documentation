@@ -38,6 +38,10 @@ In your template to set up an authentication server if your webproperty is somet
 >     export AUTH_DNS_CHOICE="cloudflare"
 >     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
 
+-----------------------------------
+
+-----------------------------------
+
 ##### 2. Basic auth based authentication
 
 To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
@@ -62,6 +66,10 @@ In your template to set up an authentication server if your webproperty is somet
 >     export AUTH_DNS_CHOICE="cloudflare"
 >     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
 
+------------------------------
+
+------------------------------
+
 ##### 3. Whitelist based authentication.
 
 To use whitelist based authentication you will need to be using reverse proxy(ies) in front of your webserver(s) and you will need to allow access by default to your reverse proxies by setting an appropriate value in firewall.dat, for example:
@@ -80,6 +88,39 @@ In your template to set up an authentication server if your webproperty is somet
 >     ######Authentication Server#####
 >     export NO_AUTHENTICATORS="1"
 >     export AUTHENTICATOR_TYPE="whitelist"
+>     export AUTH_SERVER_URL="auth.nuocialsecurity.uk"
+>     export AUTH_DNS_USERNAME="webmaster@nuocial.uk" (or whatever the email address for your cloudflare account is)  
+>     export AUTH_DNS_SECURITY_KEY="X1234X"   (your cloudflare API key)
+>     export AUTH_DNS_CHOICE="cloudflare"
+>     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
+
+-----------------------------------
+
+-----------------------------------
+
+##### 4. Wireguard based authentication servers
+
+To use wireguard based authentication servers your users need to know that they have to have a wireguard client installed on every device that they want to access your servers through. If they have the wireguard app (for example) installed on their device then they can connect to your servers by going to the authentication servers that you have set up and following the authentication process. 
+
+The way I have setup the wireguard system is that whatever your SSH PORT is set to your wireguard port is SSH_PORT + 1. In other words, I set my SSH_PORT to 1035 and therefore my wireguard port is 1036. This needs to be reflected in my firewall (in other words, I have to open port 1036 in my firewall). To do that I need to set the following in firewall.dat
+
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:1036|ipv4|0.0.0.0/0
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:
+
+**ESSENTIAL/MANDATORY**
+
+This is good enough for the OS firewall but the cloud native firewall (in other words, the firewall provided by your VPS provider) if it is active, will need to explicitly open port 1036 to all UDP traffic. This is because wireguard needs to be accessible via the UDP protocol as well as the TCP protocol. I could automate this in a script but actually I thought why not leave it as a manual step that could be seen as an extra security measure in other words, you have to explicitly activate wireguard once your servers are deployed by allowing UDP through your firewall. So go ahead and allow UDP to access port 1036 (or whatever your wireguard port is) on your reverse proxy firewall. YOU USERS WON'T BE ABLE TO CONNECT TO YOUR SERVERS UNTIL YOU ALLOW UDP PACKETS THROUGH YOUR FIREWALL. Its also a useful kill switch meaning you can take your entire infrastructure offline just by blocking the UDP packets in your cloud native firewall. 
+
+In order to setup your template so that your deployment uses wireguard you will need to configure your template similar to the following:
+
+In your template to set up an authentication server if your webproperty is something like nuocial.uk and you are putting cloudflare in front of your authentication server you will need settings for whitelist based authentication as something similar to:
+
+>     ######Authentication Server#####
+>     export NO_AUTHENTICATORS="1"
+>     export AUTHENTICATOR_TYPE="wire-guard"
 >     export AUTH_SERVER_URL="auth.nuocialsecurity.uk"
 >     export AUTH_DNS_USERNAME="webmaster@nuocial.uk" (or whatever the email address for your cloudflare account is)  
 >     export AUTH_DNS_SECURITY_KEY="X1234X"   (your cloudflare API key)

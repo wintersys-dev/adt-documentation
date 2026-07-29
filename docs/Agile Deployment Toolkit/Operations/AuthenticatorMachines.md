@@ -180,9 +180,9 @@ In this configuration access is possible to port 443 by default.
 
 - The user goes to your authentication server website and enters their custom domain email address that you have provided them with. Once they enter their address it is written to a file
 
->     ${HOME}/runtime/wire-guard/emails/authentication-emails.dat.${rnd} 
+>     ${HOME}/runtime/wire-guard/emails/authentication-emails.dat.${machine_ip} 
 
-on the current authentication machine where rnd is a unique identifier
+on the current authentication machine where machine_ip is a unique identifier
 
 The authentication file is then written to the datastore tagged as wire-guard-emails as follows:
 

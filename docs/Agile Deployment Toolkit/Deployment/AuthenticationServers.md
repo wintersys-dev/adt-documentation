@@ -126,3 +126,5 @@ In your template to set up an authentication server if your webproperty is somet
 >     export AUTH_DNS_SECURITY_KEY="X1234X"   (your cloudflare API key)
 >     export AUTH_DNS_CHOICE="cloudflare"
 >     export USER_EMAIL_DOMAIN="nuocial.uk" (the custom domain that you have issued email addresses for, for example, user1@nuocial.uk)
+
+**NOTE:** if you take your infrastructure offline and redeploy it then the reverse proxy IP addresses will change and you will need to email all of your users which you can get from the wire-guard-emails tagged datastore to update the "Endpoint" IP addresses in their wireguard configurations. 

@@ -110,9 +110,6 @@ The way I have setup the wireguard system is that whatever your SSH PORT is set 
 >     WEBSERVERPORTS:
 >     DATABASEPORTS:
 
-**ESSENTIAL/MANDATORY**
-
-This is good enough for the OS firewall but the cloud native firewall (in other words, the firewall provided by your VPS provider) if it is active, will need to explicitly open port 1036 to all UDP traffic. This is because wireguard needs to be accessible via the UDP protocol as well as the TCP protocol. I could automate this in a script but actually I thought why not leave it as a manual step that could be seen as an extra security measure in other words, you have to explicitly activate wireguard once your servers are deployed by allowing UDP through your firewall. So go ahead and allow UDP to access port 1036 (or whatever your wireguard port is) on your reverse proxy firewall. YOU USERS WON'T BE ABLE TO CONNECT TO YOUR SERVERS UNTIL YOU ALLOW UDP PACKETS THROUGH YOUR FIREWALL. Its also a useful kill switch meaning you can take your entire infrastructure offline just by blocking the UDP packets in your cloud native firewall. 
 
 In order to setup your template so that your deployment uses wireguard you will need to configure your template similar to the following:
 

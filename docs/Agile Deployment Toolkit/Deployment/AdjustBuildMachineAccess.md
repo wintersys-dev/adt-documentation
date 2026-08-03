@@ -2,7 +2,7 @@
 
 I allow you to control which IP addresses can access your build machine by providing a mechanism where the OS firewall (ufw or iptables) can be configured to allow specific IP addresses. In the below description is an outline of how this can be done. You can also allow and deny IP addresses access to your build machine using the cloud native firewall of your VPS provider. Having a cloud native firewall and the OS firewall both controlling access to your build machine is the Fort Knox solution because you can control access to a list of say three authorised IP addresses in both your cloud native firewall and your OS firewall. This might be overkill for you and if you want the most manageable solution I suggest that you either set 
 
->    export LAPTOP_IP="0.0.0.0/0"
+>     export LAPTOP_IP="0.0.0.0/0"
 
 up front when you make your deployment if you want your SSH port accessible from any laptop IP or if you have already made the deployment you can edit the file
 

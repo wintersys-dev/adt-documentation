@@ -125,7 +125,7 @@ Click on the Networking main option and the "firewalls" sub option of your vultr
  
 Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove all inbound rules and keep the outbound rules as they are set
 
-![](images/expedited/vultr2 .png "Vultr Tutorial Image 2")
+![](images/expedited/vultr2.png "Vultr Tutorial Image 2")
 
 You can then see your new firewall "adt-build-machine" listed  
 

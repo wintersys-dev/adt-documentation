@@ -1,5 +1,5 @@
-# WINTERSYS INITIATIVES...
---------------------
+# WINTERSYS INITIATIVES
+------------------------
 
 #### AVAILABLE INITIATIVES  
 

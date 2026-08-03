@@ -1,4 +1,4 @@
-To explore the project in detail:   
+To explore the project in detail:    
 [Agile Deployment Toolkit](https://www.wintersys-initiatives.uk/Agile%20Deployment%20Toolkit/ADT)   
 
 This project is 100% natural...no added AI.

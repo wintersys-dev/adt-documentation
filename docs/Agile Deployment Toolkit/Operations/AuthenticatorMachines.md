@@ -57,7 +57,7 @@ for iptables
 
 **NOTE 4:** For this style of authentication (in other words, firewall based) the firewall must be closed off by default on all reverse proxy machines for port 443 with access only allowed to authenticated ip addresses. This means that your firewall.dat file on your build machine should be configured similar to:
 
->     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
 >     REVERSEPROXYPORTS:
 >     AUTOSCALERPORTS:
 >     WEBSERVERPORTS:
@@ -92,7 +92,7 @@ This machine identified file is then written to the datastore
 
 **NOTE:** To use basic auth as a preliminary authentication method to your web property you will need to set the firewall in firewall.dat to something like:
 
->     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
 >     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0
 >     AUTOSCALERPORTS:
 >     WEBSERVERPORTS:
@@ -164,7 +164,7 @@ for lighttpd
 
 **NOTE 3:** For this style of authentication (in other words, whitelist based) the firewall must be open on port 443 on all reverse proxy machines with access being controlled by the webserver whitelist not the firewall
 
->     AUTHENTICATORPORTS:cloudflare|ipv4|cloudflare  
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
 >     REVERSEPROXYPORTS:443|ipv4|0.0.0.0/0
 >     AUTOSCALERPORTS:
 >     WEBSERVERPORTS:
@@ -228,3 +228,11 @@ The authenticator machines then coordinate amongst themselves to decide who need
 >     ${HOME}/webserver/configuration/authenticator/wire-guard/GenerateAuthenticatorEmails.sh
 
 The user will then receive the an email which will contain a QR code of a client config for each reverse proxy machine and the user should scan the QR code they receive with their wireguard app and enable the tunnel. They will then be able to connect to whichever reverse proxy they have chosen. If that reverse proxy has technical issues, then, they can swap tunnels from the reverse proxy they have chosen to the backup reverse proxy. Which reverse proxy machine is the "main" reverse proxy (in other words appears first in the email and is therefore most likely to be chosen by the user is selected at random so that load is distributed across reverse proxies and not just all on one reverse proxy and none for the others). 
+
+**NOTE 1:** For this style of authentication (in other words, wireguard based) the authenticator firewall must be open on port 443 and that's it. SSH_PORT + 1 is opened implicitly and wireguard will expect it to be open there's no need to specify the wireguard port explicitly here
+
+>     AUTHENTICATORPORTS:443|ipv4|cloudflare  
+>     REVERSEPROXYPORTS:
+>     AUTOSCALERPORTS:
+>     WEBSERVERPORTS:
+>     DATABASEPORTS:

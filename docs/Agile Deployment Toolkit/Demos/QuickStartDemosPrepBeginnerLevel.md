@@ -67,9 +67,14 @@ Once your account is setup record the username that you registered with as well 
 
 #### Step 6 (Setting up Linode Object Storage access keys)
 
-1. To setup Object Storage Access Keys, follow [here](https://techdocs.akamai.com/cloud-computing/docs/manage-access-keys)
+First of all you need Object Storage enabled in the London Region. You can enable Object Storage by following this process:
 
-**YOU DON'T WANT LIMITED ACCESS AND YOU WANT THE REGION TO BE gb-lon FOR THESE DEMOS**
+1. Log into the Linode Cloud Manager, click Object Storage in the left sidebar, and click Create an Access Key. 
+2. This automatically enables Object Storage on your account and prompts you to confirm activation.
+3. To setup Object Storage Access Keys, follow [here](https://techdocs.akamai.com/cloud-computing/docs/manage-access-keys)
+
+**TO MAKE THINGS EASY ON YOU YOU DON'T WANT LIMITED ACCESS KEYS AND YOU WANT KEYS THAT DON'T HAVE FULL ACCESS**
+**THE REGION TO BE gb-lon FOR THESE DEMOS**
 
 ---------------------
 
@@ -96,8 +101,21 @@ and click "Create Domain". Your DNS system should then be all set.
 
 ### Step 8 - VPC
 
+You need to create a specific VPC in your account to be able to deploy the Quick Demos
+
+You can learn how to create a VPC by reading [this](https://techdocs.akamai.com/cloud-computing/docs/create-a-vpc)
+
+You need to set specific values for the Quick Demos to work:
+
+1. The region needs to be gb-lon
+2. The label needs to be adt-vpc
+3. The description can be "Quick Demos VPC for ADT"
+4. The subnet description can be "adt-subnet"
+5. The subnet range should be set to "10.0.1.0/24"
+6. Create the VPC
+
 Now you need to setup your VPC. I'll just show you the images of mine
-MAKE SURE YOUR SUBNET RANGE IS **10.0.1.0/24** and THE VPC NAME is **adt-vpc** and is in the **gb-lon** region  
+**MAKE SURE YOUR SUBNET RANGE IS **10.0.1.0/24** and THE VPC NAME is **adt-vpc** and is in the **gb-lon** region**  
 
 The whole (adt-vpc) setup
 

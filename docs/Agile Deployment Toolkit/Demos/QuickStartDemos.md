@@ -1,25 +1,4 @@
-## PRE-REQUISITE STEPS
-
-You need to create a specific VPC in your account to be able to deploy the Quick Demos
-You can learn how to create a VPC by reading [this](https://techdocs.akamai.com/cloud-computing/docs/create-a-vpc)
-You need to set specific values for the Quick Demos to work:
-
-1. The region needs to be gb-lon
-2. The label needs to be adt-vpc
-3. The description can be "Quick Demos VPC for ADT"
-4. The subnet description can be "adt-subnet"
-5. The subnet range should be set to "10.0.1.0/24"
-6. Create the VPC
-
-## FURTHER QUICK DEMOS
-
-<span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  
-
-You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
-
---------------------
-
-## QUICK-START DEMO  
+## QUICK START DEMOS
 
 **NOTE:** This quick start demo is only intended for use on the Linode platform using the supplied [StackScript](https://cloud.linode.com/stackscripts/635271) to demonstrate example usage cases for the Agile Deployment Toolkit as quickly and easily as possible.  The demos themselves are very quickly put together simply there for illustrative purposes they are not there to provide any truly useful function. If anyone would like to spend time crafting demos useful for real function that could be listed here that would be valued. 
 
@@ -36,6 +15,32 @@ For more information about parameter configuration please see the [spec](https:/
 >     ${BUILD_HOME}/ApplicationCredentials.sh
 
 on your build machine.
+
+------------------------------------
+
+## PRE-REQUISITE STEPS
+
+Clearly you need a Linode account but a virgin account will still need a couple of services enabled and configured in order to deploy the demos
+
+#### Enable Object Storage
+
+First of all you need Object Storage enabled in the London Region. You can enable Object Storage by following this process:
+
+1. Log into the Linode Cloud Manager, click Object Storage in the left sidebar, and click Create an Access Key. 
+2. This automatically enables Object Storage on your account and prompts you to confirm activation.
+
+#### Create a VPC for the Quick Demos
+
+You need to create a specific VPC in your account to be able to deploy the Quick Demos
+You can learn how to create a VPC by reading [this](https://techdocs.akamai.com/cloud-computing/docs/create-a-vpc)
+You need to set specific values for the Quick Demos to work:
+
+1. The region needs to be gb-lon
+2. The label needs to be adt-vpc
+3. The description can be "Quick Demos VPC for ADT"
+4. The subnet description can be "adt-subnet"
+5. The subnet range should be set to "10.0.1.0/24"
+6. Create the VPC
 
 ------------------------------
 
@@ -69,6 +74,14 @@ then do a
 >      <password> (as per the value you entered for 'The password for your build machine user (required)' into the StackScript and stored in your ~/adt-credentials.txt file)
 >      cd adt-build-machine-scripts
 >      ./Logs.sh
+
+-------------------------
+
+## FURTHER QUICK DEMOS
+
+<span style="color:red">If you like the default demo and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  
+
+You might want to reference [Understanding StackScript overrides](./ExampleStackScriptOverride.md)
 
 -----------------
 

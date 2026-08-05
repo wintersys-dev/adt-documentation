@@ -1,3 +1,16 @@
+## PRE-REQUISITE STEPS
+
+You need to create a specific VPC in your account to be able to deploy the Quick Demos
+You can learn how to create a VPC by reading [this](https://techdocs.akamai.com/cloud-computing/docs/create-a-vpc)
+You need to set specific values for the Quick Demos to work:
+
+1. The region needs to be gb-lon
+2. The label needs to be adt-vpc
+3. The description can be "Quick Demos VPC for ADT"
+4. The subnet description can be "adt-subnet"
+5. The subnet range should be set to "10.0.1.0/24"
+6. Create the VPC
+
 ## FURTHER QUICK DEMOS
 
 <span style="color:red">If you like the demo below and you want to try further demos other than our default one click [HERE](./CustomisedDemos.md)</span>  

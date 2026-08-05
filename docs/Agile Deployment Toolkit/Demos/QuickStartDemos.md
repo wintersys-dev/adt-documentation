@@ -16,32 +16,6 @@ For more information about parameter configuration please see the [spec](https:/
 
 on your build machine.
 
-------------------------------------
-
-## PRE-REQUISITE STEPS
-
-Clearly you need a Linode account but a virgin account will still need a couple of services enabled and configured in order to deploy the demos
-
-#### Enable Object Storage
-
-First of all you need Object Storage enabled in the London Region. You can enable Object Storage by following this process:
-
-1. Log into the Linode Cloud Manager, click Object Storage in the left sidebar, and click Create an Access Key. 
-2. This automatically enables Object Storage on your account and prompts you to confirm activation.
-
-#### Create a VPC for the Quick Demos
-
-You need to create a specific VPC in your account to be able to deploy the Quick Demos
-You can learn how to create a VPC by reading [this](https://techdocs.akamai.com/cloud-computing/docs/create-a-vpc)
-You need to set specific values for the Quick Demos to work:
-
-1. The region needs to be gb-lon
-2. The label needs to be adt-vpc
-3. The description can be "Quick Demos VPC for ADT"
-4. The subnet description can be "adt-subnet"
-5. The subnet range should be set to "10.0.1.0/24"
-6. Create the VPC
-
 ------------------------------
 
 ## DEFAULT DEMO

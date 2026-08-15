@@ -1,4 +1,4 @@
-# Welcome to the Agile Deployment Toolkit Documentation  
+# Welcome to the Agile Deployment Toolkit Documentation   
 
 **AN INTRODUCTION TO THE ADT**   
 

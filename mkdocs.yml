@@ -1,7 +1,7 @@
 site_name: Wintersys Initiatives
 
 theme:
-  name: readthedocs
+  name: material
   logo: assets/wintersys.png
   highlightjs: true
   hljs_style: purebasic

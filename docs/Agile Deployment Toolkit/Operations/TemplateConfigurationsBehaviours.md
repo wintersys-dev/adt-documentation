@@ -161,8 +161,8 @@ Set the repositories which hold your application sourcecode in any template, for
 Set the SMTP email settings using the following settings in any template:
 
 >     export SYSTEM_EMAIL_PROVIDER="1"
->     export SYSTEM_TOEMAIL_ADDRESS="testemail@testemail.com"
->     export SYSTEM_FROMEMAIL_ADDRESS="testemail@testemail.com"
+>     export SYSTEM_TO_EMAIL_ADDRESS="testemail@testemail.com"
+>     export SYSTEM_FROM_EMAIL_ADDRESS="testemail@testemail.com"
 >     export SYSTEM_EMAIL_USERNAME="xxxx"
 >     export SYSTEM_EMAIL_PASSWORD="yyyy"
 >     export EMAIL_NOTIFICATION_LEVEL="ERROR"

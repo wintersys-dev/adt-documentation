@@ -106,8 +106,8 @@ export APPLICATION_REPOSITORY_TOKEN="github_pat_11BELT3NQ03fCHpjdjn7y3hjdhkf37DH
 \##### System Email Settings#########  
 export SYSTEM_EMAIL_PROVIDER=""   
 export SYSTEM_EMAIL_PROVIDER="2"   
-export SYSTEM_TOEMAIL_ADDRESS="webmaster@codetesters.uk"   
-export SYSTEM_FROMEMAIL_ADDRESS="webmaster@codetesters.uk"   
+export SYSTEM_TO_EMAIL_ADDRESS="webmaster@codetesters.uk"   
+export SYSTEM_FROM_EMAIL_ADDRESS="webmaster@codetesters.uk"   
 export SYSTEM_EMAIL_USERNAME="gf72fdhkocnv28de7e8ifjjw8f2"  
 export SYSTEM_EMAIL_PASSWORD="hfjh47fi328rjfh28folmajfigj"  
 export EMAIL_NOTIFICATION_LEVEL="ERROR"  
@@ -237,8 +237,8 @@ export APPLICATION_REPOSITORY_TOKEN="github_pat_11BELT3NQ03fCHpjdjn7y3hjdhkf37DH
 \##### System Email Settings#########  
 export SYSTEM_EMAIL_PROVIDER=""  
 export SYSTEM_EMAIL_PROVIDER="2"   
-export SYSTEM_TOEMAIL_ADDRESS="webmaster@codetesters.uk"  
-export SYSTEM_FROMEMAIL_ADDRESS="webmaster@codetesters.uk"   
+export SYSTEM_TO_EMAIL_ADDRESS="webmaster@codetesters.uk"  
+export SYSTEM_FROM_EMAIL_ADDRESS="webmaster@codetesters.uk"   
 export SYSTEM_EMAIL_USERNAME="gf72fdhkocnv28de7e8ifjjw8f2"  
 export SYSTEM_EMAIL_PASSWORD="hfjh47fi328rjfh28folmajfigj"  
 export EMAIL_NOTIFICATION_LEVEL="ERROR"  
@@ -365,8 +365,8 @@ export APPLICATION_REPOSITORY_TOKEN="github_pat_11BELT3NQ03fCHpjdjn7y3hjdhkf37DH
 \##### System Email Settings#########  
 export SYSTEM_EMAIL_PROVIDER=""  
 export SYSTEM_EMAIL_PROVIDER="2"  
-export SYSTEM_TOEMAIL_ADDRESS="webmaster@codetesters.uk"  
-export SYSTEM_FROMEMAIL_ADDRESS="webmaster@codetesters.uk"  
+export SYSTEM_TO_EMAIL_ADDRESS="webmaster@codetesters.uk"  
+export SYSTEM_FROM_EMAIL_ADDRESS="webmaster@codetesters.uk"  
 export SYSTEM_EMAIL_USERNAME="gf72fdhkocnv28de7e8ifjjw8f2"  
 export SYSTEM_EMAIL_PASSWORD="hfjh47fi328rjfh28folmajfigj"  
 export EMAIL_NOTIFICATION_LEVEL="ERROR"  

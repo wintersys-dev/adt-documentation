@@ -186,8 +186,8 @@ export APPLICATION_REPOSITORY_PROVIDER="github"
     
 \##### System Email Settings#########  
 export SYSTEM_EMAIL_PROVIDER=""  
-export SYSTEM_TOEMAIL_ADDRESS=""  
-export SYSTEM_FROMEMAIL_ADDRESS=""  
+export SYSTEM_TO_EMAIL_ADDRESS=""  
+export SYSTEM_FROM_EMAIL_ADDRESS=""  
 export SYSTEM_EMAIL_USERNAME=""   
 export SYSTEM_EMAIL_PASSWORD=""   
 export EMAIL_NOTIFICATION_LEVEL="ERROR"  
@@ -248,8 +248,8 @@ Note: because I haven't asked you to set up system emailing (to keep this tutori
 
 IGNORE THESE IF YOU SEE THEM
 >     Your value for the variable SYSTEM_EMAIL_PROVIDER () doesn't appear to be valid please review
->     It looks to me like the email address for the variable SYSTEM_TOEMAIL_ADDRESS () doesn't appear to be valid please review
->     It looks to me like the email address for the variable SYSTEM_FROMEMAIL_ADDRESS () doesn't appear to be valid please review
+>     It looks to me like the email address for the variable SYSTEM_TO_EMAIL_ADDRESS () doesn't appear to be valid please review
+>     It looks to me like the email address for the variable SYSTEM_FROM_EMAIL_ADDRESS () doesn't appear to be valid please review
 
 You will then need to answer the questions that you are asked and in a few minutes you should be able to install joomla using the GUI system of your browser. Please note, the credentials,port,database IP that you need to enter into the joomla GUI will be shown at the end of the build process.
 

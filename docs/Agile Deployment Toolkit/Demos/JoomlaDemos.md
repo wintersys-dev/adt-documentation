@@ -21,10 +21,10 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 2 (Helix template with sample data installed installed from a baseline)
 
-![](images/Helix2.png "Joomla Helix")   
+![](images/Helix1.png "Joomla Helix")   
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-![](images/Helix1.png "Joomla Helix Screenshot") 
+![](images/Helix2.png "Joomla Helix Screenshot") 
 
 

@@ -9,6 +9,7 @@ There are a few solutions to providing email services for your users so, in no p
 3. [Modoba](https://modoboa.org/en)
 4. [Postie](https://poste.io)
 5. [Stalwart](https://stalw.art)
+6. [Mox](https://www.xmox.nl)
 
 
 And so some of these solutions provide commercial offerings where they will host your email servers for you using their product but a) you have less control if you do that and b) it costs £

@@ -33,6 +33,13 @@ To be clear, you could probably get away with using MySQL and MariaDB interchang
 
 The database prefix is written to this file so we can easily see which database prefix was set when this application was baselined which means we expect the database to have tables prefixed with the same prefix
 
+---------
+
+**/var/www/html/wr.dat**
+
+This file contains the webroot that the current application was installed with. It will take the format of something like /var/www/html/joomla.
+What the system does is if a webroot is configured in the application descriptor which doesn't match with the webroot that is defined in this file then the value of the webroot in this file overrides the value that is in the application descriptor. In this way a webroot can be defined during the first deployment of the application and remain defined during all subsequent deployments, baseline or temporal as long as this file is present. 
+
 -------------
 
 **/var/www/html/dbt.dat**

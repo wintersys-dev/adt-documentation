@@ -144,14 +144,14 @@ So an example of this would be in your template or override to provision a MySQL
 So, the settings for this example are:
 
 >     db-type="MySQL"
->     db-engine="mysql/8"
+>     db-engine="mysql/8.4"
 >     region="gb-lon"
 >     machine-size="g6-nanode-1"
 >     cluster-size="1"
   
   db-type can be **"MySQL"**  
   
-  db-engine can be **"mysql/8"**  - at the time of writing you can check what engines are available for you by issuing **"linode-cli databases engines"** command.  
+  db-engine can be **"mysql/8.4"**  - at the time of writing you can check what engines are available for you by issuing **"linode-cli databases engines"** command.  
   
   region can currently be listed using **"linode-cli databases engines"**  
   

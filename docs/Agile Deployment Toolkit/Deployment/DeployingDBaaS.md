@@ -166,7 +166,7 @@ So an example of this would be in your template or override to provision a Postg
 So, the settings for this example are:
 
 >     db-type="Postgres"
->     db-engine="postgresql/17"
+>     db-engine="postgresql/18"
 >     region="gb-lon"
 >     machine-size="g6-nanode-1"
 >     cluster-size="1"

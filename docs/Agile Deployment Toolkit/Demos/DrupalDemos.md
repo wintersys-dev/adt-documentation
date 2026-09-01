@@ -17,6 +17,14 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-![](images/drupal-corporate-screenshot.png "Drupal Corporate Screenshot") 
+-----------------------------------
+-----------------------------------
+
+### Demo 2 (Umami demo installed from a baseline)
+
+![](images/drupal-umami.png "Drupal Corporate")   
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
 
 

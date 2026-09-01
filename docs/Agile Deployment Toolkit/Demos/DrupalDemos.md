@@ -22,7 +22,7 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 2 (Umami demo installed from a baseline)
 
-![](images/drupal-umami.png "Drupal Corporate")   
+![](images/umami.png "Drupal Corporate")   
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 

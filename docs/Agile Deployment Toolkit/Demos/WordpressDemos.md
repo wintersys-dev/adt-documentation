@@ -17,8 +17,11 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+----------------------------
+----------------------------
 
-### Demo 2 (StackScript overrides for a sample Wordpress Kadence template baseline) 
+
+### Demo 2 (StackScript overrides for a sample Wordpress Neve template baseline) 
 
 ![](images/neve.png "Wordpress Neve")   
 

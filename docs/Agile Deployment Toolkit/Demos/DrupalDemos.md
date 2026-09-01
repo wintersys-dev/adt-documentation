@@ -11,20 +11,24 @@ Perform step 1 or 2 below according to your experience and apply the overrides t
 
 Once you have performed the mandatory steps above you can action specific demos by overriding the mentioned settings in the StackScript before you deploy it. By overriding different settings as described below, you will deploy different application types using the same StackScript.  
 
-### Demo 1 (Corporate template installed from a baseline)
-
-![](images/drupal-corporate.png "Drupal Corporate")   
-
-The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
 -----------------------------------
------------------------------------
 
-### Demo 2 (Umami demo installed from a baseline)
+### Demo 1 (Umami demo installed from a baseline)
 
 ![](images/umami.png "Drupal Corporate")   
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
+-----------------------------------
+-----------------------------------
+
+### Demo 2 (Localgov installed from a baseline)
+
+![](images/localgov.png "Drupal Localgov")   
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
 
 
 

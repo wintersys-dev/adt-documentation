@@ -151,6 +151,20 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+To deploy a Postgres based virgin version of drupal change the values in your Stackscript of 
+
+1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
+
+  >     virgindrupalpostgres-webroot-sourcecode-baseline
+
+2. "BASELINE DB REPOSITORY"
+
+  >     virgindrupalpostgres-db-baseline
+
+You will also need to set:  
+
+![](images/postgres.png "Virgin Joomla Baseline Installation Postgres") 
+
 -----------------
 
 ### Demo 9 (StackScript overrides for a virgin installation of the Drupal CMS from a baselined repository)  
@@ -164,15 +178,15 @@ Wait for the application install to have been completed and available at:
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-To deploy a Postgres based virgin version of drupal change the values in your Stackscript of 
+To deploy a Postgres based virgin version of drupal cms change the values in your Stackscript of 
 
 1. "APPLICATION BASELINE SOURCECODE REPOSITORY"
 
-  >     virgindrupalpostgres-webroot-sourcecode-baseline
+  >     virgindrupalcmspostgres-webroot-sourcecode-baseline
 
 2. "BASELINE DB REPOSITORY"
 
-  >     virgindrupalpostgres-db-baseline
+  >     virgindrupalcmspostgres-db-baseline
 
 You will also need to set:  
 

@@ -20,7 +20,7 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 2 (StackScript overrides for a sample Wordpress Kadence template baseline) 
 
-![](images/wordpress-neve.png "Wordpress Neve")   
+![](images/neve.png "Wordpress Neve")   
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 

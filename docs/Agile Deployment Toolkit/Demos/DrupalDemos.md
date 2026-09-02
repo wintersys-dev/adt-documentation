@@ -29,6 +29,15 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+-----------------------------------
+-----------------------------------
+
+### Demo 3 (Localgov installed from a baseline)
+
+![](images/localgov.png "Drupal Localgov")   
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
 
 
 

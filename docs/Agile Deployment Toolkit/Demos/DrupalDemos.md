@@ -25,7 +25,7 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 ### Demo 2 (Localgov installed from a baseline)
 
-![](images/localgov.png "Drupal Localgov")   
+![](images/drupalcmsdemo.png "Drupal CMS Demo")   
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 

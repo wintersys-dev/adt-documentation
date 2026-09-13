@@ -139,12 +139,12 @@ So, at the time of writing (although there may be nore regions or sizes or datab
 
 So an example of this would be in your template or override to provision a MySQL Cluster
   
->     DATABASE_DBaaS_INSTALLATION_TYPE="MySQL:DBAAS:mysql/8:gb-lon:g6-nanode-1:1:test-cluster:testdb1:testdbuser:gdhf76gdfgsh:266632:235421" 
+>     DATABASE_DBaaS_INSTALLATION_TYPE="MySQL:DBAAS:mysql/8.4:gb-lon:g6-nanode-1:1:test-cluster:testdb1:testdbuser:gdhf76gdfgsh:266632:235421" 
 
 So, the settings for this example are:
 
 >     db-type="MySQL"
->     db-engine="mysql/8.4"
+>     db-engine="mysql/8.4" (make sure that this is set to the current engine value)
 >     region="gb-lon"
 >     machine-size="g6-nanode-1"
 >     cluster-size="1"
@@ -166,7 +166,7 @@ So an example of this would be in your template or override to provision a Postg
 So, the settings for this example are:
 
 >     db-type="Postgres"
->     db-engine="postgresql/18"
+>     db-engine="postgresql/18" (make sure this is set to the current engine value)
 >     region="gb-lon"
 >     machine-size="g6-nanode-1"
 >     cluster-size="1"

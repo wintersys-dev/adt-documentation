@@ -15,7 +15,7 @@ Once you have performed the mandatory steps above you can action specific demos 
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
-![](images/moodle-academi-screenshot.png "Moodle Academi Screenshot") 
+![](images/moodle-moove.png "Moodle Moove Screenshot") 
 
 ### Demo2 (StackScript overrides for a sample Moodle Moove template baseline) 
 

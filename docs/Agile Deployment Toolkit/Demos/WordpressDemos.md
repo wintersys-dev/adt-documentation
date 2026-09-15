@@ -27,3 +27,12 @@ The Default username is "adt-webmaster" and the default password is the "ISGYNS2
 
 The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
 
+----------------------------
+----------------------------
+
+### Demo 3 (StackScript overrides for a sample Wordpress Blocksy template baseline) 
+
+![](images/wordpress-blocksy.png "Wordpress Blocksy")   
+
+The Default username is "adt-webmaster" and the default password is the "ISGYNS2RXBR0"
+
